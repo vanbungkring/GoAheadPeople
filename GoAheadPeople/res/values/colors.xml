@@ -1,0 +1,77 @@
+<resources>
+
+    <!--
+        Check Android Theme colors for color reference:
+        https://developer.android.com/training/material/images/ThemeColors.png
+
+        Refer also to Color palette for the UI colors you should use:
+        http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+    -->
+
+    <color name="myPrimaryColor">#3F51B5</color>
+    <color name="myPrimaryDarkColor">#3F51B5</color>
+    <color name="myAccentColor">#3F51B5</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#DEDEDE</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="myNavigationColor">#000000</color>
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="toolbar">#424242</color>
+    <color name="bg_content">#6c90b9</color>
+    <color name="bg_actionbar">#08183c</color>
+    <color name="login_text">#254bc1</color>
+    <color name="menu_text">#eaff00</color>
+    <color name="menuinfo_text">#7b88b9</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue_smooth">#27C2F2</color>
+    <color name="light_blue_trans">#e2f4fb00</color>
+    <color name="blue_light">#e2f4fb</color>
+    <color name="blue">#33B5E5</color>
+    <color name="blue_dark">#0099CC</color>
+    <color name="purple_light">#f5eafa</color>
+    <color name="purple">#AA66CC</color>
+    <color name="purple_dark">#9933CC</color>
+    <color name="green_light">#f0f8db</color>
+    <color name="green">#99CC00</color>
+    <color name="green_dark">#669900</color>
+    <color name="yellow_light">#fff6df</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="yellow_dark">#FF8800</color>
+    <color name="red_light">#ffe4e4</color>
+    <color name="red">#FF4444</color>
+    <color name="red_dark">#CC0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#edebeb</color>
+    <color name="grey_950">#1C1C1C</color>
+    <color name="grey_900">#212121</color>
+    <color name="grey_850">#303030</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="transparent_white_percent_5">#0Dffffff</color>
+    <color name="transparent_white_percent_10">#1Affffff</color>
+    <color name="transparent_white_percent_15">#26ffffff</color>
+    <color name="transparent_white_percent_20">#33ffffff</color>
+    <color name="transparent_white_percent_25">#40ffffff</color>
+    <color name="transparent_white_percent_30">#4Dffffff</color>
+    <color name="transparent_white_percent_35">#59ffffff</color>
+    <color name="transparent_white_percent_40">#66ffffff</color>
+    <color name="transparent_white_percent_45">#73ffffff</color>
+    <color name="transparent_white_percent_50">#80ffffff</color>
+    <color name="transparent_white_percent_55">#8Cffffff</color>
+    <color name="transparent_white_percent_60">#99ffffff</color>
+    <color name="transparent_white_percent_65">#A6ffffff</color>
+    <color name="transparent_white_percent_70">#B3ffffff</color>
+    <color name="transparent_white_percent_75">#BFffffff</color>
+    <color name="transparent_white_percent_80">#CCffffff</color>
+    <color name="transparent_white_percent_85">#D9ffffff</color>
+    <color name="transparent_white_percent_90">#E6ffffff</color>
+    <color name="transparent_white_percent_95">#F2ffffff</color>
+    <color name="transparent_black_percent_30">#4D000000</color>
+    <color name="transparent_black_percent_50">#80000000</color>
+    <color name="transparent_black_percent_70">#B3000000</color>
+    <color name="transparent_black_percent_90">#E6000000</color>
+
+</resources>

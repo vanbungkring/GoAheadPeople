@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar"></style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="">
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="AppTheme">
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.raafstudio.goahead.people"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_default" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Phone"
+                android:textColor="@color/grey_700" />
+
+            <EditText
+                android:id="@+id/EtUserMobilePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ems="10"
+                android:inputType="phone"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/default_value"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_subhead" >
+
+            </EditText>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/grey_700" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text="Province"
+                android:textColor="@color/grey_700" />
+
+            <Spinner
+                android:id="@+id/SpProvince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:theme="@style/mySpinnerItemStyle" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/grey_700" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text="City"
+                android:textColor="@color/grey_700" />
+
+            <AutoCompleteTextView
+                android:id="@+id/EtUserCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/default_value"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_subhead" >
+            </AutoCompleteTextView>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/grey_700" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text="Address"
+                android:textColor="@color/grey_700" />
+
+            <EditText
+                android:id="@+id/EtUserAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/default_value"
+                android:textCursorDrawable="@null" >
+            </EditText>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/grey_700" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text="Sub Brand"
+                android:textColor="@color/grey_700" />
+
+            <AutoCompleteTextView
+                android:id="@+id/EtSubBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/default_value"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_subhead" >
+            </AutoCompleteTextView>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/grey_700" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp" />
+
+            <Button
+                android:id="@+id/BtSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_red"
+                android:text="SAVE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_subhead"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

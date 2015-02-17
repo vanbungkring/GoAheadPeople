@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.raafstudio.goahead.people"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/ImgAvatarBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+
+        <View
+            android:id="@+id/vProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/navdraw_header_height" />
+
+        <LinearLayout
+            android:id="@+id/NavdrawHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_black_percent_30"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <com.raaf.custom.CircleImageView
+                android:id="@+id/ImgAvatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/avatar"
+                app:border_color="@color/white"
+                app:border_width="1dp" />
+
+            <TextView
+                android:id="@+id/TvUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="@string/default_value"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TvUserPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_caption" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

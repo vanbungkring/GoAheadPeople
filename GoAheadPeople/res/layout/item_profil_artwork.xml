@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp" >
+
+        <com.raafstudio.goahead.people.component.ImageviewBox
+            android:id="@+id/ImgArtwork1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trans" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="1dp" />
+
+        <com.raafstudio.goahead.people.component.ImageviewBox
+            android:id="@+id/ImgArtwork2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trans" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="1dp" />
+
+        <com.raafstudio.goahead.people.component.ImageviewBox
+            android:id="@+id/ImgArtwork3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trans" />
+    </LinearLayout>
+
+</LinearLayout>

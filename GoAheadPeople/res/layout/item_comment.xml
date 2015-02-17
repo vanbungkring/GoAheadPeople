@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.raafstudio.goahead.people"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="16dp" >
+
+    <com.raaf.custom.CircleImageView
+        android:id="@+id/ImgAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/avatar"
+        app:border_color="@color/grey"
+        app:border_width="1dp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="16dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TvCommentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:text="@string/default_value"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_titlle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TvCommentContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:text="@string/default_value"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/text_subhead" />
+
+        <TextView
+            android:id="@+id/TvCommentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="@string/default_value"
+            android:textColor="@color/grey_500" />
+
+        <LinearLayout
+            android:id="@+id/LayoutComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/EtComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Leave a comment"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_700"
+                android:textSize="@dimen/text_subhead"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/BtCommentSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_send" />
+
+        </LinearLayout>
+
+      
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+    </LinearLayout>
+
+</LinearLayout>

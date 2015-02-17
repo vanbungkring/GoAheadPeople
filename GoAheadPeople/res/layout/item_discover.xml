@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.raafstudio.goahead.people"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ProgressBar
+                android:id="@+id/ArtPb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/default_value"
+                android:padding="16dp"
+                android:progress="1"
+                android:visibility="visible" />
+
+            <com.raafstudio.goahead.people.component.ImageviewNormal
+                android:id="@+id/ArtImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/ArtTvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="@string/default_value"
+                android:textColor="@color/transparent_white_percent_40"
+                android:textSize="@dimen/text_caption" />
+
+            <TextView
+                android:id="@+id/ArtTvTitlle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_subhead"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/LayoutUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp" >
+
+                <com.raaf.custom.CircleImageView
+                    android:id="@+id/ArtImgUserAvatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:border_color="@color/grey"
+                    app:border_width="1dp" />
+
+                <TextView
+                    android:id="@+id/ArtTvFullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:text="@string/default_value"
+                    android:textColor="@color/transparent_white_percent_60"
+                    android:textSize="@dimen/text_body" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_percent_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp" >
+
+            <ImageView
+                android:id="@+id/ArtImgLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_like" />
+
+            <TextView
+                android:id="@+id/ArtTvLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/default_value"
+                android:textSize="@dimen/text_body"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

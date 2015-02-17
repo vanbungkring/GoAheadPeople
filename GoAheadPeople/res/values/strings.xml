@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Go Ahead People</string>
+    <string name="api_url">http://staging.goaheadpeople.com/mobileapps/</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="action_settings">Settings</string>
+    <string name="separator"> | </string>
+	<string name="default_value">loading ..</string>
+	<string name="follow">Follow</string>
+	<string name="no_network">please connect to network</string>
+    <string-array name="toolbar_spinner">
+        <item>Discover</item>
+        <item>Friends Feed</item>
+        <item>Visual Art</item>
+        <item>Style</item>
+        <item>Photography</item>
+    </string-array>
+
+</resources>

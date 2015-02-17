@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.raafstudio.goahead.people"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.raaf.custom.CircleImageView
+            android:id="@+id/NotifImgAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar"
+            app:border_color="@color/grey"
+            app:border_width="1dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="16dp" >
+
+            <TextView
+                android:id="@+id/NotifTvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/NotifTvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textColor="@color/grey_600"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <com.raaf.custom.CircleImageView
+            android:id="@+id/NotifImgAktif"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:src="@color/red"
+            app:border_color="@color/red_dark"
+            app:border_width="1dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

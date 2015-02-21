@@ -32,24 +32,7 @@ public class ImageviewNormal extends ImageView {
 				int height = 1;// (int)
 				pembagi = imgHeight / imgWidth;
 				width = MeasureSpec.getSize(widthMeasureSpec);
-				height = (int) ((float) width * pembagi);// (int)
-//				if (imgWidth > imgHeight) {
-//					pembagi = imgHeight / imgWidth;
-//					width = MeasureSpec.getSize(widthMeasureSpec);
-//					height = (int) ((float) width * pembagi);// (int)
-//				} else {
-//					pembagi = imgWidth / imgHeight;
-//					height = MeasureSpec.getSize(heightMeasureSpec);
-//					width = (int) ((float) height * pembagi);// (int)
-//					//width = MeasureSpec.getSize(widthMeasureSpec);
-//					// height = width;
-//					//height = width;
-//
-//					// pembagi = imgHeight / imgWidth;
-//				}
-
-				// (Math.ceil((float)
-				// width * 3 / 4));
+				height = (int) ((float) width * pembagi);
 				setMeasuredDimension(width, height);
 			} catch (Exception e) {
 				// TODO: handle exception

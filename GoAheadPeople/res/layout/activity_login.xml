@@ -30,7 +30,8 @@
                     android:id="@+id/EtEmail"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" >
+                    android:inputType="textPersonName"
+                    android:text="maulfi.02@gmail.com" >
 
                     <requestFocus />
                 </EditText>
@@ -52,7 +53,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:text="kumahaaing" />
+
             </TableRow>
 
             <TableRow

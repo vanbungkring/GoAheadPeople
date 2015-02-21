@@ -1,81 +1,3 @@
-Raaf.Db.DbAssistant
-Raaf.Db.DbAssistant$Exporter
-Raaf.Db.DbAssistant$Importer
-Raaf.Db.DbCommand
-Raaf.Db.DbConnector
-Raaf.Db.DbHelper
-Raaf.Db.DbParam
-Raaf.Db.DbParam$data_type
-Raaf.Db.DbTable
-Raaf.Http.GetXMLTask
-Raaf.Http.HttpReader
-Raaf.Http.raafLoader:
-    59:61:public raafLoader(java.lang.String)
-    70:73:public raafLoader(java.lang.String,android.os.Handler)
-    87:90:public raafLoader(java.lang.String,android.os.Handler,android.os.Bundle,java.lang.String)
-    98:103:public raafLoader(java.lang.String,android.os.Handler,android.os.Bundle,Raaf.Http.raafLoader$Http_type,java.util.List,java.util.List)
-Raaf.Http.raafLoader$PhotoUploadResponseHandler
-Raaf.Rupiah
-Raaf.Weather.ConditionDefinition
-Raaf.Weather.WOEIDUtils
-Raaf.Weather.WeatherInfo
-Raaf.Weather.YahooWeatherInfoListener
-Raaf.Weather.YahooWeatherUtils
-Raaf.Weather.YahooWeatherUtils$WeatherQueryTask
-Raaf.raafDate
-Raaf.raafDialog:
-    10:10:public raafDialog()
-    18:19:public static void SetToastLong(android.content.Context,java.lang.String)
-    23:29:public static void ShowDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
-    33:53:public static void ShowDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    119:128:public static void ShowProgressDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.Boolean,int)
-    131:132:public static void setProgress(int)
-    135:137:public static void setProgress(int,java.lang.String)
-Raaf.raafDialog$1
-Raaf.raafGps
-Raaf.raafGps$1
-Raaf.raafGps$2
-Raaf.raafIO
-Raaf.raafImageLoader
-Raaf.raafImageLoader$BitmapDisplayer
-Raaf.raafImageLoader$PhotoToLoad
-Raaf.raafImageLoader$PhotosLoader
-Raaf.raafImageLoader$PhotosQueue
-Raaf.raafImaging:
-    28:28:public raafImaging()
-    30:30:public static int getcolorfromrgb(int,int,int)
-    35:64:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,android.graphics.Bitmap,java.lang.String,int,int,int,int)
-    69:71:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,int,java.lang.String,int,int,int,int)
-    77:82:public static android.graphics.Bitmap doOverlay(android.graphics.Bitmap,android.graphics.Bitmap,float,float)
-    118:162:public static android.graphics.Bitmap downloadBitmap(java.lang.String)
-    166:181:public static android.graphics.Bitmap getPreview(java.lang.String)
-Raaf.raafJson
-Raaf.raafLanguage
-Raaf.raafLanguage$tag
-Raaf.raafListParam
-Raaf.raafMap
-Raaf.raafMap$1
-Raaf.raafMap$2
-Raaf.raafNet:
-    android.widget.ImageView imgView
-    android.os.Handler handler
-    android.os.Bundle b
-    android.graphics.Bitmap bmp
-    22:22:public raafNet()
-    29:29:public android.graphics.Bitmap getDownloadedBitmap()
-    53:57:public void GetBitmapFromUrl(java.lang.String,android.widget.ImageView,android.os.Handler)
-    60:63:public void GetFileFromUrl(java.lang.String,java.lang.String,android.os.Handler)
-Raaf.raafNet$GetBitmapFromUrl
-Raaf.raafNet$GetFileFromUrl
-Raaf.raafParam
-Raaf.raafPrayTime
-Raaf.raafSecurity:
-    7:7:public raafSecurity()
-    9:18:private static java.lang.String convertToHex(byte[])
-    22:25:public static java.lang.String getSHA1(java.lang.String)
-Raaf.raafTimer
-Raaf.raafTimer$mainTask
-Raaf.raafUtil
 android.UnusedStub
 android.support.annotation.AnimRes
 android.support.annotation.AnimatorRes
@@ -311,18 +233,7 @@ android.support.v4.app.FragmentManagerImpl$FragmentTag:
 android.support.v4.app.FragmentPagerAdapter
 android.support.v4.app.FragmentStatePagerAdapter
 android.support.v4.app.FragmentTabHost:
-    private android.widget.FrameLayout mRealTabContent
-    130:132:public FragmentTabHost(android.content.Context)
-    135:137:public FragmentTabHost(android.content.Context,android.util.AttributeSet)
-    140:146:private void initFragmentTabHost(android.content.Context,android.util.AttributeSet)
-    151:174:private void ensureHierarchy(android.content.Context)
     188:193:public void setup(android.content.Context,android.support.v4.app.FragmentManager)
-    196:209:public void setup(android.content.Context,android.support.v4.app.FragmentManager,int)
-    212:219:private void ensureContent()
-    227:246:public void addTab(android.widget.TabHost$TabSpec,java.lang.Class,android.os.Bundle)
-android.support.v4.app.FragmentTabHost$DummyTabFactory
-android.support.v4.app.FragmentTabHost$TabInfo:
-    67:71:FragmentTabHost$TabInfo(java.lang.String,java.lang.Class,android.os.Bundle)
 android.support.v4.app.FragmentTransaction:
     public static final int TRANSIT_ENTER_MASK
     public static final int TRANSIT_EXIT_MASK
@@ -3499,117 +3410,189 @@ android.support.v7.widget.Toolbar$LayoutParams:
     static final int EXPANDED
     1807:1809:public Toolbar$LayoutParams(int,int,int)
     1812:1813:public Toolbar$LayoutParams(int)
+cn.Ragnarok.BitmapFilter:
+    public static final int GRAY_STYLE
+    public static final int RELIEF_STYLE
+    public static final int AVERAGE_BLUR_STYLE
+    public static final int OIL_STYLE
+    public static final int NEON_STYLE
+    public static final int PIXELATE_STYLE
+    public static final int TV_STYLE
+    public static final int INVERT_STYLE
+    public static final int BLOCK_STYLE
+    public static final int OLD_STYLE
+    public static final int SHARPEN_STYLE
+    public static final int LIGHT_STYLE
+    public static final int LOMO_STYLE
+    public static final int HDR_STYLE
+    public static final int GAUSSIAN_BLUR_STYLE
+    public static final int SOFT_GLOW_STYLE
+    public static final int SKETCH_STYLE
+    public static final int MOTION_BLUR_STYLE
+    public static final int GOTHAM_STYLE
+    public static final int TOTAL_FILTER_NUM
+    6:6:public BitmapFilter()
+cn.Ragnarok.BlockFilter:
+    7:7:public BlockFilter()
+cn.Ragnarok.BlurFilter:
+    6:6:public BlurFilter()
+cn.Ragnarok.GaussianBlurFilter:
+    5:5:public GaussianBlurFilter()
+cn.Ragnarok.GothamFilter:
+    5:5:public GothamFilter()
+cn.Ragnarok.GrayFilter:
+    9:9:public GrayFilter()
+cn.Ragnarok.HDRFilter:
+    5:5:public HDRFilter()
+cn.Ragnarok.InvertFilter:
+    6:6:public InvertFilter()
+cn.Ragnarok.LightFilter:
+    6:6:public LightFilter()
+cn.Ragnarok.LomoFilter:
+    11:11:public LomoFilter()
+cn.Ragnarok.MotionBlurFilter:
+    5:5:public MotionBlurFilter()
+cn.Ragnarok.NativeFilterFunc:
+    5:5:public NativeFilterFunc()
+cn.Ragnarok.NeonFilter:
+    9:9:public NeonFilter()
+cn.Ragnarok.OilFilter:
+    7:7:public OilFilter()
+cn.Ragnarok.OldFilter:
+    6:6:public OldFilter()
+cn.Ragnarok.PixelateFilter:
+    6:6:public PixelateFilter()
+cn.Ragnarok.R
+cn.Ragnarok.R$string
+cn.Ragnarok.ReliefFilter:
+    11:11:public ReliefFilter()
+cn.Ragnarok.SharpenFilter:
+    8:8:public SharpenFilter()
+cn.Ragnarok.SketchFilter:
+    5:5:public SketchFilter()
+cn.Ragnarok.SoftGlowFilter:
+    5:5:public SoftGlowFilter()
+cn.Ragnarok.TvFilter:
+    5:5:public TvFilter()
 com.bumptech.glide.BitmapOptions
 com.bumptech.glide.BitmapRequestBuilder:
-    75:75:public com.bumptech.glide.BitmapRequestBuilder approximate()
-    86:86:public com.bumptech.glide.BitmapRequestBuilder asIs()
-    98:98:public com.bumptech.glide.BitmapRequestBuilder atMost()
-    113:116:private com.bumptech.glide.BitmapRequestBuilder downsample(com.bumptech.glide.load.resource.bitmap.Downsampler)
-    124:125:public com.bumptech.glide.BitmapRequestBuilder thumbnail(float)
-    153:154:public com.bumptech.glide.BitmapRequestBuilder thumbnail(com.bumptech.glide.BitmapRequestBuilder)
-    162:163:public com.bumptech.glide.BitmapRequestBuilder sizeMultiplier(float)
-    203:205:public com.bumptech.glide.BitmapRequestBuilder imageDecoder(com.bumptech.glide.load.ResourceDecoder)
-    217:219:public com.bumptech.glide.BitmapRequestBuilder videoDecoder(com.bumptech.glide.load.ResourceDecoder)
-    240:244:public com.bumptech.glide.BitmapRequestBuilder format(com.bumptech.glide.load.DecodeFormat)
+    73:73:public com.bumptech.glide.BitmapRequestBuilder approximate()
+    84:84:public com.bumptech.glide.BitmapRequestBuilder asIs()
+    96:96:public com.bumptech.glide.BitmapRequestBuilder atMost()
+    111:114:private com.bumptech.glide.BitmapRequestBuilder downsample(com.bumptech.glide.load.resource.bitmap.Downsampler)
+    122:123:public com.bumptech.glide.BitmapRequestBuilder thumbnail(float)
+    151:152:public com.bumptech.glide.BitmapRequestBuilder thumbnail(com.bumptech.glide.BitmapRequestBuilder)
+    160:161:public com.bumptech.glide.BitmapRequestBuilder sizeMultiplier(float)
+    178:179:public com.bumptech.glide.BitmapRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    187:188:public com.bumptech.glide.BitmapRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    201:203:public com.bumptech.glide.BitmapRequestBuilder imageDecoder(com.bumptech.glide.load.ResourceDecoder)
+    215:217:public com.bumptech.glide.BitmapRequestBuilder videoDecoder(com.bumptech.glide.load.ResourceDecoder)
+    239:244:public com.bumptech.glide.BitmapRequestBuilder format(com.bumptech.glide.load.DecodeFormat)
     249:250:public com.bumptech.glide.BitmapRequestBuilder priority(com.bumptech.glide.Priority)
     312:313:public com.bumptech.glide.BitmapRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
     321:322:public com.bumptech.glide.BitmapRequestBuilder dontAnimate()
     330:331:public com.bumptech.glide.BitmapRequestBuilder animate(int)
-    339:340:public com.bumptech.glide.BitmapRequestBuilder animate(android.view.animation.Animation)
-    348:349:public com.bumptech.glide.BitmapRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
-    357:358:public com.bumptech.glide.BitmapRequestBuilder placeholder(int)
-    366:367:public com.bumptech.glide.BitmapRequestBuilder placeholder(android.graphics.drawable.Drawable)
-    375:376:public com.bumptech.glide.BitmapRequestBuilder error(int)
-    384:385:public com.bumptech.glide.BitmapRequestBuilder error(android.graphics.drawable.Drawable)
-    431:432:public com.bumptech.glide.BitmapRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
-    449:450:public com.bumptech.glide.BitmapRequestBuilder dontTransform()
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(int)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(int)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(int)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontAnimate()
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontTransform()
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(float)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder centerCrop()
-    47:47:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fitCenter()
+    341:342:public com.bumptech.glide.BitmapRequestBuilder animate(android.view.animation.Animation)
+    350:351:public com.bumptech.glide.BitmapRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    368:369:public com.bumptech.glide.BitmapRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    377:378:public com.bumptech.glide.BitmapRequestBuilder error(int)
+    386:387:public com.bumptech.glide.BitmapRequestBuilder error(android.graphics.drawable.Drawable)
+    433:434:public com.bumptech.glide.BitmapRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    451:452:public com.bumptech.glide.BitmapRequestBuilder dontTransform()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(int)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(int)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontAnimate()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontTransform()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(float)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder centerCrop()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fitCenter()
 com.bumptech.glide.BitmapTypeRequest:
-    84:84:public com.bumptech.glide.BitmapRequestBuilder transcode(com.bumptech.glide.load.resource.transcode.ResourceTranscoder,java.lang.Class)
-    98:98:public com.bumptech.glide.BitmapRequestBuilder toBytes()
-    113:113:public com.bumptech.glide.BitmapRequestBuilder toBytes(android.graphics.Bitmap$CompressFormat,int)
+    70:70:public com.bumptech.glide.BitmapRequestBuilder transcode(com.bumptech.glide.load.resource.transcode.ResourceTranscoder,java.lang.Class)
+    84:84:public com.bumptech.glide.BitmapRequestBuilder toBytes()
+    99:99:public com.bumptech.glide.BitmapRequestBuilder toBytes(android.graphics.Bitmap$CompressFormat,int)
 com.bumptech.glide.DownloadOptions
 com.bumptech.glide.DrawableOptions
 com.bumptech.glide.DrawableRequestBuilder:
-    82:83:public com.bumptech.glide.DrawableRequestBuilder thumbnail(com.bumptech.glide.DrawableRequestBuilder)
-    92:93:public com.bumptech.glide.DrawableRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
-    101:102:public com.bumptech.glide.DrawableRequestBuilder thumbnail(float)
-    110:111:public com.bumptech.glide.DrawableRequestBuilder sizeMultiplier(float)
-    146:147:public com.bumptech.glide.DrawableRequestBuilder priority(com.bumptech.glide.Priority)
-    168:168:public varargs com.bumptech.glide.DrawableRequestBuilder transform(com.bumptech.glide.load.resource.bitmap.BitmapTransformation[])
-    213:218:public varargs com.bumptech.glide.DrawableRequestBuilder bitmapTransform(com.bumptech.glide.load.Transformation[])
-    240:241:public com.bumptech.glide.DrawableRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
-    256:257:public com.bumptech.glide.DrawableRequestBuilder crossFade(int)
-    264:265:public com.bumptech.glide.DrawableRequestBuilder crossFade(android.view.animation.Animation,int)
-    272:274:public com.bumptech.glide.DrawableRequestBuilder crossFade(int,int)
-    282:283:public com.bumptech.glide.DrawableRequestBuilder dontAnimate()
-    291:292:public com.bumptech.glide.DrawableRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
-    300:301:public com.bumptech.glide.DrawableRequestBuilder animate(int)
-    309:310:public com.bumptech.glide.DrawableRequestBuilder animate(android.view.animation.Animation)
-    318:319:public com.bumptech.glide.DrawableRequestBuilder placeholder(int)
-    327:328:public com.bumptech.glide.DrawableRequestBuilder placeholder(android.graphics.drawable.Drawable)
-    336:337:public com.bumptech.glide.DrawableRequestBuilder error(int)
-    345:346:public com.bumptech.glide.DrawableRequestBuilder error(android.graphics.drawable.Drawable)
-    399:400:public com.bumptech.glide.DrawableRequestBuilder dontTransform()
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(int)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(int)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(int)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontAnimate()
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontTransform()
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(float)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder centerCrop()
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fitCenter()
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(int,int)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(android.view.animation.Animation,int)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(int)
-    40:40:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade()
+    78:79:public com.bumptech.glide.DrawableRequestBuilder thumbnail(com.bumptech.glide.DrawableRequestBuilder)
+    88:89:public com.bumptech.glide.DrawableRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    97:98:public com.bumptech.glide.DrawableRequestBuilder thumbnail(float)
+    106:107:public com.bumptech.glide.DrawableRequestBuilder sizeMultiplier(float)
+    124:125:public com.bumptech.glide.DrawableRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    133:134:public com.bumptech.glide.DrawableRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    142:143:public com.bumptech.glide.DrawableRequestBuilder priority(com.bumptech.glide.Priority)
+    164:164:public varargs com.bumptech.glide.DrawableRequestBuilder transform(com.bumptech.glide.load.resource.bitmap.BitmapTransformation[])
+    209:214:public varargs com.bumptech.glide.DrawableRequestBuilder bitmapTransform(com.bumptech.glide.load.Transformation[])
+    238:239:public com.bumptech.glide.DrawableRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    254:255:public com.bumptech.glide.DrawableRequestBuilder crossFade(int)
+    263:264:public com.bumptech.glide.DrawableRequestBuilder crossFade(android.view.animation.Animation,int)
+    271:273:public com.bumptech.glide.DrawableRequestBuilder crossFade(int,int)
+    281:282:public com.bumptech.glide.DrawableRequestBuilder dontAnimate()
+    290:291:public com.bumptech.glide.DrawableRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    299:300:public com.bumptech.glide.DrawableRequestBuilder animate(int)
+    310:311:public com.bumptech.glide.DrawableRequestBuilder animate(android.view.animation.Animation)
+    328:329:public com.bumptech.glide.DrawableRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    337:338:public com.bumptech.glide.DrawableRequestBuilder error(int)
+    346:347:public com.bumptech.glide.DrawableRequestBuilder error(android.graphics.drawable.Drawable)
+    401:402:public com.bumptech.glide.DrawableRequestBuilder dontTransform()
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(int)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(int)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontAnimate()
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontTransform()
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(float)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder centerCrop()
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fitCenter()
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(int,int)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(android.view.animation.Animation,int)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(int)
+    41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade()
 com.bumptech.glide.DrawableTypeRequest:
-    99:99:public com.bumptech.glide.GifTypeRequest asGif()
-    107:107:public com.bumptech.glide.request.target.Target downloadOnly(com.bumptech.glide.request.target.Target)
-    114:114:public com.bumptech.glide.request.FutureTarget downloadOnly(int,int)
-    118:118:private com.bumptech.glide.GenericTranscodeRequest getDownloadOnlyRequest()
+    89:89:public com.bumptech.glide.GifTypeRequest asGif()
+    96:96:public com.bumptech.glide.request.target.Target downloadOnly(com.bumptech.glide.request.target.Target)
+    103:103:public com.bumptech.glide.request.FutureTarget downloadOnly(int,int)
+    107:107:private com.bumptech.glide.GenericTranscodeRequest getDownloadOnlyRequest()
 com.bumptech.glide.GenericRequestBuilder:
-    120:122:public com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
-    152:157:public com.bumptech.glide.GenericRequestBuilder thumbnail(float)
-    170:175:public com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
-    293:295:public com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
-    324:325:public com.bumptech.glide.GenericRequestBuilder dontTransform()
-    340:344:public com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
-    352:353:public com.bumptech.glide.GenericRequestBuilder dontAnimate()
-    366:366:public com.bumptech.glide.GenericRequestBuilder animate(int)
-    379:379:public com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
-    393:393:public com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
-    415:417:public com.bumptech.glide.GenericRequestBuilder placeholder(int)
-    428:430:public com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
-    441:443:public com.bumptech.glide.GenericRequestBuilder error(int)
-    454:456:public com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
-    592:605:public com.bumptech.glide.request.FutureTarget into(int,int)
+    128:130:public com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    160:165:public com.bumptech.glide.GenericRequestBuilder thumbnail(float)
+    178:183:public com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
+    221:225:public com.bumptech.glide.GenericRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    286:290:public com.bumptech.glide.GenericRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    301:303:public com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
+    332:333:public com.bumptech.glide.GenericRequestBuilder dontTransform()
+    348:352:public com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    360:361:public com.bumptech.glide.GenericRequestBuilder dontAnimate()
+    372:372:public com.bumptech.glide.GenericRequestBuilder animate(int)
+    392:392:public com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
+    405:405:public com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    440:442:public com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    453:455:public com.bumptech.glide.GenericRequestBuilder error(int)
+    466:468:public com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
+    664:677:public com.bumptech.glide.request.FutureTarget into(int,int)
+    699:700:public com.bumptech.glide.request.target.Target preload(int,int)
+    713:713:public com.bumptech.glide.request.target.Target preload()
 com.bumptech.glide.GenericRequestBuilder$1
 com.bumptech.glide.GenericTranscodeRequest:
-    77:80:public com.bumptech.glide.GenericRequestBuilder transcode(com.bumptech.glide.load.resource.transcode.ResourceTranscoder,java.lang.Class)
+    49:55:GenericTranscodeRequest(java.lang.Class,com.bumptech.glide.GenericRequestBuilder,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,java.lang.Class,com.bumptech.glide.RequestManager$OptionsApplier)
+    78:81:public com.bumptech.glide.GenericRequestBuilder transcode(com.bumptech.glide.load.resource.transcode.ResourceTranscoder,java.lang.Class)
     89:89:public com.bumptech.glide.request.target.Target downloadOnly(com.bumptech.glide.request.target.Target)
     96:96:public com.bumptech.glide.request.FutureTarget downloadOnly(int,int)
     100:104:private com.bumptech.glide.GenericRequestBuilder getDownloadOnlyRequest()
@@ -3619,46 +3602,65 @@ com.bumptech.glide.Glide:
     static final int DEFAULT_DISK_CACHE_SIZE
     private static final java.lang.String DEFAULT_DISK_CACHE_DIR
     private static final java.lang.String TAG
-    156:156:public static boolean isSetup()
-    169:174:public static void setup(com.bumptech.glide.GlideBuilder)
-    178:179:static void tearDown()
-    290:290:android.os.Handler getMainHandler()
-    303:305:public void clearMemory()
-    313:315:public void trimMemory(int)
-    329:331:public void setMemoryCategory(com.bumptech.glide.MemoryCategory)
-    354:355:public static void clear(com.bumptech.glide.request.FutureTarget)
-    371:373:public static void clear(android.view.View)
-    420:424:public void unregister(java.lang.Class,java.lang.Class)
-    476:476:public static com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)
-    497:497:public static com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)
-    574:575:public static com.bumptech.glide.RequestManager with(android.app.Fragment)
+    178:178:public static boolean isSetup()
+    193:198:public static void setup(com.bumptech.glide.GlideBuilder)
+    202:203:static void tearDown()
+    323:323:android.os.Handler getMainHandler()
+    361:362:public varargs void preFillBitmapPool(com.bumptech.glide.load.engine.prefill.PreFillType$Builder[])
+    397:399:public void setMemoryCategory(com.bumptech.glide.MemoryCategory)
+    422:423:public static void clear(com.bumptech.glide.request.FutureTarget)
+    439:441:public static void clear(android.view.View)
+    491:495:public void unregister(java.lang.Class,java.lang.Class)
+    537:537:public static com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Object,java.lang.Class,android.content.Context)
+    557:557:public static com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Object,android.content.Context)
+    578:578:public static com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Object,android.content.Context)
+    645:646:public static com.bumptech.glide.RequestManager with(android.app.Fragment)
 com.bumptech.glide.Glide$ClearTarget
 com.bumptech.glide.GlideBuilder:
-    44:45:public com.bumptech.glide.GlideBuilder setBitmapPool(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool)
-    56:57:public com.bumptech.glide.GlideBuilder setMemoryCache(com.bumptech.glide.load.engine.cache.MemoryCache)
-    68:69:public com.bumptech.glide.GlideBuilder setDiskCache(com.bumptech.glide.load.engine.cache.DiskCache)
-    88:89:public com.bumptech.glide.GlideBuilder setResizeService(java.util.concurrent.ExecutorService)
-    108:109:public com.bumptech.glide.GlideBuilder setDiskCacheService(java.util.concurrent.ExecutorService)
-    114:115:com.bumptech.glide.GlideBuilder setEngine(com.bumptech.glide.load.engine.Engine)
+    private static final java.lang.String TAG
+    50:51:public com.bumptech.glide.GlideBuilder setBitmapPool(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool)
+    62:63:public com.bumptech.glide.GlideBuilder setMemoryCache(com.bumptech.glide.load.engine.cache.MemoryCache)
+    78:78:public com.bumptech.glide.GlideBuilder setDiskCache(com.bumptech.glide.load.engine.cache.DiskCache)
+    95:96:public com.bumptech.glide.GlideBuilder setDiskCache(com.bumptech.glide.load.engine.cache.DiskCache$Factory)
+    115:116:public com.bumptech.glide.GlideBuilder setResizeService(java.util.concurrent.ExecutorService)
+    135:136:public com.bumptech.glide.GlideBuilder setDiskCacheService(java.util.concurrent.ExecutorService)
+    162:170:public com.bumptech.glide.GlideBuilder setDecodeFormat(com.bumptech.glide.load.DecodeFormat)
+    175:176:com.bumptech.glide.GlideBuilder setEngine(com.bumptech.glide.load.engine.Engine)
+com.bumptech.glide.GlideBuilder$1
 com.bumptech.glide.ListPreloader
 com.bumptech.glide.ListPreloader$1
+com.bumptech.glide.ListPreloader$2
+com.bumptech.glide.ListPreloader$PreloadModelProvider
+com.bumptech.glide.ListPreloader$PreloadSizeProvider
 com.bumptech.glide.ListPreloader$PreloadTarget
 com.bumptech.glide.ListPreloader$PreloadTargetQueue
 com.bumptech.glide.MemoryCategory
 com.bumptech.glide.RequestManager:
-    105:106:public void setDefaultOptions(com.bumptech.glide.RequestManager$DefaultOptions)
-    115:116:public boolean isPaused()
-    194:194:public com.bumptech.glide.RequestManager$ImageModelRequest using(com.bumptech.glide.load.model.stream.StreamModelLoader)
-    204:204:public com.bumptech.glide.RequestManager$ImageModelRequest using(com.bumptech.glide.load.model.stream.StreamByteArrayLoader)
-    216:216:public com.bumptech.glide.RequestManager$VideoModelRequest using(com.bumptech.glide.load.model.file_descriptor.FileDescriptorModelLoader)
-    249:249:public com.bumptech.glide.DrawableTypeRequest load(android.net.Uri)
-    276:281:public com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri,java.lang.String,long,int)
-    298:298:public com.bumptech.glide.DrawableTypeRequest load(java.io.File)
-    314:314:public com.bumptech.glide.DrawableTypeRequest load(java.lang.Integer)
-    330:330:public com.bumptech.glide.DrawableTypeRequest load(java.net.URL)
-    345:346:public com.bumptech.glide.DrawableTypeRequest load(byte[],java.lang.String)
-    360:360:public com.bumptech.glide.DrawableTypeRequest load(byte[])
-    374:374:public com.bumptech.glide.DrawableTypeRequest load(java.lang.Object)
+    123:124:public void setDefaultOptions(com.bumptech.glide.RequestManager$DefaultOptions)
+    133:134:public boolean isPaused()
+    212:212:public com.bumptech.glide.RequestManager$ImageModelRequest using(com.bumptech.glide.load.model.stream.StreamModelLoader)
+    223:223:public com.bumptech.glide.RequestManager$ImageModelRequest using(com.bumptech.glide.load.model.stream.StreamByteArrayLoader)
+    234:234:public com.bumptech.glide.RequestManager$VideoModelRequest using(com.bumptech.glide.load.model.file_descriptor.FileDescriptorModelLoader)
+    280:280:public com.bumptech.glide.DrawableTypeRequest load(android.net.Uri)
+    302:302:public com.bumptech.glide.DrawableTypeRequest fromUri()
+    331:332:public com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri,java.lang.String,long,int)
+    344:344:public com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri)
+    376:381:public com.bumptech.glide.DrawableTypeRequest fromMediaStore()
+    394:394:public com.bumptech.glide.DrawableTypeRequest load(java.io.File)
+    417:417:public com.bumptech.glide.DrawableTypeRequest fromFile()
+    429:429:public com.bumptech.glide.DrawableTypeRequest load(java.lang.Integer)
+    455:455:public com.bumptech.glide.DrawableTypeRequest fromResource()
+    472:472:public com.bumptech.glide.DrawableTypeRequest load(java.net.URL)
+    490:490:public com.bumptech.glide.DrawableTypeRequest fromUrl()
+    512:512:public com.bumptech.glide.DrawableTypeRequest load(byte[],java.lang.String)
+    524:524:public com.bumptech.glide.DrawableTypeRequest load(byte[])
+    539:539:public com.bumptech.glide.DrawableTypeRequest fromBytes()
+    561:561:public com.bumptech.glide.DrawableTypeRequest load(java.lang.Object)
+    584:584:public com.bumptech.glide.DrawableTypeRequest from(java.lang.Class)
+com.bumptech.glide.RequestManager$GenericModelRequest:
+    688:688:public com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest from(java.lang.Class)
+com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest:
+    717:721:RequestManager$GenericModelRequest$GenericTypeRequest(com.bumptech.glide.RequestManager$GenericModelRequest,java.lang.Class)
 com.bumptech.glide.RequestManager$ImageModelRequest
 com.bumptech.glide.RequestManager$VideoModelRequest
 com.bumptech.glide.disklrucache.DiskLruCache:
@@ -3672,23 +3674,23 @@ com.bumptech.glide.disklrucache.DiskLruCache:
     private static final java.lang.String DIRTY
     private static final java.lang.String REMOVE
     private static final java.lang.String READ
-    466:466:public java.io.File getDirectory()
-    474:474:public synchronized long getMaxSize()
-    482:484:public synchronized void setMaxSize(long)
-    492:492:public synchronized long size()
-    607:607:public synchronized boolean isClosed()
-    618:621:public synchronized void flush()
-    656:656:private static java.lang.String inputStreamToString(java.io.InputStream)
+    472:472:public java.io.File getDirectory()
+    480:480:public synchronized long getMaxSize()
+    488:490:public synchronized void setMaxSize(long)
+    498:498:public synchronized long size()
+    613:613:public synchronized boolean isClosed()
+    624:627:public synchronized void flush()
+    662:662:private static java.lang.String inputStreamToString(java.io.InputStream)
     85:85:static synthetic com.bumptech.glide.disklrucache.DiskLruCache$Editor access$1600(com.bumptech.glide.disklrucache.DiskLruCache,java.lang.String,long)
     85:85:static synthetic java.lang.String access$1700(java.io.InputStream)
 com.bumptech.glide.disklrucache.DiskLruCache$Editor:
-    714:726:private java.io.InputStream newInputStream(int)
-    734:735:public java.lang.String getString(int)
-    756:764:public void set(int,java.lang.String)
+    720:732:private java.io.InputStream newInputStream(int)
+    740:741:public java.lang.String getString(int)
+    762:770:public void set(int,java.lang.String)
 com.bumptech.glide.disklrucache.DiskLruCache$Value:
-    679:679:public com.bumptech.glide.disklrucache.DiskLruCache$Editor edit()
-    688:689:public java.lang.String getString(int)
-    694:694:public long getLength(int)
+    685:685:public com.bumptech.glide.disklrucache.DiskLruCache$Editor edit()
+    694:695:public java.lang.String getString(int)
+    700:700:public long getLength(int)
 com.bumptech.glide.disklrucache.StrictLineReader:
     private static final byte CR
     private static final byte LF
@@ -3699,25 +3701,80 @@ com.bumptech.glide.gifdecoder.GifDecoder:
     public static final int STATUS_OK
     public static final int STATUS_FORMAT_ERROR
     public static final int STATUS_OPEN_ERROR
+    public static final int STATUS_PARTIAL_DECODE
     private static final int MAX_STACK_SIZE
     private static final int DISPOSAL_UNSPECIFIED
     private static final int DISPOSAL_NONE
     private static final int DISPOSAL_BACKGROUND
     private static final int DISPOSAL_PREVIOUS
-    139:139:public int getWidth()
-    143:143:public int getHeight()
-    151:151:public byte[] getData()
-    270:297:public int read(java.io.InputStream,int)
-    330:352:public int read(byte[])
+    private static final int NULL_CODE
+    private static final int INITIAL_FRAME_POINTER
+    private com.bumptech.glide.gifdecoder.GifHeaderParser parser
+    160:160:public int getWidth()
+    164:164:public int getHeight()
+    168:168:public byte[] getData()
+    180:180:public int getStatus()
+    234:235:public void resetFrameIndex()
+    316:343:public int read(java.io.InputStream,int)
+    383:386:private com.bumptech.glide.gifdecoder.GifHeaderParser getHeaderParser()
+    396:418:public int read(byte[])
+com.bumptech.glide.gifdecoder.GifHeader:
+    40:40:public int getHeight()
+    44:44:public int getWidth()
 com.bumptech.glide.gifdecoder.GifHeaderParser:
     public static final java.lang.String TAG
-    private static final int MAX_STACK_SIZE
+    static final int MIN_FRAME_DELAY
+    static final int DEFAULT_FRAME_DELAY
+    private static final int MAX_BLOCK_SIZE
+com.bumptech.glide.gifencoder.AnimatedGifEncoder:
+    private static final java.lang.String TAG
+    private static final double MIN_TRANSPARENT_PERCENTAGE
+    106:109:public void setDispose(int)
+    120:123:public void setRepeat(int)
+    136:137:public void setTransparent(int)
+    225:228:public void setFrameRate(float)
+    240:243:public void setQuality(int)
+    296:304:public boolean start(java.lang.String)
+com.bumptech.glide.gifencoder.LZWEncoder:
+    private static final int EOF
+    static final int BITS
+    static final int HSIZE
+com.bumptech.glide.gifencoder.NeuQuant:
+    protected static final int netsize
+    protected static final int prime1
+    protected static final int prime2
+    protected static final int prime3
+    protected static final int prime4
+    protected static final int minpicturebytes
+    protected static final int maxnetpos
+    protected static final int netbiasshift
+    protected static final int ncycles
+    protected static final int intbiasshift
+    protected static final int intbias
+    protected static final int gammashift
+    protected static final int gamma
+    protected static final int betashift
+    protected static final int beta
+    protected static final int betagamma
+    protected static final int initrad
+    protected static final int radiusbiasshift
+    protected static final int radiusbias
+    protected static final int initradius
+    protected static final int radiusdec
+    protected static final int alphabiasshift
+    protected static final int initalpha
+    protected static final int radbiasshift
+    protected static final int radbias
+    protected static final int alpharadbshift
+    protected static final int alpharadbias
 com.bumptech.glide.load.Key:
+    public static final java.lang.String STRING_CHARSET_NAME
     public abstract boolean equals(java.lang.Object)
     public abstract int hashCode()
 com.bumptech.glide.load.MultiTransformation:
     25:30:public MultiTransformation(java.util.Collection)
-com.bumptech.glide.load.data.ByteArrayFetcher
+com.bumptech.glide.load.data.AssetPathFetcher:
+    private static final java.lang.String TAG
 com.bumptech.glide.load.data.HttpUrlFetcher:
     private static final int MAXIMUM_REDIRECTS
 com.bumptech.glide.load.data.LocalUriFetcher:
@@ -3729,36 +3786,31 @@ com.bumptech.glide.load.data.MediaStoreThumbFetcher$ThumbnailQuery
 com.bumptech.glide.load.data.MediaStoreThumbFetcher$ThumbnailStreamOpener
 com.bumptech.glide.load.data.MediaStoreThumbFetcher$ThumbnailStreamOpenerFactory
 com.bumptech.glide.load.data.MediaStoreThumbFetcher$VideoThumbnailQuery
-com.bumptech.glide.load.engine.CacheLoader:
+com.bumptech.glide.load.engine.CacheLoader
+com.bumptech.glide.load.engine.DecodeJob:
     private static final java.lang.String TAG
 com.bumptech.glide.load.engine.Engine:
     private static final java.lang.String TAG
-com.bumptech.glide.load.engine.Engine$ResourceRecyclerCallback:
-    public static final int RECYCLE_RESOURCE
 com.bumptech.glide.load.engine.EngineJob:
+    private static final int MSG_COMPLETE
+    private static final int MSG_EXCEPTION
+    131:131:boolean isCancelled()
+com.bumptech.glide.load.engine.EngineRunnable:
     private static final java.lang.String TAG
-    68:68:boolean isCancelled()
-com.bumptech.glide.load.engine.EngineKey:
-    private static final java.lang.String FORMAT
-com.bumptech.glide.load.engine.ResourceRunner:
-    private static final java.lang.String TAG
-com.bumptech.glide.load.engine.SourceResourceRunner:
-    private static final java.lang.String TAG
+com.bumptech.glide.load.engine.ResourceRecycler$ResourceRecyclerCallback:
+    public static final int RECYCLE_RESOURCE
 com.bumptech.glide.load.engine.bitmap_recycle.BaseKeyPool:
     private static final int MAX_SIZE
 com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool:
+    public abstract int getMaxSize()
     public abstract void setSizeMultiplier(float)
-    public abstract void clearMemory()
-    public abstract void trimMemory(int)
 com.bumptech.glide.load.engine.bitmap_recycle.BitmapPoolAdapter:
-    13:13:public void setSizeMultiplier(float)
-    33:33:public void clearMemory()
-    38:38:public void trimMemory(int)
+    12:12:public int getMaxSize()
+    18:18:public void setSizeMultiplier(float)
 com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool:
     private static final java.lang.String TAG
-    53:55:public void setSizeMultiplier(float)
-    123:124:public void clearMemory()
-    129:134:public void trimMemory(int)
+    68:68:public int getMaxSize()
+    73:75:public synchronized void setSizeMultiplier(float)
 com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool$ThrowingBitmapTracker
 com.bumptech.glide.load.engine.bitmap_recycle.SizeStrategy:
     private static final int MAX_SIZE_MULTIPLE
@@ -3766,12 +3818,10 @@ com.bumptech.glide.load.engine.cache.DiskLruCacheWrapper:
     private static final java.lang.String TAG
     private static final int APP_VERSION
     private static final int VALUE_COUNT
-com.bumptech.glide.load.engine.cache.LruResourceCache:
-    44:54:public void trimMemory(int)
 com.bumptech.glide.load.engine.cache.MemoryCache:
+    public abstract int getCurrentSize()
+    public abstract int getMaxSize()
     public abstract void setSizeMultiplier(float)
-    public abstract void clearMemory()
-    public abstract void trimMemory(int)
 com.bumptech.glide.load.engine.cache.MemoryCacheAdapter
 com.bumptech.glide.load.engine.cache.MemorySizeCalculator:
     private static final java.lang.String TAG
@@ -3780,9 +3830,25 @@ com.bumptech.glide.load.engine.cache.MemorySizeCalculator:
     static final int BITMAP_POOL_TARGET_SCREENS
     static final float MAX_SIZE_MULTIPLIER
     static final float LOW_MEMORY_MAX_SIZE_MULTIPLIER
-com.bumptech.glide.load.engine.cache.StringKey
+com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner
+com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner$1
+com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner$Clock
+com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner$UniqueKey
+com.bumptech.glide.load.engine.prefill.BitmapPreFiller:
+    private com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner current
+    35:52:public varargs void preFill(com.bumptech.glide.load.engine.prefill.PreFillType$Builder[])
+    56:73:com.bumptech.glide.load.engine.prefill.PreFillQueue generateAllocationOrder(com.bumptech.glide.load.engine.prefill.PreFillType[])
+    77:77:private static int getSizeInBytes(com.bumptech.glide.load.engine.prefill.PreFillType)
+com.bumptech.glide.load.engine.prefill.PreFillQueue
+com.bumptech.glide.load.engine.prefill.PreFillType
+com.bumptech.glide.load.engine.prefill.PreFillType$Builder
+com.bumptech.glide.load.model.AssetUriParser:
+    private static final java.lang.String ASSET_PATH_SEGMENT
+    private static final java.lang.String ASSET_PREFIX
+    14:16:private AssetUriParser()
 com.bumptech.glide.load.model.GenericLoaderFactory:
-    43:50:public synchronized com.bumptech.glide.load.model.ModelLoaderFactory unregister(java.lang.Class,java.lang.Class)
+    50:57:public synchronized com.bumptech.glide.load.model.ModelLoaderFactory unregister(java.lang.Class,java.lang.Class)
+    112:112:public synchronized com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)
 com.bumptech.glide.load.model.GlideUrl:
     private static final java.lang.String ALLOWED_URI_CHARS
 com.bumptech.glide.load.model.ImageVideoModelLoader:
@@ -3794,41 +3860,45 @@ com.bumptech.glide.load.model.StreamEncoder:
 com.bumptech.glide.load.model.file_descriptor.FileDescriptorFileLoader:
     38:39:public FileDescriptorFileLoader(android.content.Context)
 com.bumptech.glide.load.model.file_descriptor.FileDescriptorResourceLoader:
-    36:37:public FileDescriptorResourceLoader(android.content.Context)
+    37:38:public FileDescriptorResourceLoader(android.content.Context)
 com.bumptech.glide.load.model.file_descriptor.FileDescriptorStringLoader:
     36:37:public FileDescriptorStringLoader(android.content.Context)
 com.bumptech.glide.load.model.file_descriptor.FileDescriptorUriLoader:
-    37:38:public FileDescriptorUriLoader(android.content.Context)
+    39:40:public FileDescriptorUriLoader(android.content.Context)
 com.bumptech.glide.load.model.stream.BaseGlideUrlLoader
 com.bumptech.glide.load.model.stream.MediaStoreStreamLoader
-com.bumptech.glide.load.model.stream.StreamByteArrayLoader
 com.bumptech.glide.load.model.stream.StreamFileLoader:
-    35:36:public StreamFileLoader(android.content.Context)
+    36:37:public StreamFileLoader(android.content.Context)
 com.bumptech.glide.load.model.stream.StreamResourceLoader:
-    35:36:public StreamResourceLoader(android.content.Context)
+    36:37:public StreamResourceLoader(android.content.Context)
 com.bumptech.glide.load.model.stream.StreamStringLoader:
-    35:36:public StreamStringLoader(android.content.Context)
+    36:37:public StreamStringLoader(android.content.Context)
 com.bumptech.glide.load.model.stream.StreamUriLoader:
-    40:41:public StreamUriLoader(android.content.Context)
+    42:43:public StreamUriLoader(android.content.Context)
+com.bumptech.glide.load.resource.NullDecoder
 com.bumptech.glide.load.resource.bitmap.BitmapDecoder:
     public abstract android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bitmap.BitmapDrawableResource
 com.bumptech.glide.load.resource.bitmap.BitmapEncoder:
+    private static final java.lang.String TAG
     private static final int DEFAULT_COMPRESSION_QUALITY
 com.bumptech.glide.load.resource.bitmap.BitmapTransformation:
-    35:36:public BitmapTransformation(android.content.Context)
+    38:39:public BitmapTransformation(android.content.Context)
 com.bumptech.glide.load.resource.bitmap.CenterCrop:
     17:18:public CenterCrop(android.content.Context)
 com.bumptech.glide.load.resource.bitmap.Downsampler:
     private static final java.lang.String TAG
     private static final int MARK_POSITION
-    24:24:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
+    26:26:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bitmap.Downsampler$1:
-    72:72:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
+    38:38:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bitmap.Downsampler$2:
-    89:89:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
+    55:55:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bitmap.Downsampler$3:
-    104:104:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
+    70:70:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
+com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder:
+    25:26:public FileDescriptorBitmapDecoder(android.content.Context)
+    29:30:public FileDescriptorBitmapDecoder(android.content.Context,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bitmap.FitCenter:
     15:16:public FitCenter(android.content.Context)
 com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable$BitmapState:
@@ -3849,80 +3919,108 @@ com.bumptech.glide.load.resource.bitmap.ImageHeaderParser:
     private static final int ORIENTATION_TAG_TYPE
 com.bumptech.glide.load.resource.bitmap.ImageVideoBitmapDecoder:
     private static final java.lang.String TAG
+com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream:
+    private static final java.lang.String TAG
 com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream$InvalidMarkException:
     private static final long serialVersionUID
 com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder:
     private static final java.lang.String ID
+    27:28:public StreamBitmapDecoder(android.content.Context)
+    31:32:public StreamBitmapDecoder(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool)
+    35:36:public StreamBitmapDecoder(android.content.Context,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bitmap.TransformationUtils:
     private static final java.lang.String TAG
     public static final int PAINT_FLAGS
-    17:17:public TransformationUtils()
-    111:127:public static int getOrientation(java.lang.String)
-    139:140:public static android.graphics.Bitmap orientImage(java.lang.String,android.graphics.Bitmap)
-    153:172:public static android.graphics.Bitmap rotateImage(android.graphics.Bitmap,int)
+    22:24:private TransformationUtils()
+    159:169:public static int getOrientation(java.lang.String)
+    183:184:public static android.graphics.Bitmap orientImage(java.lang.String,android.graphics.Bitmap)
+    197:216:public static android.graphics.Bitmap rotateImage(android.graphics.Bitmap,int)
 com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder:
-    17:17:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
+    private static final int NO_FRAME
+    29:30:public VideoBitmapDecoder(int)
+    33:34:VideoBitmapDecoder(com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder$MediaMetadataRetrieverFactory)
+    71:74:private static int checkValidFrame(int)
+    18:18:public bridge synthetic android.graphics.Bitmap decode(java.lang.Object,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat)
 com.bumptech.glide.load.resource.bytes.BytesResource
 com.bumptech.glide.load.resource.drawable.GlideDrawable:
     public static final int LOOP_FOREVER
     public static final int LOOP_INTRINSIC
 com.bumptech.glide.load.resource.gif.GifDrawable:
-    79:85:GifDrawable(com.bumptech.glide.gifdecoder.GifDecoder,com.bumptech.glide.load.resource.gif.GifFrameManager,int,int)
-    161:162:void setIsRunning(boolean)
-    228:228:boolean isRecycled()
+    90:97:GifDrawable(com.bumptech.glide.gifdecoder.GifDecoder,com.bumptech.glide.load.resource.gif.GifFrameLoader,android.graphics.Bitmap,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Paint)
+    116:116:public com.bumptech.glide.gifdecoder.GifDecoder getDecoder()
+    210:211:void setIsRunning(boolean)
+    288:288:boolean isRecycled()
 com.bumptech.glide.load.resource.gif.GifDrawable$GifState:
-    277:290:public GifDrawable$GifState(com.bumptech.glide.load.resource.gif.GifDrawable$GifState)
-com.bumptech.glide.load.resource.gif.GifFrameManager:
-    private static final long MIN_FRAME_DELAY
-    92:92:com.bumptech.glide.load.Transformation getTransformation()
+    private static final int GRAVITY
+    339:351:public GifDrawable$GifState(com.bumptech.glide.load.resource.gif.GifDrawable$GifState)
+com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameLoaderCallback:
+    public static final int MSG_DELAY
+    public static final int MSG_CLEAR
 com.bumptech.glide.load.resource.gif.GifResourceDecoder:
     private static final java.lang.String TAG
-    37:38:public GifResourceDecoder(android.content.Context)
+    38:39:public GifResourceDecoder(android.content.Context)
 com.bumptech.glide.load.resource.gif.GifResourceEncoder:
     private static final java.lang.String TAG
 com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder:
     static final int MARK_LIMIT_BYTES
 com.bumptech.glide.load.resource.transcode.BitmapBytesTranscoder
+com.bumptech.glide.load.resource.transcode.BitmapToGlideDrawableTranscoder
 com.bumptech.glide.load.resource.transcode.GifDrawableBytesTranscoder
+com.bumptech.glide.load.resource.transcode.GlideBitmapDrawableTranscoder:
+    22:23:public GlideBitmapDrawableTranscoder(android.content.Context)
 com.bumptech.glide.manager.RequestManagerRetriever:
     static final java.lang.String TAG
     private static final int ID_REMOVE_FRAGMENT_MANAGER
     private static final int ID_REMOVE_SUPPORT_FRAGMENT_MANAGER
-    139:152:public com.bumptech.glide.RequestManager get(android.app.Fragment)
+    139:146:public com.bumptech.glide.RequestManager get(android.app.Fragment)
 com.bumptech.glide.manager.RequestTracker:
-    34:35:void addRequest(com.bumptech.glide.request.Request)
-    48:48:public boolean isPaused()
+    36:37:void addRequest(com.bumptech.glide.request.Request)
+    50:50:public boolean isPaused()
+com.bumptech.glide.module.ManifestParser:
+    private static final java.lang.String GLIDE_MODULE_VALUE
 com.bumptech.glide.provider.ChildLoadProvider:
-    72:73:public void setTranscoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    44:45:public void setCacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    63:64:public void setEncoder(com.bumptech.glide.load.ResourceEncoder)
+    73:74:public void setTranscoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
 com.bumptech.glide.request.FutureTarget
 com.bumptech.glide.request.GenericRequest:
     private static final java.lang.String TAG
     private static final double TO_MEGABYTE
-    311:311:public boolean isPaused()
+    320:320:public boolean isPaused()
 com.bumptech.glide.request.Request:
     public abstract boolean isPaused()
     public abstract boolean isFailed()
 com.bumptech.glide.request.RequestFutureTarget
-com.bumptech.glide.request.RequestFutureTarget$1
-com.bumptech.glide.request.RequestFutureTarget$DefaultWaiter
 com.bumptech.glide.request.RequestFutureTarget$Waiter
 com.bumptech.glide.request.ThumbnailRequestCoordinator:
-    77:77:public boolean isPaused()
-    106:106:public boolean isFailed()
-com.bumptech.glide.request.animation.DrawableCrossFadeViewAnimation:
-    public static final int DEFAULT_DURATION
-com.bumptech.glide.request.animation.DrawableCrossFadeViewAnimation$DrawableCrossFadeFactory:
-    55:56:public DrawableCrossFadeViewAnimation$DrawableCrossFadeFactory(int)
-    58:62:public DrawableCrossFadeViewAnimation$DrawableCrossFadeFactory(android.content.Context,int,int)
-com.bumptech.glide.request.animation.ViewAnimation
-com.bumptech.glide.request.animation.ViewAnimation$ViewAnimationFactory
+    106:106:public boolean isPaused()
+    140:140:public boolean isFailed()
+com.bumptech.glide.request.animation.DrawableCrossFadeFactory:
+    private static final int DEFAULT_DURATION_MS
+    37:38:public DrawableCrossFadeFactory(android.content.Context,int,int)
+    41:42:public DrawableCrossFadeFactory(android.view.animation.Animation,int)
+com.bumptech.glide.request.animation.ViewAnimationFactory:
+    18:19:public ViewAnimationFactory(android.view.animation.Animation)
+    22:23:public ViewAnimationFactory(android.content.Context,int)
+com.bumptech.glide.request.animation.ViewAnimationFactory$ConcreteAnimationFactory
+com.bumptech.glide.request.animation.ViewAnimationFactory$ResourceAnimationFactory
 com.bumptech.glide.request.animation.ViewPropertyAnimation
 com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator
-com.bumptech.glide.request.animation.ViewPropertyAnimation$ViewPropertyAnimationFactory
+com.bumptech.glide.request.animation.ViewPropertyAnimationFactory
+com.bumptech.glide.request.target.AppWidgetTarget
 com.bumptech.glide.request.target.GlideDrawableImageViewTarget:
     private static final float SQUARE_RATIO_MARGIN
+com.bumptech.glide.request.target.NotificationTarget
+com.bumptech.glide.request.target.PreloadTarget
+com.bumptech.glide.request.target.Target:
+    public static final int SIZE_ORIGINAL
 com.bumptech.glide.request.target.ViewTarget:
     private static final java.lang.String TAG
+com.bumptech.glide.request.target.ViewTarget$SizeDeterminer:
+    private static final int PENDING_SIZE
+com.bumptech.glide.signature.ApplicationVersionSignature
+com.bumptech.glide.signature.MediaStoreSignature
+com.bumptech.glide.signature.StringSignature
 com.bumptech.glide.util.ByteArrayPool:
     private static final java.lang.String TAG
     private static final int TEMP_BYTES_SIZE
@@ -3930,17 +4028,24 @@ com.bumptech.glide.util.ByteArrayPool:
     private static final int MAX_BYTE_ARRAY_COUNT
     34:37:public void clear()
 com.bumptech.glide.util.ExceptionCatchingInputStream:
-    33:33:static void clearQueue()
+    35:38:static void clearQueue()
+com.bumptech.glide.util.FixedPreloadSizeProvider
 com.bumptech.glide.util.LogTime:
-    10:10:public LogTime()
+    14:16:private LogTime()
 com.bumptech.glide.util.LruCache:
     37:42:public void setSizeMultiplier(float)
-    68:68:public int getCurrentSize()
-    78:78:public boolean contains(java.lang.Object)
-    134:135:public void clearMemory()
+    68:68:public int getMaxSize()
+    85:85:public boolean contains(java.lang.Object)
+com.bumptech.glide.util.MarkEnforcingInputStream:
+    private static final int UNSET
+    private static final int END_OF_STREAM
 com.bumptech.glide.util.Util:
-    15:15:public Util()
-    61:64:public static void assertBackgroundThread()
+    23:25:private Util()
+    38:38:public static java.lang.String sha1BytesToHex(byte[])
+    63:63:public static int getSize(android.graphics.Bitmap)
+    136:139:public static void assertBackgroundThread()
+com.bumptech.glide.util.ViewPreloadSizeProvider
+com.bumptech.glide.util.ViewPreloadSizeProvider$SizeViewTarget
 com.google.ads.AdRequest
 com.google.ads.AdRequest$ErrorCode
 com.google.ads.AdRequest$Gender
@@ -8807,16 +8912,109 @@ com.raaf.R:
     9:9:public R()
 com.raaf.R$attr
 com.raaf.R$color
+com.raaf.R$dimen
 com.raaf.R$drawable
+com.raaf.R$id:
+    77:77:public R$id()
+com.raaf.R$layout:
+    80:80:public R$layout()
 com.raaf.R$string
 com.raaf.R$style
-com.raaf.R$styleable:
-    62:62:public R$styleable()
-com.raaf.custom.CircleImageView:
-    private static final int COLORDRAWABLE_DIMENSION
-    private static final int DEFAULT_BORDER_WIDTH
-    private static final int DEFAULT_BORDER_COLOR
+com.raaf.R$styleable
+com.raaf.Rupiah
+com.raaf.colorpicker.ColorPicker
+com.raaf.colorpicker.ColorPicker$OnColorChangedListener
+com.raaf.colorpicker.ColorPicker$OnColorSelectedListener
+com.raaf.colorpicker.OpacityBar
+com.raaf.colorpicker.OpacityBar$OnOpacityChangedListener
+com.raaf.colorpicker.SVBar
+com.raaf.colorpicker.SaturationBar
+com.raaf.colorpicker.SaturationBar$OnSaturationChangedListener
+com.raaf.colorpicker.ValueBar
+com.raaf.colorpicker.ValueBar$OnValueChangedListener
+com.raaf.db.DbAssistant
+com.raaf.db.DbAssistant$Exporter
+com.raaf.db.DbAssistant$Importer
+com.raaf.db.DbCommand
+com.raaf.db.DbConnector
+com.raaf.db.DbHelper
+com.raaf.db.DbParam
+com.raaf.db.DbParam$data_type
+com.raaf.db.DbTable
+com.raaf.http.GetXMLTask
+com.raaf.http.HttpReader
+com.raaf.http.rLoader:
+    60:62:public rLoader(java.lang.String)
+    71:74:public rLoader(java.lang.String,android.os.Handler)
+    88:91:public rLoader(java.lang.String,android.os.Handler,android.os.Bundle,java.lang.String)
+    99:103:public rLoader(java.lang.String,android.os.Handler,android.os.Bundle,com.raaf.http.rLoader$Http_type,java.util.List,java.util.List)
+com.raaf.http.rLoader$PhotoUploadResponseHandler
+com.raaf.rActivityLog
+com.raaf.rDate
+com.raaf.rDialog:
+    10:10:public rDialog()
+    18:19:public static void SetToastLong(android.content.Context,java.lang.String)
+    23:29:public static void ShowDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
+    33:53:public static void ShowDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    119:128:public static void ShowProgressDialog(android.content.Context,java.lang.String,java.lang.String,java.lang.Boolean,int)
+    131:132:public static void setProgress(int)
+    135:137:public static void setProgress(int,java.lang.String)
+com.raaf.rDialog$1
+com.raaf.rExceptionHandler
+com.raaf.rGps
+com.raaf.rGps$1
+com.raaf.rGps$2
+com.raaf.rIO:
+    15:15:public rIO()
+    17:28:public static void CopyStream(java.io.InputStream,java.io.OutputStream)
+    32:52:public static java.lang.Boolean SaveImageToFile(android.graphics.Bitmap,java.lang.String,android.graphics.Bitmap$CompressFormat,int)
+com.raaf.rImageLoader
+com.raaf.rImageLoader$BitmapDisplayer
+com.raaf.rImageLoader$PhotoToLoad
+com.raaf.rImageLoader$PhotosLoader
+com.raaf.rImageLoader$PhotosQueue
+com.raaf.rImaging:
+    32:32:public rImaging()
+    34:34:public static int getcolorfromrgb(int,int,int)
+    39:68:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,android.graphics.Bitmap,java.lang.String,int,int,int,int)
+    73:75:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,int,java.lang.String,int,int,int,int)
+    123:167:public static android.graphics.Bitmap downloadBitmap(java.lang.String)
+    171:186:public static android.graphics.Bitmap getPreview(java.lang.String)
+com.raaf.rJson
+com.raaf.rLanguage
+com.raaf.rLanguage$tag
+com.raaf.rListParam
+com.raaf.rLog
+com.raaf.rMap
+com.raaf.rMap$1
+com.raaf.rMap$2
+com.raaf.rNet:
+    android.widget.ImageView imgView
+    android.os.Handler handler
+    android.os.Bundle b
+    android.graphics.Bitmap bmp
+    22:22:public rNet()
+    29:29:public android.graphics.Bitmap getDownloadedBitmap()
+    53:57:public void GetBitmapFromUrl(java.lang.String,android.widget.ImageView,android.os.Handler)
+    60:63:public void GetFileFromUrl(java.lang.String,java.lang.String,android.os.Handler)
+com.raaf.rNet$GetBitmapFromUrl
+com.raaf.rNet$GetFileFromUrl
+com.raaf.rParam
+com.raaf.rPrayTime
+com.raaf.rSecurity:
+    7:7:public rSecurity()
+    9:18:private static java.lang.String convertToHex(byte[])
+    22:25:public static java.lang.String getSHA1(java.lang.String)
+com.raaf.rTimer
+com.raaf.rTimer$mainTask
+com.raaf.rUtil
 com.raaf.tes
+com.raaf.weather.ConditionDefinition
+com.raaf.weather.WOEIDUtils
+com.raaf.weather.WeatherInfo
+com.raaf.weather.YahooWeatherInfoListener
+com.raaf.weather.YahooWeatherUtils
+com.raaf.weather.YahooWeatherUtils$WeatherQueryTask
 com.raafstudio.goahead.people.ActivityProfile:
     android.widget.GridView GvArtworks
     com.raafstudio.goahead.people.adapter.ArtworkAdapter ArtAdapter
@@ -8824,9 +9022,13 @@ com.raafstudio.goahead.people.ActivitySettingBasic:
     android.widget.Button BtSave
 com.raafstudio.goahead.people.ActivitySplash
 com.raafstudio.goahead.people.BuildConfig
+com.raafstudio.goahead.people.ErrorReporting
+com.raafstudio.goahead.people.ErrorReporting$1
+com.raafstudio.goahead.people.MyApp
 com.raafstudio.goahead.people.R:
     10:10:public R()
 com.raafstudio.goahead.people.R$anim
+com.raafstudio.goahead.people.R$animator
 com.raafstudio.goahead.people.R$array
 com.raafstudio.goahead.people.R$attr
 com.raafstudio.goahead.people.R$bool
@@ -8841,12 +9043,27 @@ com.raafstudio.goahead.people.R$raw
 com.raafstudio.goahead.people.R$string
 com.raafstudio.goahead.people.R$style
 com.raafstudio.goahead.people.R$styleable:
-    3052:3052:public R$styleable()
+    3282:3282:public R$styleable()
 com.raafstudio.goahead.people.adapter.ArtworkAdapter
 com.raafstudio.goahead.people.adapter.ArtworkAdapter$ViewHolder
 com.raafstudio.goahead.people.adapter.NotificationAdapter:
     android.widget.ProgressBar pb1
-com.raafstudio.goahead.people.fragment.FragmentArtworks
+com.raafstudio.goahead.people.component.CircleImageView:
+    private static final int COLORDRAWABLE_DIMENSION
+    private static final int DEFAULT_BORDER_WIDTH
+    private static final int DEFAULT_BORDER_COLOR
+com.raafstudio.goahead.people.component.CustomImageView
+com.raafstudio.goahead.people.component.CustomImageView$ScaleListener
+com.raafstudio.goahead.people.component.TouchView:
+    private static final int INVALID_POINTER_ID
+    34:39:public TouchView(android.content.Context)
+    42:43:public TouchView(android.content.Context,android.util.AttributeSet)
+    51:52:public TouchView(android.content.Context,android.util.AttributeSet,android.graphics.drawable.Drawable)
+com.raafstudio.goahead.people.fragment.FragmentArtworkFrame:
+    int cok
+com.raafstudio.goahead.people.fragment.FragmentArtworkGraph:
+    protected static final java.lang.String msg
+    int cok
 com.raafstudio.goahead.people.fragment.FragmentBase:
     protected android.widget.ProgressBar pb
     protected android.widget.TextView TvNoNetwork
@@ -8854,29 +9071,25 @@ com.raafstudio.goahead.people.fragment.FragmentBase:
     37:38:public void setPos(int)
 com.raafstudio.goahead.people.fragment.FragmentProducts
 com.raafstudio.goahead.people.helper.API:
-    31:31:public API()
-    140:150:public static void getProfileFollower(int,int,int,android.os.Handler)
-    154:164:public static void getProfileFollowing(int,int,int,android.os.Handler)
-    167:177:public static void doProfileFollow(int,android.os.Handler)
-    201:208:public static void SettingGetProfile(android.os.Handler)
-    211:218:public static void SettingCekToken(android.os.Handler)
-    254:267:public static void SettingUploadKtp(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    271:281:public static void StoreGet(java.lang.String,int,int,android.os.Handler)
-    284:292:public static void StoreGetDetail(java.lang.String,android.os.Handler)
-    295:302:public static void StoreHome(android.os.Handler)
-    305:315:public static void StoreRedem(java.lang.String,android.os.Handler)
-    343:352:public static void DiscoverGetArtworkComment(java.lang.String,int,android.os.Handler)
-    356:368:public static void DiscoverPostArtwork(Raff.Io.rFile,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    372:383:public static void DiscoverPostArtworkComment(java.lang.String,java.lang.String,android.os.Handler)
-    386:396:public static void DiscoverLikeArtwork(java.lang.String,android.os.Handler)
-    400:412:public static void DiscoverReportArtwork(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    415:422:public static void BrandList(android.os.Handler)
+    33:33:public API()
+    143:153:public static void getProfileFollower(int,int,int,android.os.Handler)
+    157:167:public static void getProfileFollowing(int,int,int,android.os.Handler)
+    204:211:public static void SettingGetProfile(android.os.Handler)
+    214:221:public static void SettingCekToken(android.os.Handler)
+    257:270:public static void SettingUploadKtp(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    274:284:public static void StoreGet(java.lang.String,int,int,android.os.Handler)
+    287:295:public static void StoreGetDetail(java.lang.String,android.os.Handler)
+    298:305:public static void StoreHome(android.os.Handler)
+    308:318:public static void StoreRedem(java.lang.String,android.os.Handler)
+    404:416:public static void DiscoverReportArtwork(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    419:425:public static void BrandList(android.os.Handler)
     465:472:public static void MenuGetEarnings(android.os.Handler)
 com.raafstudio.goahead.people.helper.DB
 com.raafstudio.goahead.people.helper.Util:
     9:9:public Util()
-    21:22:public static java.lang.Boolean CheckFile(java.lang.String)
+    29:30:public static java.lang.Boolean CheckFile(java.lang.String)
 com.raafstudio.goahead.people.helper.so:
+    public static final int modul_base
     public static final int modul_login
     public static final int modul_profile
     public static final int modul_setting
@@ -8891,9 +9104,8 @@ com.raafstudio.goahead.people.helper.so:
     public static final java.lang.String PREF_APP_VERSION
     public static final java.lang.String GCM_SENDER_ID
     static com.raafstudio.goahead.people.helper.Util util
-    20:20:public so()
-    98:101:public static void setParam(java.lang.String,java.lang.String)
-    104:107:public static void setParamInt(java.lang.String,int)
+    21:21:public so()
+    110:113:public static void setParam(java.lang.String,java.lang.String)
 com.raafstudio.goahead.people.model.Account:
     29:29:public java.lang.String getGender()
     45:45:public java.lang.String getOtherName()
@@ -8904,60 +9116,56 @@ com.raafstudio.goahead.people.model.Account:
 com.raafstudio.goahead.people.model.Artwork:
     java.lang.String featured_image
     java.lang.String featured_thumb
-    java.lang.String artwork_thumb
-    java.lang.String description
     java.lang.String publisher_id
     java.lang.String artist
     java.lang.String convert_status
     java.lang.String is_highlight
     java.lang.String highlight_from
     java.lang.String highlight_until
-    55:55:public java.lang.String getType()
-    63:63:public int getId()
-    95:95:public int getView_stat()
-    103:103:public java.lang.String getCreatedatetime()
-    119:119:public java.lang.String getVerifydatetime()
-    143:143:public java.lang.String getImage_ori()
-    151:151:public int getImageHeight()
-    159:159:public int getImageWidth()
-    167:167:public int getPriority()
-    175:175:public int getAuthor_id()
-    183:183:public java.lang.String getSub_type()
-    191:191:public java.lang.String getArtwork_class()
-    199:199:public int getIs_featured()
-    223:223:public java.lang.String getIs_you()
-    231:231:public java.lang.String getJob_profile()
-    239:239:public java.lang.String getJob_location()
-    247:247:public java.lang.String getBio()
-    263:263:public java.lang.String getLink()
-    271:271:public java.lang.String getEncrypted_id()
-    279:279:public java.lang.String getArtwork_id()
-    287:287:public java.lang.Boolean getIs_video()
-    295:295:public java.lang.String getFeatured_image()
-    299:300:public void setFeatured_image(java.lang.String)
-    303:303:public java.lang.String getArtwork_content()
-    311:311:public java.lang.String getKind()
-    319:319:public java.lang.String getStatus()
-    327:327:public java.lang.String getFeatured_thumb()
-    331:332:public void setFeatured_thumb(java.lang.String)
-    335:335:public java.lang.String getArtwork_thumb()
-    339:340:public void setArtwork_thumb(java.lang.String)
-    343:343:public java.lang.String getDescription()
-    347:348:public void setDescription(java.lang.String)
-    351:351:public java.lang.String getPublisher_id()
-    355:356:public void setPublisher_id(java.lang.String)
-    359:359:public java.lang.String getArtist()
-    363:364:public void setArtist(java.lang.String)
-    367:367:public java.lang.String getConvert_status()
-    371:372:public void setConvert_status(java.lang.String)
-    375:375:public java.lang.String getIs_highlight()
-    379:380:public void setIs_highlight(java.lang.String)
-    383:383:public java.lang.String getHighlight_from()
-    387:388:public void setHighlight_from(java.lang.String)
-    391:391:public java.lang.String getHighlight_until()
-    395:396:public void setHighlight_until(java.lang.String)
-    399:399:public java.util.ArrayList getComments()
-    403:404:public void setComments(java.util.ArrayList)
+    62:62:public java.lang.String getType()
+    94:94:public int getComment_stat()
+    102:102:public int getView_stat()
+    110:110:public java.lang.String getCreatedatetime()
+    126:126:public java.lang.String getVerifydatetime()
+    150:150:public java.lang.String getImage_ori()
+    158:158:public int getImageHeight()
+    166:166:public int getImageWidth()
+    174:174:public int getPriority()
+    182:182:public int getAuthor_id()
+    190:190:public java.lang.String getSub_type()
+    198:198:public java.lang.String getArtwork_class()
+    206:206:public int getIs_featured()
+    230:230:public java.lang.String getIs_you()
+    238:238:public java.lang.String getJob_profile()
+    246:246:public java.lang.String getJob_location()
+    254:254:public java.lang.String getBio()
+    270:270:public java.lang.String getLink()
+    278:278:public java.lang.String getEncrypted_id()
+    294:294:public java.lang.String getIs_video()
+    302:302:public java.lang.String getFeatured_image()
+    306:307:public void setFeatured_image(java.lang.String)
+    310:310:public java.lang.String getArtwork_content()
+    318:318:public java.lang.String getKind()
+    326:326:public java.lang.String getStatus()
+    334:334:public java.lang.String getFeatured_thumb()
+    338:339:public void setFeatured_thumb(java.lang.String)
+    342:342:public java.lang.String getArtwork_thumb()
+    358:358:public java.lang.String getPublisher_id()
+    362:363:public void setPublisher_id(java.lang.String)
+    366:366:public java.lang.String getArtist()
+    370:371:public void setArtist(java.lang.String)
+    374:374:public java.lang.String getConvert_status()
+    378:379:public void setConvert_status(java.lang.String)
+    382:382:public java.lang.String getIs_highlight()
+    386:387:public void setIs_highlight(java.lang.String)
+    390:390:public java.lang.String getHighlight_from()
+    394:395:public void setHighlight_from(java.lang.String)
+    398:398:public java.lang.String getHighlight_until()
+    402:403:public void setHighlight_until(java.lang.String)
+    410:411:public void setComments(java.util.ArrayList)
+    422:422:public java.lang.String getIs_follow()
+    430:430:public java.lang.String getPrinterous_pass_token()
+    438:438:public java.lang.String getPrinterous_token_valid_until()
 com.raafstudio.goahead.people.model.Brand:
     14:14:public java.lang.String getBrandID()
     22:22:public java.lang.String getBrandName()
@@ -8971,12 +9179,14 @@ com.raafstudio.goahead.people.model.City:
     36:36:public java.lang.String getaDBan()
     44:44:public java.lang.String getStateName()
     52:52:public java.lang.String getStateCode()
-com.raafstudio.goahead.people.model.Comment
+com.raafstudio.goahead.people.model.Comment:
+    11:11:public int getComment_id()
+    43:43:public java.lang.String getTime()
 com.raafstudio.goahead.people.model.Item:
     18:19:public void setCode(java.lang.String)
     26:27:public void setDesc(java.lang.String)
 com.raafstudio.goahead.people.model.Meta:
-    19:19:public java.lang.String getErrorType()
+    28:28:public java.lang.String getErrorType()
 com.raafstudio.goahead.people.model.Notification:
     java.lang.String time
     23:23:public int getNotification_id()
@@ -8993,14 +9203,12 @@ com.raafstudio.goahead.people.model.Notification:
     135:135:public java.lang.String getOriginal()
 com.raafstudio.goahead.people.model.Product:
     int product_id
-    java.lang.String product_thumbnail
     39:39:public int getProduct_id()
     43:44:public void setProduct_id(int)
     49:49:public java.lang.String getEncrypted_id()
     57:57:public java.lang.String getString_id()
     73:73:public java.lang.String getProduct_description()
-    89:89:public java.lang.String getProduct_thumbnail()
-    93:94:public void setProduct_thumbnail(java.lang.String)
+    81:81:public java.lang.String getProduct_image()
     97:97:public int getUser_id()
     105:105:public java.lang.String getPrice()
     113:113:public int getStock()
@@ -9051,8 +9259,6 @@ com.raafstudio.goahead.people.model.User:
     199:199:public java.lang.String getRefered_by()
     207:207:public int getDone_tutorial()
     215:215:public int getIs_enter_market()
-    239:239:public java.lang.String getProfile_id()
-    265:265:public int getIs_follow()
     273:273:public java.lang.String getIs_you()
     281:281:public java.lang.Boolean getIsFirstTime()
     289:289:public java.lang.Boolean getIsSkipable()
@@ -9070,14 +9276,15 @@ com.raafstudio.goahead.people.navdraw.NavigationDrawerFragment:
     private static final java.lang.String PREF_USER_LEARNED_DRAWER
     private static final java.lang.String STATE_SELECTED_POSITION
     private static final java.lang.String PREFERENCES_FILE
-    189:189:public android.support.v7.app.ActionBarDrawerToggle getActionBarDrawerToggle()
-    194:195:public void setActionBarDrawerToggle(android.support.v7.app.ActionBarDrawerToggle)
-    243:244:public void openDrawer()
-    303:303:public android.support.v4.widget.DrawerLayout getDrawerLayout()
-    307:308:public void setDrawerLayout(android.support.v4.widget.DrawerLayout)
+    200:200:public android.support.v7.app.ActionBarDrawerToggle getActionBarDrawerToggle()
+    205:206:public void setActionBarDrawerToggle(android.support.v7.app.ActionBarDrawerToggle)
+    254:255:public void openDrawer()
+    314:314:public android.support.v4.widget.DrawerLayout getDrawerLayout()
+    318:319:public void setDrawerLayout(android.support.v4.widget.DrawerLayout)
 com.raafstudio.goahead.people.navdraw.NavigationItem:
     24:25:public void setText(java.lang.String)
     32:33:public void setDrawable(android.graphics.drawable.Drawable)
+com.raafstudio.goahead.people.rExceptionHandler
 org.apache.http.ConnectionClosedException:
     private static final long serialVersionUID
 org.apache.http.ContentTooLongException:

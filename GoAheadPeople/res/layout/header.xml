@@ -36,7 +36,7 @@
             android:textStyle="normal" />
     </LinearLayout>
 
-    <com.raaf.custom.CircleImageView
+    <com.raafstudio.goahead.people.component.CircleImageView
         android:id="@+id/circleView"
         android:layout_width="70dp"
         android:layout_height="70dp"

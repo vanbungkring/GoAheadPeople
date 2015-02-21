@@ -13,9 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.raaf.custom.CircleImageView;
+import com.bumptech.glide.load.engine.DiskCacheStrategy; 
 import com.raafstudio.goahead.people.R;
+import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.model.Notification;
 
 public class NotificationAdapter extends ArrayAdapter<Notification> {

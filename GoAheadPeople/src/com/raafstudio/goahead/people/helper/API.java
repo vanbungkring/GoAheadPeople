@@ -1070,6 +1070,25 @@ public class API {
 						+ e.getStackTrace().toString());
 			}
 
+		} else if (message.contains("\"status\"")) {
+			so.meta = new Meta();
+			JSONObject jObject;
+			try {
+				jObject = new JSONObject(message);
+				if( jObject.getBoolean("status"))
+					so.meta.setCode(200);
+				else
+					so.meta.setCode(201);
+				so.meta.setErrorDetail(jObject.getString("message"));
+				
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				so.meta.setCode(-2);
+				so.meta.setErrorType("http");
+				so.meta.setErrorDetail(message);
+			}
+			
 		} else {
 			so.meta = new Meta();
 			so.meta.setCode(-2);

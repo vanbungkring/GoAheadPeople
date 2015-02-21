@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <com.raaf.custom.CircleImageView
+        <com.raafstudio.goahead.people.component.CircleImageView
             android:id="@+id/NotifImgAvatar"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -40,10 +40,9 @@
                 android:text="@string/default_value"
                 android:textColor="@color/grey_600"
                 android:textSize="12sp" />
-
         </LinearLayout>
 
-        <com.raaf.custom.CircleImageView
+        <com.raafstudio.goahead.people.component.CircleImageView
             android:id="@+id/NotifImgAktif"
             android:layout_width="10dp"
             android:layout_height="10dp"
@@ -51,7 +50,6 @@
             android:src="@color/red"
             app:border_color="@color/red_dark"
             app:border_width="1dp" />
-
     </LinearLayout>
 
 </LinearLayout>

@@ -3,7 +3,7 @@ package com.raafstudio.goahead.people;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.raaf.rDialog;
-import com.raaf.custom.CircleImageView;
+import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.component.ImageviewBox;
 import com.raafstudio.goahead.people.component.ImageviewNormal;
 import com.raafstudio.goahead.people.helper.API;

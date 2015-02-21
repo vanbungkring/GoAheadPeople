@@ -24,12 +24,12 @@
         <item name="android:windowBackground">@drawable/bg_list</item>
     </style>
 
-    <style name="Transparent" parent="@android:style/Theme.NoTitleBar">
+    <style name="MainDemo" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowIsTranslucent">true</item>
-      
+        <item name="android:background">@drawable/discover_mark</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
 
     <style name="mySpinnerItemStyle" parent="Theme.AppCompat.NoActionBar"></style>

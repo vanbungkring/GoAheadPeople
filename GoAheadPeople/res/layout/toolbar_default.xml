@@ -9,4 +9,15 @@
     android:paddingRight="16dp"
     app:navigationIcon="@drawable/ic_back_button" >
 
+    <TextView
+        android:id="@+id/TollbarBtNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Next"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
 </android.support.v7.widget.Toolbar>

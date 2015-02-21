@@ -3,11 +3,10 @@ package com.raafstudio.goahead.people.fragment;
 import java.util.ArrayList;
 
 import com.raaf.rDialog;
-import com.raaf.custom.CircleImageView;
 import com.raafstudio.goahead.people.ActivityArtwork;
-import com.raafstudio.goahead.people.ActivityArtworkFrame;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.adapter.DiscoverAdapter;
+import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
 import com.raafstudio.goahead.people.model.Artwork;
@@ -235,6 +234,8 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 			rDialog.SetToast(getActivity(), "Shop");
 			break;
 		case R.id.LauncherAdd:
+			so.requester = 2;
+			so.apply_image = false;
 			startActivity(new Intent(getActivity(), ActivityArtwork.class));
 
 			break;

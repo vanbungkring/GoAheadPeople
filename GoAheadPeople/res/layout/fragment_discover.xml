@@ -38,28 +38,28 @@
         android:orientation="vertical"
         android:padding="8dp" >
 
-        <com.raaf.custom.CircleImageView
+        <com.raafstudio.goahead.people.component.CircleImageView
             android:id="@+id/LauncherDiscover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_btn_discover"
             android:visibility="gone" />
 
-        <com.raaf.custom.CircleImageView
+        <com.raafstudio.goahead.people.component.CircleImageView
             android:id="@+id/LauncherAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_btn_create"
             android:visibility="gone" />
 
-        <com.raaf.custom.CircleImageView
+        <com.raafstudio.goahead.people.component.CircleImageView
             android:id="@+id/LauncherMerchant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_btn_marketplace"
             android:visibility="gone" />
 
-        <com.raaf.custom.CircleImageView
+        <com.raafstudio.goahead.people.component.CircleImageView
             android:id="@+id/Launcher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

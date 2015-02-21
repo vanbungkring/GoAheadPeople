@@ -2,6 +2,7 @@ package com.raafstudio.goahead.people.helper;
 
 import java.util.ArrayList;
 
+import com.raaf.rSecurity;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.model.Artwork;
 import com.raafstudio.goahead.people.model.Brand;
@@ -18,6 +19,11 @@ import android.content.SharedPreferences;
 import android.provider.SyncStateContract.Constants;
 
 public class so {
+	public static String[] styles = { "GrayScale", "Relief", "Average Blur",
+			"Oil Painting", "Neon", "Pixelate", "Old TV", "Invert Color",
+			"Block", "Aged photo", "Sharpen", "Light", "Lomo", "HDR",
+			"Gaussian Blur", "Soft Glow", "Sketch", "Motion Blur", "Gotham" };
+
 	public static final int modul_base = 0;
 	public static final int modul_login = 1;
 	public static final int modul_profile = 2;
@@ -34,7 +40,8 @@ public class so {
 	public static final String PREF_APP_VERSION = "PREF_APP_VERSION";
 	public static final String GCM_SENDER_ID = "470363429504";
 	public static Boolean apply_image = false;
-
+	public static int requester = 0;
+	public static String PicturePath = "";
 	static ArrayList<Artwork> DiscoverArtworks;
 	static ArrayList<Province> Provinces;
 	static ArrayList<Brand> Brands;
@@ -46,6 +53,7 @@ public class so {
 	static ArrayList<Notification> notification;
 	public static Meta meta;
 	public static Context ctx;
+	public static String CurrentFrame;
 
 	public static SharedPreferences getSp() {
 		if (ctx == null)
@@ -152,5 +160,31 @@ public class so {
 		if (notification == null)
 			notification = new ArrayList<Notification>();
 		return notification;
+	}
+
+	public static String getFileArtSource() {
+		return Util.getDirArt() + "/"
+				+ rSecurity.getMD5(so.getUser().getUser_id() + "");
+	}
+
+	public static String getFileArtLayout() {
+		return Util.getDirArt() + "/"
+				+ rSecurity.getMD5(so.getUser().getUser_id() + "layout");
+	}
+
+	public static String getFileArtGraph() {
+		return Util.getDirArt() + "/"
+				+ rSecurity.getMD5(so.getUser().getUser_id() + "graph");
+	}
+
+	public static String getFileArtFrame() {
+		return Util.getDirArt() + "/"
+				+ rSecurity.getMD5(so.getUser().getUser_id() + "frame");
+	}
+
+	public static String getFileArtFilter() {
+		return Util.getDirArt() + "/"
+				+ rSecurity.getMD5(so.getUser().getUser_id() + "filter")
+				+ ".jpeg";
 	}
 }

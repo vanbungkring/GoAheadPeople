@@ -22,7 +22,7 @@
             android:orientation="vertical"
             android:padding="24dp" >
 
-            <com.raaf.custom.CircleImageView
+            <com.raafstudio.goahead.people.component.CircleImageView
                 android:id="@+id/ImgAvatar"
                 android:layout_width="100dp"
                 android:layout_height="100dp"

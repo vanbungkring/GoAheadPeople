@@ -17,6 +17,14 @@ public class Util {
 		return sdir;
 	}
 
+	public static String getDirArt() {
+		String sdir = getDir() + "/art";
+		File dir = new File(sdir);
+		if (!dir.exists())
+			dir.mkdir();
+		return sdir;
+	}
+
 	public static Boolean CheckFile(String filepath) {
 		File file = new File(filepath);
 		return file.exists();

@@ -69,7 +69,7 @@
                 android:paddingBottom="4dp"
                 android:paddingTop="4dp" >
 
-                <com.raaf.custom.CircleImageView
+                <com.raafstudio.goahead.people.component.CircleImageView
                     android:id="@+id/ArtImgUserAvatar"
                     android:layout_width="40dp"
                     android:layout_height="40dp"

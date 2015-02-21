@@ -7,7 +7,7 @@
     android:padding="32dp" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/TvDialogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -17,7 +17,7 @@
         android:textSize="@dimen/text_headline"
         android:textStyle="bold" />
 
-    <com.raaf.custom.CircleImageView
+    <com.raafstudio.goahead.people.component.CircleImageView
         android:id="@+id/ImgAvatar"
         android:layout_width="200dp"
         android:layout_height="200dp"

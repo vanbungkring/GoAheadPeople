@@ -1,6 +1,7 @@
 package com.raafstudio.goahead.people;
 
 import com.raaf.rDialog;
+import com.raaf.custom.DemoDialog;
 import com.raafstudio.goahead.people.fragment.FragmentDiscover;
 import com.raafstudio.goahead.people.fragment.FragmentEarnings;
 import com.raafstudio.goahead.people.fragment.FragmentNotification;
@@ -9,7 +10,7 @@ import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
 import com.raafstudio.goahead.people.navdraw.NavigationDrawerCallbacks;
 import com.raafstudio.goahead.people.navdraw.NavigationDrawerFragment;
- 
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.DataSetObserver;
@@ -124,21 +125,21 @@ public class ActivityMain extends ActivityBase implements
 
 	public void ShowDemo() {
 		if (!so.getSp().getBoolean("activity_main", false)) {
-			startActivity(new Intent(ActivityMain.this, ActivityMainDemo.class));
+			DemoDialog dd = new DemoDialog(this, getResources().getDrawable(
+					R.drawable.discover_mark));
+			dd.show();
+			// startActivity(new Intent(ActivityMain.this,
+			// ActivityMainDemo.class));
 			so.setParamBoolean("activity_main", true);
 		}
 	}
-
-
 
 	@Override
 	protected void handlerResponse(Message msg) {
 		// TODO Auto-generated method stub
 		super.handlerResponse(msg);
-		
-	}
 
-	
+	}
 
 	int last_id = 0;
 

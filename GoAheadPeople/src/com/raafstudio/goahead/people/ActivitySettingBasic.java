@@ -1,7 +1,7 @@
 package com.raafstudio.goahead.people;
 
 import java.io.File;
- 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
@@ -18,8 +18,8 @@ import com.jhlabs.image.DilateFilter;
 import com.raaf.rDialog;
 import com.raaf.rImaging;
 import com.raaf.rSecurity;
-import com.raaf.custom.CircleImageView;
 import com.raaf.io.rFile;
+import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.Util;
 import com.raafstudio.goahead.people.helper.so;
@@ -47,6 +47,7 @@ public class ActivitySettingBasic extends ActivityBase {
 
 					@Override
 					public void onClick(View v) {
+						so.requester = 1;
 						startActivity(new Intent(ActivitySettingBasic.this,
 								DialogCapture.class));
 
@@ -69,9 +70,8 @@ public class ActivitySettingBasic extends ActivityBase {
 								EtUserAbout.getText().toString(), EtUserOccup
 										.getText().toString(), EtUserLocation
 										.getText().toString(), r, handler);
-						rDialog.ShowProgressDialog(
-								ActivitySettingBasic.this, "Please Wait",
-								"Updating Basic Info", true);
+						rDialog.ShowProgressDialog(ActivitySettingBasic.this,
+								"Please Wait", "Updating Basic Info", true);
 					}
 				});
 		so.apply_image = false;
@@ -107,8 +107,7 @@ public class ActivitySettingBasic extends ActivityBase {
 
 		if (so.apply_image)
 			filename = Util.getDir() + "/"
-					+ rSecurity.getMD5(so.getUser().getUser_id() + "")
-					+ ".jpg";
+					+ rSecurity.getMD5(so.getUser().getUser_id() + "") + ".jpeg";
 		else
 			filename = Util.getDir() + "/"
 					+ rSecurity.getMD5(so.getUser().getUser_id() + "");

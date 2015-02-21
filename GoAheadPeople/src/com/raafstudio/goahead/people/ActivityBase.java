@@ -13,25 +13,27 @@ import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class ActivityBase extends ActionBarActivity {
-	protected MyApp mMyApp;
+	// protected MyApp mMyApp;
 	protected Toolbar mToolbar;
+	protected TextView TvNext;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		mMyApp = (MyApp) this.getApplicationContext();
-		Thread.setDefaultUncaughtExceptionHandler(new rExceptionHandler(this,
-				ErrorReporting.class));
+		// mMyApp = (MyApp) this.getApplicationContext();
+		//Thread.setDefaultUncaughtExceptionHandler(new rExceptionHandler(this,
+		//		ErrorReporting.class));
 		if (so.ctx == null)
 			so.ctx = getApplicationContext();
 	}
 
 	protected void onResume() {
 		super.onResume();
-		mMyApp.setCurrentActivity(this);
+		// mMyApp.setCurrentActivity(this);
 	}
 
 	protected void onPause() {
@@ -45,9 +47,9 @@ public class ActivityBase extends ActionBarActivity {
 	}
 
 	private void clearReferences() {
-		Activity currActivity = mMyApp.getCurrentActivity();
-		if (currActivity != null && currActivity.equals(this))
-			mMyApp.setCurrentActivity(null);
+		// Activity currActivity = mMyApp.getCurrentActivity();
+		// if (currActivity != null && currActivity.equals(this))
+		// mMyApp.setCurrentActivity(null);
 	}
 
 	public void bindToolbar() {
@@ -55,6 +57,8 @@ public class ActivityBase extends ActionBarActivity {
 		setSupportActionBar(mToolbar);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		getSupportActionBar().setDisplayShowTitleEnabled(true);
+		TvNext = (TextView) findViewById(R.id.TollbarBtNext);
+
 	}
 
 	protected final Handler handler = new Handler() {

@@ -1,7 +1,3 @@
-Raaf.Db.DbParam$data_type: Raaf.Db.DbParam$data_type[] values()
-Raaf.Db.DbParam$data_type: Raaf.Db.DbParam$data_type valueOf(java.lang.String)
-Raaf.Http.raafLoader$Http_type: Raaf.Http.raafLoader$Http_type[] values()
-Raaf.Http.raafLoader$Http_type: Raaf.Http.raafLoader$Http_type valueOf(java.lang.String)
 android.support.v4.app.BackStackState
 android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.Fragment: Fragment()
@@ -12,6 +8,9 @@ android.support.v4.app.FragmentManagerState
 android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentState
 android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost
+android.support.v4.app.FragmentTabHost: FragmentTabHost(android.content.Context)
+android.support.v4.app.FragmentTabHost: FragmentTabHost(android.content.Context,android.util.AttributeSet)
 android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
 android.support.v4.app.FragmentTabHost$SavedState
 android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
@@ -1365,6 +1364,24 @@ android.support.v7.widget.Toolbar: void setMinimumHeight(int)
 android.support.v7.widget.Toolbar: int getMinimumHeightCompat()
 android.support.v7.widget.Toolbar$SavedState
 android.support.v7.widget.Toolbar$SavedState: android.os.Parcelable$Creator CREATOR
+cn.Ragnarok.NativeFilterFunc
+cn.Ragnarok.NativeFilterFunc: int[] lightFilter(int[],int,int,int,int,int)
+cn.Ragnarok.NativeFilterFunc: int[] lomoAddBlckRound(int[],int,int,double)
+cn.Ragnarok.NativeFilterFunc: int[] neonFilter(int[],int,int,int,int,int)
+cn.Ragnarok.NativeFilterFunc: int[] oilFilter(int[],int,int,int)
+cn.Ragnarok.NativeFilterFunc: int[] tvFilter(int[],int,int)
+cn.Ragnarok.NativeFilterFunc: int[] averageSmooth(int[],int,int,int)
+cn.Ragnarok.NativeFilterFunc: int[] hdrFilter(int[],int,int)
+cn.Ragnarok.NativeFilterFunc: int[] discreteGaussianBlur(int[],int,int,double)
+cn.Ragnarok.NativeFilterFunc: int[] softGlow(int[],int,int,double)
+cn.Ragnarok.NativeFilterFunc: int[] sketchFilter(int[],int,int)
+cn.Ragnarok.NativeFilterFunc: int[] sharpenFilter(int[],int,int)
+cn.Ragnarok.NativeFilterFunc: int[] reliefFilter(int[],int,int)
+cn.Ragnarok.NativeFilterFunc: int[] pxelateFilter(int[],int,int,int)
+cn.Ragnarok.NativeFilterFunc: int[] blockFilter(int[],int,int)
+cn.Ragnarok.NativeFilterFunc: int[] motionBlurFilter(int[],int,int,int,int)
+cn.Ragnarok.NativeFilterFunc: int[] gothamFilter(int[],int,int)
+cn.Ragnarok.R$string: int libname
 com.bumptech.glide.MemoryCategory: com.bumptech.glide.MemoryCategory[] values()
 com.bumptech.glide.MemoryCategory: com.bumptech.glide.MemoryCategory valueOf(java.lang.String)
 com.bumptech.glide.Priority: com.bumptech.glide.Priority[] values()
@@ -1373,6 +1390,8 @@ com.bumptech.glide.load.DecodeFormat: com.bumptech.glide.load.DecodeFormat[] val
 com.bumptech.glide.load.DecodeFormat: com.bumptech.glide.load.DecodeFormat valueOf(java.lang.String)
 com.bumptech.glide.load.engine.DiskCacheStrategy: com.bumptech.glide.load.engine.DiskCacheStrategy[] values()
 com.bumptech.glide.load.engine.DiskCacheStrategy: com.bumptech.glide.load.engine.DiskCacheStrategy valueOf(java.lang.String)
+com.bumptech.glide.load.engine.EngineRunnable$Stage: com.bumptech.glide.load.engine.EngineRunnable$Stage[] values()
+com.bumptech.glide.load.engine.EngineRunnable$Stage: com.bumptech.glide.load.engine.EngineRunnable$Stage valueOf(java.lang.String)
 com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType: com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType[] values()
 com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType: com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType valueOf(java.lang.String)
 com.bumptech.glide.request.GenericRequest$Status: com.bumptech.glide.request.GenericRequest$Status[] values()
@@ -2305,8 +2324,17 @@ com.google.android.gms.wearable.internal.x
 com.google.android.gms.wearable.internal.x: android.os.Parcelable$Creator CREATOR
 com.google.android.gms.wearable.internal.z
 com.google.android.gms.wearable.internal.z: android.os.Parcelable$Creator CREATOR
-com.raaf.R$attr: int border_color
-com.raaf.R$attr: int border_width
+com.raaf.R$attr: int bar_length
+com.raaf.R$attr: int bar_orientation_horizontal
+com.raaf.R$attr: int bar_pointer_halo_radius
+com.raaf.R$attr: int bar_pointer_radius
+com.raaf.R$attr: int bar_thickness
+com.raaf.R$attr: int color_center_halo_radius
+com.raaf.R$attr: int color_center_radius
+com.raaf.R$attr: int color_pointer_halo_radius
+com.raaf.R$attr: int color_pointer_radius
+com.raaf.R$attr: int color_wheel_radius
+com.raaf.R$attr: int color_wheel_thickness
 com.raaf.R$color: int black
 com.raaf.R$color: int blue
 com.raaf.R$color: int dark_blue
@@ -2343,31 +2371,87 @@ com.raaf.R$color: int transparent_white_percent_90
 com.raaf.R$color: int transparent_white_percent_95
 com.raaf.R$color: int white
 com.raaf.R$color: int yellow
+com.raaf.R$dimen: int bar_length
+com.raaf.R$dimen: int bar_pointer_halo_radius
+com.raaf.R$dimen: int bar_pointer_radius
+com.raaf.R$dimen: int bar_thickness
+com.raaf.R$dimen: int color_center_halo_radius
+com.raaf.R$dimen: int color_center_radius
+com.raaf.R$dimen: int color_pointer_halo_radius
+com.raaf.R$dimen: int color_pointer_radius
+com.raaf.R$dimen: int color_wheel_radius
+com.raaf.R$dimen: int color_wheel_thickness
 com.raaf.R$drawable: int ic_launcher
+com.raaf.R$drawable: int trans
+com.raaf.R$id: int ImgDemo
+com.raaf.R$layout: int demo_dialog
 com.raaf.R$string: int app_name
 com.raaf.R$style: int AppBaseTheme
 com.raaf.R$style: int AppTheme
-com.raaf.R$styleable: int[] CircleImageView
-com.raaf.R$styleable: int CircleImageView_border_color
-com.raaf.R$styleable: int CircleImageView_border_width
-com.raaf.custom.CircleImageView
-com.raaf.custom.CircleImageView: CircleImageView(android.content.Context)
-com.raaf.custom.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet)
-com.raaf.custom.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet,int)
-com.raaf.custom.CircleImageView: android.widget.ImageView$ScaleType getScaleType()
-com.raaf.custom.CircleImageView: void setScaleType(android.widget.ImageView$ScaleType)
-com.raaf.custom.CircleImageView: void setAdjustViewBounds(boolean)
-com.raaf.custom.CircleImageView: int getBorderColor()
-com.raaf.custom.CircleImageView: void setBorderColor(int)
-com.raaf.custom.CircleImageView: int getBorderWidth()
-com.raaf.custom.CircleImageView: void setBorderWidth(int)
-com.raaf.custom.CircleImageView: void setImageBitmap(android.graphics.Bitmap)
-com.raaf.custom.CircleImageView: void setImageDrawable(android.graphics.drawable.Drawable)
-com.raaf.custom.CircleImageView: void setImageResource(int)
-com.raaf.custom.CircleImageView: void setImageURI(android.net.Uri)
-com.raaf.custom.CircleImageView: void setColorFilter(android.graphics.ColorFilter)
+com.raaf.R$styleable: int[] ColorBars
+com.raaf.R$styleable: int ColorBars_bar_length
+com.raaf.R$styleable: int ColorBars_bar_orientation_horizontal
+com.raaf.R$styleable: int ColorBars_bar_pointer_halo_radius
+com.raaf.R$styleable: int ColorBars_bar_pointer_radius
+com.raaf.R$styleable: int ColorBars_bar_thickness
+com.raaf.R$styleable: int[] ColorPicker
+com.raaf.R$styleable: int ColorPicker_color_center_halo_radius
+com.raaf.R$styleable: int ColorPicker_color_center_radius
+com.raaf.R$styleable: int ColorPicker_color_pointer_halo_radius
+com.raaf.R$styleable: int ColorPicker_color_pointer_radius
+com.raaf.R$styleable: int ColorPicker_color_wheel_radius
+com.raaf.R$styleable: int ColorPicker_color_wheel_thickness
+com.raaf.colorpicker.ColorPicker: void setOnColorChangedListener(com.raaf.colorpicker.ColorPicker$OnColorChangedListener)
+com.raaf.colorpicker.ColorPicker: com.raaf.colorpicker.ColorPicker$OnColorChangedListener getOnColorChangedListener()
+com.raaf.colorpicker.ColorPicker: void setOnColorSelectedListener(com.raaf.colorpicker.ColorPicker$OnColorSelectedListener)
+com.raaf.colorpicker.ColorPicker: com.raaf.colorpicker.ColorPicker$OnColorSelectedListener getOnColorSelectedListener()
+com.raaf.colorpicker.ColorPicker: int getColor()
+com.raaf.colorpicker.ColorPicker: void setColor(int)
+com.raaf.colorpicker.ColorPicker: void setNewCenterColor(int)
+com.raaf.colorpicker.ColorPicker: void setOldCenterColor(int)
+com.raaf.colorpicker.ColorPicker: int getOldCenterColor()
+com.raaf.colorpicker.ColorPicker: void setShowOldCenterColor(boolean)
+com.raaf.colorpicker.ColorPicker: boolean getShowOldCenterColor()
+com.raaf.colorpicker.ColorPicker: void setTouchAnywhereOnColorWheelEnabled(boolean)
+com.raaf.colorpicker.ColorPicker: boolean getTouchAnywhereOnColorWheel()
+com.raaf.colorpicker.OpacityBar: void setOnOpacityChangedListener(com.raaf.colorpicker.OpacityBar$OnOpacityChangedListener)
+com.raaf.colorpicker.OpacityBar: com.raaf.colorpicker.OpacityBar$OnOpacityChangedListener getOnOpacityChangedListener()
+com.raaf.colorpicker.OpacityBar: void setColor(int)
+com.raaf.colorpicker.OpacityBar: void setOpacity(int)
+com.raaf.colorpicker.OpacityBar: int getOpacity()
+com.raaf.colorpicker.OpacityBar: int getColor()
+com.raaf.colorpicker.OpacityBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
+com.raaf.colorpicker.SVBar: void setSaturation(float)
+com.raaf.colorpicker.SVBar: void setValue(float)
+com.raaf.colorpicker.SVBar: void setColor(int)
+com.raaf.colorpicker.SVBar: int getColor()
+com.raaf.colorpicker.SVBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
+com.raaf.colorpicker.SaturationBar: void setOnSaturationChangedListener(com.raaf.colorpicker.SaturationBar$OnSaturationChangedListener)
+com.raaf.colorpicker.SaturationBar: com.raaf.colorpicker.SaturationBar$OnSaturationChangedListener getOnSaturationChangedListener()
+com.raaf.colorpicker.SaturationBar: void setColor(int)
+com.raaf.colorpicker.SaturationBar: void setSaturation(float)
+com.raaf.colorpicker.SaturationBar: int getColor()
+com.raaf.colorpicker.SaturationBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
+com.raaf.colorpicker.ValueBar: void setOnValueChangedListener(com.raaf.colorpicker.ValueBar$OnValueChangedListener)
+com.raaf.colorpicker.ValueBar: com.raaf.colorpicker.ValueBar$OnValueChangedListener getOnValueChangedListener()
+com.raaf.colorpicker.ValueBar: void setColor(int)
+com.raaf.colorpicker.ValueBar: void setValue(float)
+com.raaf.colorpicker.ValueBar: int getColor()
+com.raaf.colorpicker.ValueBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
+com.raaf.db.DbParam$data_type: com.raaf.db.DbParam$data_type[] values()
+com.raaf.db.DbParam$data_type: com.raaf.db.DbParam$data_type valueOf(java.lang.String)
+com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type[] values()
+com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type valueOf(java.lang.String)
 com.raafstudio.goahead.people.ActivityArtDetail
 com.raafstudio.goahead.people.ActivityArtDetail: ActivityArtDetail()
+com.raafstudio.goahead.people.ActivityArtwork
+com.raafstudio.goahead.people.ActivityArtwork: ActivityArtwork()
+com.raafstudio.goahead.people.ActivityArtworkFilter
+com.raafstudio.goahead.people.ActivityArtworkFilter: ActivityArtworkFilter()
+com.raafstudio.goahead.people.ActivityArtworkInfo
+com.raafstudio.goahead.people.ActivityArtworkInfo: ActivityArtworkInfo()
+com.raafstudio.goahead.people.ActivityArtworkPublish
+com.raafstudio.goahead.people.ActivityArtworkPublish: ActivityArtworkPublish()
 com.raafstudio.goahead.people.ActivityBase: ActivityBase()
 com.raafstudio.goahead.people.ActivityLogin
 com.raafstudio.goahead.people.ActivityLogin: ActivityLogin()
@@ -2395,6 +2479,9 @@ com.raafstudio.goahead.people.R$anim: int abc_slide_in_bottom
 com.raafstudio.goahead.people.R$anim: int abc_slide_in_top
 com.raafstudio.goahead.people.R$anim: int abc_slide_out_bottom
 com.raafstudio.goahead.people.R$anim: int abc_slide_out_top
+com.raafstudio.goahead.people.R$animator: int flipping
+com.raafstudio.goahead.people.R$animator: int flipping1
+com.raafstudio.goahead.people.R$array: int spinner_art_type
 com.raafstudio.goahead.people.R$array: int toolbar_spinner
 com.raafstudio.goahead.people.R$attr: int actionBarDivider
 com.raafstudio.goahead.people.R$attr: int actionBarItemBackground
@@ -2438,6 +2525,11 @@ com.raafstudio.goahead.people.R$attr: int background
 com.raafstudio.goahead.people.R$attr: int backgroundSplit
 com.raafstudio.goahead.people.R$attr: int backgroundStacked
 com.raafstudio.goahead.people.R$attr: int barSize
+com.raafstudio.goahead.people.R$attr: int bar_length
+com.raafstudio.goahead.people.R$attr: int bar_orientation_horizontal
+com.raafstudio.goahead.people.R$attr: int bar_pointer_halo_radius
+com.raafstudio.goahead.people.R$attr: int bar_pointer_radius
+com.raafstudio.goahead.people.R$attr: int bar_thickness
 com.raafstudio.goahead.people.R$attr: int border_color
 com.raafstudio.goahead.people.R$attr: int border_width
 com.raafstudio.goahead.people.R$attr: int buttonBarButtonStyle
@@ -2465,6 +2557,12 @@ com.raafstudio.goahead.people.R$attr: int colorControlNormal
 com.raafstudio.goahead.people.R$attr: int colorPrimary
 com.raafstudio.goahead.people.R$attr: int colorPrimaryDark
 com.raafstudio.goahead.people.R$attr: int colorSwitchThumbNormal
+com.raafstudio.goahead.people.R$attr: int color_center_halo_radius
+com.raafstudio.goahead.people.R$attr: int color_center_radius
+com.raafstudio.goahead.people.R$attr: int color_pointer_halo_radius
+com.raafstudio.goahead.people.R$attr: int color_pointer_radius
+com.raafstudio.goahead.people.R$attr: int color_wheel_radius
+com.raafstudio.goahead.people.R$attr: int color_wheel_thickness
 com.raafstudio.goahead.people.R$attr: int commitIcon
 com.raafstudio.goahead.people.R$attr: int contentInsetEnd
 com.raafstudio.goahead.people.R$attr: int contentInsetLeft
@@ -2809,6 +2907,16 @@ com.raafstudio.goahead.people.R$dimen: int abc_text_size_title_material
 com.raafstudio.goahead.people.R$dimen: int abc_text_size_title_material_toolbar
 com.raafstudio.goahead.people.R$dimen: int activity_horizontal_margin
 com.raafstudio.goahead.people.R$dimen: int activity_vertical_margin
+com.raafstudio.goahead.people.R$dimen: int bar_length
+com.raafstudio.goahead.people.R$dimen: int bar_pointer_halo_radius
+com.raafstudio.goahead.people.R$dimen: int bar_pointer_radius
+com.raafstudio.goahead.people.R$dimen: int bar_thickness
+com.raafstudio.goahead.people.R$dimen: int color_center_halo_radius
+com.raafstudio.goahead.people.R$dimen: int color_center_radius
+com.raafstudio.goahead.people.R$dimen: int color_pointer_halo_radius
+com.raafstudio.goahead.people.R$dimen: int color_pointer_radius
+com.raafstudio.goahead.people.R$dimen: int color_wheel_radius
+com.raafstudio.goahead.people.R$dimen: int color_wheel_thickness
 com.raafstudio.goahead.people.R$dimen: int dialog_fixed_height_major
 com.raafstudio.goahead.people.R$dimen: int dialog_fixed_height_minor
 com.raafstudio.goahead.people.R$dimen: int dialog_fixed_width_major
@@ -2881,7 +2989,13 @@ com.raafstudio.goahead.people.R$drawable: int abc_textfield_search_default_mtrl_
 com.raafstudio.goahead.people.R$drawable: int abc_textfield_search_material
 com.raafstudio.goahead.people.R$drawable: int avatar
 com.raafstudio.goahead.people.R$drawable: int bg_list
+com.raafstudio.goahead.people.R$drawable: int bounding_box
+com.raafstudio.goahead.people.R$drawable: int bounding_box1
 com.raafstudio.goahead.people.R$drawable: int box
+com.raafstudio.goahead.people.R$drawable: int btn_art_graph_off
+com.raafstudio.goahead.people.R$drawable: int btn_art_graph_on
+com.raafstudio.goahead.people.R$drawable: int btn_art_layout_off
+com.raafstudio.goahead.people.R$drawable: int btn_art_layout_on
 com.raafstudio.goahead.people.R$drawable: int button_red
 com.raafstudio.goahead.people.R$drawable: int button_tab
 com.raafstudio.goahead.people.R$drawable: int button_tab_enable
@@ -2912,31 +3026,67 @@ com.raafstudio.goahead.people.R$drawable: int common_signin_btn_text_normal_ligh
 com.raafstudio.goahead.people.R$drawable: int common_signin_btn_text_pressed_dark
 com.raafstudio.goahead.people.R$drawable: int common_signin_btn_text_pressed_light
 com.raafstudio.goahead.people.R$drawable: int discover_mark
+com.raafstudio.goahead.people.R$drawable: int frame_selected
 com.raafstudio.goahead.people.R$drawable: int header_background
 com.raafstudio.goahead.people.R$drawable: int ic_back_button
+com.raafstudio.goahead.people.R$drawable: int ic_btn_add_frame
+com.raafstudio.goahead.people.R$drawable: int ic_btn_add_graphic
+com.raafstudio.goahead.people.R$drawable: int ic_btn_body_off
+com.raafstudio.goahead.people.R$drawable: int ic_btn_body_on
+com.raafstudio.goahead.people.R$drawable: int ic_btn_change_color
 com.raafstudio.goahead.people.R$drawable: int ic_btn_create
 com.raafstudio.goahead.people.R$drawable: int ic_btn_discover
+com.raafstudio.goahead.people.R$drawable: int ic_btn_edit_layout
+com.raafstudio.goahead.people.R$drawable: int ic_btn_frame_basic_off
+com.raafstudio.goahead.people.R$drawable: int ic_btn_frame_basic_on
+com.raafstudio.goahead.people.R$drawable: int ic_btn_frame_crop_off
+com.raafstudio.goahead.people.R$drawable: int ic_btn_frame_crop_on
+com.raafstudio.goahead.people.R$drawable: int ic_btn_frame_custom_off
+com.raafstudio.goahead.people.R$drawable: int ic_btn_frame_custom_on
 com.raafstudio.goahead.people.R$drawable: int ic_btn_launcher
 com.raafstudio.goahead.people.R$drawable: int ic_btn_marketplace
+com.raafstudio.goahead.people.R$drawable: int ic_btn_pattern_off
+com.raafstudio.goahead.people.R$drawable: int ic_btn_pattern_on
+com.raafstudio.goahead.people.R$drawable: int ic_btn_plus
+com.raafstudio.goahead.people.R$drawable: int ic_btn_shape_off
+com.raafstudio.goahead.people.R$drawable: int ic_btn_shape_on
 com.raafstudio.goahead.people.R$drawable: int ic_camera
 com.raafstudio.goahead.people.R$drawable: int ic_comment
 com.raafstudio.goahead.people.R$drawable: int ic_fileimage
 com.raafstudio.goahead.people.R$drawable: int ic_follow
 com.raafstudio.goahead.people.R$drawable: int ic_launcher
 com.raafstudio.goahead.people.R$drawable: int ic_like
+com.raafstudio.goahead.people.R$drawable: int ic_liked
 com.raafstudio.goahead.people.R$drawable: int ic_next
 com.raafstudio.goahead.people.R$drawable: int ic_plusone_medium_off_client
 com.raafstudio.goahead.people.R$drawable: int ic_plusone_small_off_client
 com.raafstudio.goahead.people.R$drawable: int ic_plusone_standard_off_client
 com.raafstudio.goahead.people.R$drawable: int ic_plusone_tall_off_client
+com.raafstudio.goahead.people.R$drawable: int ic_send
 com.raafstudio.goahead.people.R$drawable: int layout_click
+com.raafstudio.goahead.people.R$drawable: int layout_typo1_active
+com.raafstudio.goahead.people.R$drawable: int layout_typo2_active
+com.raafstudio.goahead.people.R$drawable: int layout_typo3_active
+com.raafstudio.goahead.people.R$drawable: int layout_typo4_active
+com.raafstudio.goahead.people.R$drawable: int layout_typo5_active
 com.raafstudio.goahead.people.R$drawable: int list_selector
 com.raafstudio.goahead.people.R$drawable: int powered_by_google_dark
 com.raafstudio.goahead.people.R$drawable: int powered_by_google_light
+com.raafstudio.goahead.people.R$drawable: int tab_bg
+com.raafstudio.goahead.people.R$drawable: int tab_selected_focused_holo
+com.raafstudio.goahead.people.R$drawable: int tab_selected_holo
+com.raafstudio.goahead.people.R$drawable: int tab_selected_pressed_holo
+com.raafstudio.goahead.people.R$drawable: int tab_unselected_focused_holo
+com.raafstudio.goahead.people.R$drawable: int tab_unselected_holo
+com.raafstudio.goahead.people.R$drawable: int tab_unselected_pressed_holo
+com.raafstudio.goahead.people.R$drawable: int trans
 com.raafstudio.goahead.people.R$id: int ArtImg
 com.raafstudio.goahead.people.R$id: int ArtImgFollow
+com.raafstudio.goahead.people.R$id: int ArtImgLike
 com.raafstudio.goahead.people.R$id: int ArtImgMenu
 com.raafstudio.goahead.people.R$id: int ArtImgUserAvatar
+com.raafstudio.goahead.people.R$id: int ArtLayout
+com.raafstudio.goahead.people.R$id: int ArtLayoutComment
 com.raafstudio.goahead.people.R$id: int ArtPb
 com.raafstudio.goahead.people.R$id: int ArtTvComment
 com.raafstudio.goahead.people.R$id: int ArtTvCommentCount
@@ -2948,12 +3098,25 @@ com.raafstudio.goahead.people.R$id: int ArtTvLikeCount
 com.raafstudio.goahead.people.R$id: int ArtTvTime
 com.raafstudio.goahead.people.R$id: int ArtTvTitlle
 com.raafstudio.goahead.people.R$id: int BtApplyImage
+com.raafstudio.goahead.people.R$id: int BtCommentSend
 com.raafstudio.goahead.people.R$id: int BtSave
+com.raafstudio.goahead.people.R$id: int BtSearchArtworks
+com.raafstudio.goahead.people.R$id: int BtSearchProducts
+com.raafstudio.goahead.people.R$id: int BtSearchUser
+com.raafstudio.goahead.people.R$id: int BtSendError
 com.raafstudio.goahead.people.R$id: int BtSignIn
+com.raafstudio.goahead.people.R$id: int BtText1
+com.raafstudio.goahead.people.R$id: int BtText2
+com.raafstudio.goahead.people.R$id: int BtText3
+com.raafstudio.goahead.people.R$id: int BtText4
+com.raafstudio.goahead.people.R$id: int BtText5
 com.raafstudio.goahead.people.R$id: int BtUserArtworks
 com.raafstudio.goahead.people.R$id: int BtUserFollow
 com.raafstudio.goahead.people.R$id: int BtUserProducts
 com.raafstudio.goahead.people.R$id: int DemoMain
+com.raafstudio.goahead.people.R$id: int EtArtworkDesc
+com.raafstudio.goahead.people.R$id: int EtArtworkTitle
+com.raafstudio.goahead.people.R$id: int EtComment
 com.raafstudio.goahead.people.R$id: int EtEmail
 com.raafstudio.goahead.people.R$id: int EtPassword
 com.raafstudio.goahead.people.R$id: int EtSubBrand
@@ -2964,6 +3127,22 @@ com.raafstudio.goahead.people.R$id: int EtUserLocation
 com.raafstudio.goahead.people.R$id: int EtUserMobilePhone
 com.raafstudio.goahead.people.R$id: int EtUserName
 com.raafstudio.goahead.people.R$id: int EtUserOccupation
+com.raafstudio.goahead.people.R$id: int ImgArtFrameBasic
+com.raafstudio.goahead.people.R$id: int ImgArtFrameCrop
+com.raafstudio.goahead.people.R$id: int ImgArtFrameCustom
+com.raafstudio.goahead.people.R$id: int ImgArtGraph
+com.raafstudio.goahead.people.R$id: int ImgArtGraph1
+com.raafstudio.goahead.people.R$id: int ImgArtGraph2
+com.raafstudio.goahead.people.R$id: int ImgArtGraph3
+com.raafstudio.goahead.people.R$id: int ImgArtGraph4
+com.raafstudio.goahead.people.R$id: int ImgArtGraph5
+com.raafstudio.goahead.people.R$id: int ImgArtLay1
+com.raafstudio.goahead.people.R$id: int ImgArtLay2
+com.raafstudio.goahead.people.R$id: int ImgArtLay3
+com.raafstudio.goahead.people.R$id: int ImgArtLay4
+com.raafstudio.goahead.people.R$id: int ImgArtLay5
+com.raafstudio.goahead.people.R$id: int ImgArtPlus
+com.raafstudio.goahead.people.R$id: int ImgArtwork
 com.raafstudio.goahead.people.R$id: int ImgArtwork1
 com.raafstudio.goahead.people.R$id: int ImgArtwork2
 com.raafstudio.goahead.people.R$id: int ImgArtwork3
@@ -2971,6 +3150,7 @@ com.raafstudio.goahead.people.R$id: int ImgAvatar
 com.raafstudio.goahead.people.R$id: int ImgAvatarBackground
 com.raafstudio.goahead.people.R$id: int ImgCaptureCam
 com.raafstudio.goahead.people.R$id: int ImgCaptureFile
+com.raafstudio.goahead.people.R$id: int ImgDemo
 com.raafstudio.goahead.people.R$id: int ImgProduct
 com.raafstudio.goahead.people.R$id: int Launcher
 com.raafstudio.goahead.people.R$id: int LauncherAdd
@@ -2980,6 +3160,9 @@ com.raafstudio.goahead.people.R$id: int LayListArtworks
 com.raafstudio.goahead.people.R$id: int LayListProducts
 com.raafstudio.goahead.people.R$id: int LayListProducts1
 com.raafstudio.goahead.people.R$id: int LayListProducts2
+com.raafstudio.goahead.people.R$id: int LayoutArtGraph
+com.raafstudio.goahead.people.R$id: int LayoutComment
+com.raafstudio.goahead.people.R$id: int LayoutResult
 com.raafstudio.goahead.people.R$id: int LayoutUser
 com.raafstudio.goahead.people.R$id: int ListArt
 com.raafstudio.goahead.people.R$id: int ListNotification
@@ -2992,13 +3175,20 @@ com.raafstudio.goahead.people.R$id: int NotifTvTime
 com.raafstudio.goahead.people.R$id: int RelativeLayout1
 com.raafstudio.goahead.people.R$id: int SearchEt
 com.raafstudio.goahead.people.R$id: int SearchToolbar
+com.raafstudio.goahead.people.R$id: int SpCategory
 com.raafstudio.goahead.people.R$id: int SpProvince
 com.raafstudio.goahead.people.R$id: int TextSpinner
+com.raafstudio.goahead.people.R$id: int TollbarBtNext
 com.raafstudio.goahead.people.R$id: int Toolbar
 com.raafstudio.goahead.people.R$id: int ToolbarImgSearch
 com.raafstudio.goahead.people.R$id: int ToolbarLayout
 com.raafstudio.goahead.people.R$id: int ToolbarSp
 com.raafstudio.goahead.people.R$id: int TvChangeAvatar
+com.raafstudio.goahead.people.R$id: int TvCommentContent
+com.raafstudio.goahead.people.R$id: int TvCommentName
+com.raafstudio.goahead.people.R$id: int TvCommentTime
+com.raafstudio.goahead.people.R$id: int TvDialogTitle
+com.raafstudio.goahead.people.R$id: int TvError
 com.raafstudio.goahead.people.R$id: int TvNoNetwork
 com.raafstudio.goahead.people.R$id: int TvProductTitle
 com.raafstudio.goahead.people.R$id: int TvProductUser
@@ -3033,6 +3223,7 @@ com.raafstudio.goahead.people.R$id: int buyButton
 com.raafstudio.goahead.people.R$id: int buy_now
 com.raafstudio.goahead.people.R$id: int buy_with_google
 com.raafstudio.goahead.people.R$id: int checkbox
+com.raafstudio.goahead.people.R$id: int circleImageView1
 com.raafstudio.goahead.people.R$id: int circleView
 com.raafstudio.goahead.people.R$id: int classic
 com.raafstudio.goahead.people.R$id: int collapseActionView
@@ -3056,11 +3247,13 @@ com.raafstudio.goahead.people.R$id: int holo_dark
 com.raafstudio.goahead.people.R$id: int holo_light
 com.raafstudio.goahead.people.R$id: int home
 com.raafstudio.goahead.people.R$id: int homeAsUp
+com.raafstudio.goahead.people.R$id: int horizontalScrollView1
+com.raafstudio.goahead.people.R$id: int horizontalScrollView2
 com.raafstudio.goahead.people.R$id: int hybrid
 com.raafstudio.goahead.people.R$id: int icon
 com.raafstudio.goahead.people.R$id: int ifRoom
 com.raafstudio.goahead.people.R$id: int image
-com.raafstudio.goahead.people.R$id: int imageView1
+com.raafstudio.goahead.people.R$id: int imageView2
 com.raafstudio.goahead.people.R$id: int item_info
 com.raafstudio.goahead.people.R$id: int item_name
 com.raafstudio.goahead.people.R$id: int listMode
@@ -3079,6 +3272,8 @@ com.raafstudio.goahead.people.R$id: int progressBar1
 com.raafstudio.goahead.people.R$id: int progress_circular
 com.raafstudio.goahead.people.R$id: int progress_horizontal
 com.raafstudio.goahead.people.R$id: int radio
+com.raafstudio.goahead.people.R$id: int realtabcontent
+com.raafstudio.goahead.people.R$id: int root
 com.raafstudio.goahead.people.R$id: int sandbox
 com.raafstudio.goahead.people.R$id: int satellite
 com.raafstudio.goahead.people.R$id: int scrimInsetsFrameLayout
@@ -3102,6 +3297,7 @@ com.raafstudio.goahead.people.R$id: int split_action_bar
 com.raafstudio.goahead.people.R$id: int strict_sandbox
 com.raafstudio.goahead.people.R$id: int submit_area
 com.raafstudio.goahead.people.R$id: int tabMode
+com.raafstudio.goahead.people.R$id: int tabhost
 com.raafstudio.goahead.people.R$id: int tableRow1
 com.raafstudio.goahead.people.R$id: int tableRow2
 com.raafstudio.goahead.people.R$id: int tableRow3
@@ -3143,7 +3339,12 @@ com.raafstudio.goahead.people.R$layout: int abc_screen_toolbar
 com.raafstudio.goahead.people.R$layout: int abc_search_dropdown_item_icons_2line
 com.raafstudio.goahead.people.R$layout: int abc_search_view
 com.raafstudio.goahead.people.R$layout: int abc_simple_dropdown_hint
+com.raafstudio.goahead.people.R$layout: int activity_artwork
 com.raafstudio.goahead.people.R$layout: int activity_artwork_detail
+com.raafstudio.goahead.people.R$layout: int activity_artwork_filter
+com.raafstudio.goahead.people.R$layout: int activity_artwork_info
+com.raafstudio.goahead.people.R$layout: int activity_artwork_publish
+com.raafstudio.goahead.people.R$layout: int activity_error
 com.raafstudio.goahead.people.R$layout: int activity_login
 com.raafstudio.goahead.people.R$layout: int activity_main
 com.raafstudio.goahead.people.R$layout: int activity_main_demo
@@ -3154,9 +3355,14 @@ com.raafstudio.goahead.people.R$layout: int activity_setting_basic
 com.raafstudio.goahead.people.R$layout: int activity_setting_help
 com.raafstudio.goahead.people.R$layout: int activity_setting_terms
 com.raafstudio.goahead.people.R$layout: int activity_splash
+com.raafstudio.goahead.people.R$layout: int demo_dialog
 com.raafstudio.goahead.people.R$layout: int demo_login
 com.raafstudio.goahead.people.R$layout: int dialog_image
 com.raafstudio.goahead.people.R$layout: int drawer_row
+com.raafstudio.goahead.people.R$layout: int footer_discover
+com.raafstudio.goahead.people.R$layout: int fragment_artwork_frame
+com.raafstudio.goahead.people.R$layout: int fragment_artwork_graphic
+com.raafstudio.goahead.people.R$layout: int fragment_artwork_layout
 com.raafstudio.goahead.people.R$layout: int fragment_discover
 com.raafstudio.goahead.people.R$layout: int fragment_earnings
 com.raafstudio.goahead.people.R$layout: int fragment_list_artwork
@@ -3166,10 +3372,14 @@ com.raafstudio.goahead.people.R$layout: int fragment_notifications
 com.raafstudio.goahead.people.R$layout: int fragment_setting
 com.raafstudio.goahead.people.R$layout: int fragment_tes
 com.raafstudio.goahead.people.R$layout: int header
+com.raafstudio.goahead.people.R$layout: int item_art
 com.raafstudio.goahead.people.R$layout: int item_artwork
+com.raafstudio.goahead.people.R$layout: int item_artwork_graphic
+com.raafstudio.goahead.people.R$layout: int item_comment
 com.raafstudio.goahead.people.R$layout: int item_discover
 com.raafstudio.goahead.people.R$layout: int item_notification
 com.raafstudio.goahead.people.R$layout: int item_product
+com.raafstudio.goahead.people.R$layout: int item_profil_artwork
 com.raafstudio.goahead.people.R$layout: int list_artworks
 com.raafstudio.goahead.people.R$layout: int my_spinner
 com.raafstudio.goahead.people.R$layout: int my_spinner1
@@ -3234,6 +3444,7 @@ com.raafstudio.goahead.people.R$string: int default_value
 com.raafstudio.goahead.people.R$string: int drawer_close
 com.raafstudio.goahead.people.R$string: int drawer_open
 com.raafstudio.goahead.people.R$string: int follow
+com.raafstudio.goahead.people.R$string: int libname
 com.raafstudio.goahead.people.R$string: int no_network
 com.raafstudio.goahead.people.R$string: int separator
 com.raafstudio.goahead.people.R$string: int store_picture_message
@@ -3352,6 +3563,7 @@ com.raafstudio.goahead.people.R$style: int Base_Widget_AppCompat_Spinner_DropDow
 com.raafstudio.goahead.people.R$style: int Base_Widget_AppCompat_Toolbar
 com.raafstudio.goahead.people.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
 com.raafstudio.goahead.people.R$style: int DrawerArrowStyle
+com.raafstudio.goahead.people.R$style: int MainDemo
 com.raafstudio.goahead.people.R$style: int MyActionBar
 com.raafstudio.goahead.people.R$style: int MyActionBarTitleText
 com.raafstudio.goahead.people.R$style: int Platform_AppCompat
@@ -3432,7 +3644,6 @@ com.raafstudio.goahead.people.R$style: int ThemeOverlay_AppCompat_Dark
 com.raafstudio.goahead.people.R$style: int ThemeOverlay_AppCompat_Dark_ActionBar
 com.raafstudio.goahead.people.R$style: int ThemeOverlay_AppCompat_Light
 com.raafstudio.goahead.people.R$style: int ToolBarStyle
-com.raafstudio.goahead.people.R$style: int Transparent
 com.raafstudio.goahead.people.R$style: int WalletFragmentDefaultButtonTextAppearance
 com.raafstudio.goahead.people.R$style: int WalletFragmentDefaultDetailsHeaderTextAppearance
 com.raafstudio.goahead.people.R$style: int WalletFragmentDefaultDetailsTextAppearance
@@ -3540,6 +3751,19 @@ com.raafstudio.goahead.people.R$styleable: int AdsAttrs_adUnitId
 com.raafstudio.goahead.people.R$styleable: int[] CircleImageView
 com.raafstudio.goahead.people.R$styleable: int CircleImageView_border_color
 com.raafstudio.goahead.people.R$styleable: int CircleImageView_border_width
+com.raafstudio.goahead.people.R$styleable: int[] ColorBars
+com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_length
+com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_orientation_horizontal
+com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_pointer_halo_radius
+com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_pointer_radius
+com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_thickness
+com.raafstudio.goahead.people.R$styleable: int[] ColorPicker
+com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_center_halo_radius
+com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_center_radius
+com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_pointer_halo_radius
+com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_pointer_radius
+com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_wheel_radius
+com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_wheel_thickness
 com.raafstudio.goahead.people.R$styleable: int[] CompatTextView
 com.raafstudio.goahead.people.R$styleable: int CompatTextView_textAllCaps
 com.raafstudio.goahead.people.R$styleable: int[] DrawerArrowToggle
@@ -3802,10 +4026,29 @@ com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletD
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsLogoImageType
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsLogoTextColor
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsTextAppearance
+com.raafstudio.goahead.people.component.CircleImageView
+com.raafstudio.goahead.people.component.CircleImageView: CircleImageView(android.content.Context)
+com.raafstudio.goahead.people.component.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet)
+com.raafstudio.goahead.people.component.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet,int)
+com.raafstudio.goahead.people.component.CircleImageView: android.widget.ImageView$ScaleType getScaleType()
+com.raafstudio.goahead.people.component.CircleImageView: void setScaleType(android.widget.ImageView$ScaleType)
+com.raafstudio.goahead.people.component.CircleImageView: void setAdjustViewBounds(boolean)
+com.raafstudio.goahead.people.component.CircleImageView: int getBorderColor()
+com.raafstudio.goahead.people.component.CircleImageView: void setBorderColor(int)
+com.raafstudio.goahead.people.component.CircleImageView: int getBorderWidth()
+com.raafstudio.goahead.people.component.CircleImageView: void setBorderWidth(int)
+com.raafstudio.goahead.people.component.CircleImageView: void setImageBitmap(android.graphics.Bitmap)
+com.raafstudio.goahead.people.component.CircleImageView: void setImageDrawable(android.graphics.drawable.Drawable)
+com.raafstudio.goahead.people.component.CircleImageView: void setImageResource(int)
+com.raafstudio.goahead.people.component.CircleImageView: void setImageURI(android.net.Uri)
+com.raafstudio.goahead.people.component.CircleImageView: void setColorFilter(android.graphics.ColorFilter)
+com.raafstudio.goahead.people.component.CustomImageView: void setCustomDrawable(android.graphics.drawable.Drawable)
 com.raafstudio.goahead.people.component.ImageviewBox
 com.raafstudio.goahead.people.component.ImageviewBox: ImageviewBox(android.content.Context,android.util.AttributeSet)
 com.raafstudio.goahead.people.component.ImageviewNormal
 com.raafstudio.goahead.people.component.ImageviewNormal: ImageviewNormal(android.content.Context,android.util.AttributeSet)
+com.raafstudio.goahead.people.component.ImageviewPer3
+com.raafstudio.goahead.people.component.ImageviewPer3: ImageviewPer3(android.content.Context,android.util.AttributeSet)
 com.raafstudio.goahead.people.component.ScrimInsetsFrameLayout
 com.raafstudio.goahead.people.component.ScrimInsetsFrameLayout: ScrimInsetsFrameLayout(android.content.Context)
 com.raafstudio.goahead.people.component.ScrimInsetsFrameLayout: ScrimInsetsFrameLayout(android.content.Context,android.util.AttributeSet)

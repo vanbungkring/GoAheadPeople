@@ -8,10 +8,10 @@ import com.bumptech.glide.request.target.Target;
 import com.raaf.rDialog;
 import com.raaf.rImaging;
 import com.raaf.rSecurity;
-import com.raaf.custom.CircleImageView;
+import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.Util;
 import com.raafstudio.goahead.people.helper.so;
- 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -25,11 +25,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DialogCapture extends Activity {
 	private static int RESULT_LOAD_IMAGE = 1;
 	CircleImageView imageView;
 	Button BtApply;
+	TextView TvTitle;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,11 @@ public class DialogCapture extends Activity {
 		setContentView(R.layout.dialog_image);
 		imageView = (CircleImageView) findViewById(R.id.ImgAvatar);
 		BtApply = (Button) findViewById(R.id.BtApplyImage);
+		TvTitle = (TextView) findViewById(R.id.TvDialogTitle);
+		if (so.requester == 1)
+			TvTitle.setText("Avatar Source");
+		else
+			TvTitle.setText("Image Source");
 		((ImageView) findViewById(R.id.ImgCaptureCam))
 				.setOnClickListener(new OnClickListener() {
 
@@ -66,6 +73,7 @@ public class DialogCapture extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				so.requester = 11;
 				so.apply_image = true;
 				finish();
 			}
@@ -86,11 +94,11 @@ public class DialogCapture extends Activity {
 			cursor.moveToFirst();
 
 			int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-			String picturePath = cursor.getString(columnIndex);
+			so.PicturePath = cursor.getString(columnIndex);
 			cursor.close();
 			imageView.setVisibility(View.VISIBLE);
 			BtApply.setVisibility(View.VISIBLE);
-			Glide.with(this).load(picturePath).asBitmap().centerCrop()
+			Glide.with(this).load(so.PicturePath).asBitmap().centerCrop()
 					.override(220, 220)
 					.listener(new RequestListener<String, Bitmap>() {
 
@@ -98,11 +106,16 @@ public class DialogCapture extends Activity {
 						public boolean onResourceReady(Bitmap arg0,
 								String arg1, Target<Bitmap> arg2, boolean arg3,
 								boolean arg4) {
-							String filename = Util.getDir()
-									+ "/"
-									+ rSecurity.getMD5(so.getUser()
-											.getUser_id() + "") + ".jpg";
-							rDialog.SetToast(DialogCapture.this, filename);
+							String filename;
+							if (so.requester == 1)
+								filename = Util.getDir()
+										+ "/"
+										+ rSecurity.getMD5(so.getUser()
+												.getUser_id() + "") + ".jpeg";
+							else
+								filename = Util.getDirArt() + "/"
+										+ rSecurity.getMD5("new_art");
+							//rDialog.SetToast(DialogCapture.this, filename);
 							File fl = new File(filename);
 							if (fl.exists())
 								fl.delete();
@@ -122,5 +135,11 @@ public class DialogCapture extends Activity {
 
 		}
 
+	}
+
+	@Override
+	public void onBackPressed() {
+		so.requester = 12;
+		super.onBackPressed();
 	}
 }

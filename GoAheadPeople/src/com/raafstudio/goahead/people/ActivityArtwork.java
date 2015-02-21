@@ -1,14 +1,27 @@
 package com.raafstudio.goahead.people;
 
 import com.raaf.rColorPicker;
+import com.raaf.rIO;
+import com.raaf.rImaging;
 import com.raaf.rColorPicker.OnColorChangedListener;
+import com.raafstudio.goahead.people.fragment.FragmentArtworkFrame;
+import com.raafstudio.goahead.people.fragment.FragmentArtworkGraph;
+import com.raafstudio.goahead.people.fragment.FragmentArtworksLayout;
+import com.raafstudio.goahead.people.fragment.FragmentDiscover;
+import com.raafstudio.goahead.people.fragment.FragmentNotification;
+import com.raafstudio.goahead.people.fragment.FragmentSetting;
+import com.raafstudio.goahead.people.helper.so;
 import com.raaf.rDialog;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTabHost;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
@@ -17,8 +30,9 @@ import android.widget.TextView;
 
 public class ActivityArtwork extends ActivityBase implements
 		OnColorChangedListener {
-	private TabHost myTabHost;
+	private FragmentTabHost myTabHost;
 	rColorPicker rc;
+	Boolean newArt = true;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,37 +40,65 @@ public class ActivityArtwork extends ActivityBase implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_artwork);
 		bindToolbar();
+		TvNext.setVisibility(View.VISIBLE);
+		TvNext.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				if (myTabHost.getCurrentTab() == 2) {
+					rDialog.ShowProgressDialog(ActivityArtwork.this,
+							"processing image", "please wait", true);
+					if (so.apply_image) {
+						Bitmap bmp = rImaging.getImageFromFile(so
+								.getFileArtGraph());
+						Bitmap bmp1 = rImaging.getBitmapFromAssets(
+								ActivityArtwork.this, so.CurrentFrame);
+						bmp1 = rImaging.getPreview(bmp1, bmp.getWidth());
+						Bitmap bmpov = rImaging.doOverlay(bmp, bmp1, 0, 0);
+						bmp.recycle();
+						bmp1.recycle();
+						rImaging.SaveImageToFile(bmpov, so.getFileArtFrame(),
+								CompressFormat.JPEG, 100);
+						bmpov.recycle();
+					} else
+						rIO.copyFile(so.getFileArtGraph(), so.getFileArtFrame());
+					startActivity(new Intent(ActivityArtwork.this,
+							ActivityArtworkFilter.class));
+				} else
+					myTabHost.setCurrentTab(myTabHost.getCurrentTab() + 1);
+			}
+		});
 		rc = new rColorPicker(ActivityArtwork.this, this, "", Color.BLACK,
 				Color.WHITE);
 		getSupportActionBar().setTitle("Edit Layout");
-		myTabHost = (TabHost) findViewById(R.id.TabHost01);
-		myTabHost.setup();
-		TabSpec spec = myTabHost.newTabSpec("tab_1");
-		spec.setIndicator("",
-				getResources().getDrawable(R.drawable.ic_btn_edit_layout));
-		spec.setContent(R.id.onglet1);
-		myTabHost.addTab(spec);
-		myTabHost.addTab(myTabHost
-				.newTabSpec("tab_2")
-				.setIndicator(
+
+		myTabHost = (FragmentTabHost) findViewById(R.id.tabhost);
+		myTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+		myTabHost.addTab(
+				myTabHost.newTabSpec("tab1").setIndicator(
 						"",
 						getResources().getDrawable(
-								R.drawable.ic_btn_add_graphic))
-				.setContent(R.id.Onglet2));
-		myTabHost
-				.addTab(myTabHost
-						.newTabSpec("tab_3")
+								R.drawable.ic_btn_edit_layout)),
+				FragmentArtworksLayout.class, null);
+		myTabHost.addTab(
+				myTabHost.newTabSpec("tab2").setIndicator(
+						"",
+						getResources().getDrawable(
+								R.drawable.ic_btn_add_graphic)),
+				FragmentArtworkGraph.class, null);
+		myTabHost.addTab(
+				myTabHost.newTabSpec("tab3")
 						.setIndicator(
 								"",
 								getResources().getDrawable(
-										R.drawable.ic_btn_add_frame))
-						.setContent(R.id.Onglet3));
+										R.drawable.ic_btn_add_frame)),
+				FragmentArtworkFrame.class, null);
 		TabWidget widget = myTabHost.getTabWidget();
 		for (int i = 0; i < widget.getChildCount(); i++) {
 			View v = widget.getChildAt(i);
 
-			// Look for the title view to ensure this is an indicator and not a
-			// divider.
 			TextView tv = (TextView) v.findViewById(android.R.id.title);
 			if (tv == null) {
 				continue;
@@ -67,16 +109,34 @@ public class ActivityArtwork extends ActivityBase implements
 
 			@Override
 			public void onTabChanged(String tabId) {
-				if (tabId.equals("tab_1")) {
+				rDialog.ShowProgressDialog(ActivityArtwork.this,
+						"processing image", "please wait", true);
+				if (tabId.equals("tab1")) {
 					getSupportActionBar().setTitle("Edit Layout");
-				} else if (tabId.equals("tab_2")) {
+				} else if (tabId.equals("tab2")) {
 					getSupportActionBar().setTitle("Add Graphic");
 				} else {
 					getSupportActionBar().setTitle("Add Frame");
-					rc.show();
+
 				}
 			}
 		});
+
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (so.requester == 12)
+			finish();
+		else if (so.requester == 11) {
+			newArt = false;
+			rDialog.SetToast(this, "load art");
+
+		} else {
+			so.requester = 2;
+			startActivity(new Intent(ActivityArtwork.this, DialogCapture.class));
+		}
 	}
 
 	@Override
@@ -94,10 +154,14 @@ public class ActivityArtwork extends ActivityBase implements
 
 	@Override
 	public void onBackPressed() {
-		if (myTabHost.getCurrentTab() == 0)
-			super.onBackPressed();
-		else {
-
+		if (myTabHost.getCurrentTab() == 0) {
+			if (!newArt) {
+				so.requester = 2;
+				startActivity(new Intent(ActivityArtwork.this,
+						DialogCapture.class));
+			} else
+				super.onBackPressed();
+		} else {
 			myTabHost.setCurrentTab(myTabHost.getCurrentTab() - 1);
 		}
 	}

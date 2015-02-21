@@ -150,7 +150,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <com.raaf.custom.CircleImageView
+                <com.raafstudio.goahead.people.component.CircleImageView
                     android:id="@+id/ImgAvatar"
                     android:layout_width="75dp"
                     android:layout_height="75dp"

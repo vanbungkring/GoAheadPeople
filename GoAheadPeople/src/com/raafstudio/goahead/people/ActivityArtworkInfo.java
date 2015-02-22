@@ -19,7 +19,7 @@ import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
 
 public class ActivityArtworkInfo extends ActivityBase {
- 
+	ImageviewNormal ImgArtwork;
 	EditText EtTitle, EtDesc;
 	Spinner SpType;
 
@@ -39,6 +39,7 @@ public class ActivityArtworkInfo extends ActivityBase {
 		});
 		TvNext.setText("Publish");
 		getSupportActionBar().setTitle("Edit Info");
+		ImgArtwork = (ImageviewNormal) findViewById(R.id.ImgArtwork);
 		EtTitle = (EditText) findViewById(R.id.EtArtworkTitle);
 		EtDesc = (EditText) findViewById(R.id.EtArtworkDesc);
 		SpType = (Spinner) findViewById(R.id.SpCategory);
@@ -47,6 +48,8 @@ public class ActivityArtworkInfo extends ActivityBase {
 
 	protected void Publish() {
 		// TODO Auto-generated method stub
+		rDialog.ShowProgressDialog(ActivityArtworkInfo.this,
+				"publishing artwork", "please wait", true);
 		rFile file = new rFile();
 		file.setFile(new File(so.getFileArtFilter()));
 		file.setParam("content");
@@ -68,7 +71,12 @@ public class ActivityArtworkInfo extends ActivityBase {
 	@Override
 	protected void onResume() {
 		super.onResume();
-
+		if (so.artwork_published) {
+			finish();
+			return;
+		}
+		ImgArtwork.setImageBitmap(rImaging.getImageFromFile(so
+				.getFileArtFilter()));
 	}
 
 	@Override
@@ -79,9 +87,11 @@ public class ActivityArtworkInfo extends ActivityBase {
 			startActivity(new Intent(ActivityArtworkInfo.this,
 					ActivityArtworkPublish.class));
 			finish();
-		} else
+		} else {
 			rDialog.SetToast(ActivityArtworkInfo.this,
 					so.meta.getCode() + " : " + so.meta.getErrorDetail()
 							+ "\n\n" + so.meta.getJson());
+			rDialog.CloseProgressDialog();
+		}
 	}
 }

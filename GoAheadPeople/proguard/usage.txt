@@ -9043,7 +9043,7 @@ com.raafstudio.goahead.people.R$raw
 com.raafstudio.goahead.people.R$string
 com.raafstudio.goahead.people.R$style
 com.raafstudio.goahead.people.R$styleable:
-    3282:3282:public R$styleable()
+    3288:3288:public R$styleable()
 com.raafstudio.goahead.people.adapter.ArtworkAdapter
 com.raafstudio.goahead.people.adapter.ArtworkAdapter$ViewHolder
 com.raafstudio.goahead.people.adapter.NotificationAdapter:
@@ -9067,8 +9067,8 @@ com.raafstudio.goahead.people.fragment.FragmentArtworkGraph:
 com.raafstudio.goahead.people.fragment.FragmentBase:
     protected android.widget.ProgressBar pb
     protected android.widget.TextView TvNoNetwork
-    31:33:public int getPos()
-    37:38:public void setPos(int)
+    35:37:public int getPos()
+    41:42:public void setPos(int)
 com.raafstudio.goahead.people.fragment.FragmentProducts
 com.raafstudio.goahead.people.helper.API:
     33:33:public API()
@@ -9086,8 +9086,8 @@ com.raafstudio.goahead.people.helper.API:
     465:472:public static void MenuGetEarnings(android.os.Handler)
 com.raafstudio.goahead.people.helper.DB
 com.raafstudio.goahead.people.helper.Util:
-    9:9:public Util()
-    29:30:public static java.lang.Boolean CheckFile(java.lang.String)
+    12:12:public Util()
+    32:33:public static java.lang.Boolean CheckFile(java.lang.String)
 com.raafstudio.goahead.people.helper.so:
     public static final int modul_base
     public static final int modul_login
@@ -9105,7 +9105,7 @@ com.raafstudio.goahead.people.helper.so:
     public static final java.lang.String GCM_SENDER_ID
     static com.raafstudio.goahead.people.helper.Util util
     21:21:public so()
-    110:113:public static void setParam(java.lang.String,java.lang.String)
+    111:114:public static void setParam(java.lang.String,java.lang.String)
 com.raafstudio.goahead.people.model.Account:
     29:29:public java.lang.String getGender()
     45:45:public java.lang.String getOtherName()

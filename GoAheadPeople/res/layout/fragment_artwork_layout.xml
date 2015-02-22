@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -8,7 +9,10 @@
     <FrameLayout
         android:id="@+id/root"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/picture_frame" >
 
         <com.raafstudio.goahead.people.component.ImageviewNormal
             android:id="@+id/ImgArtwork"
@@ -16,56 +20,12 @@
             android:layout_height="match_parent" />
     </FrameLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
-
-            <com.raafstudio.goahead.people.component.ImageviewNormal
-                android:id="@+id/ImgArtLay1"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_art_layout_off"
-                android:src="@drawable/layout_typo1_active" />
-
-            <com.raafstudio.goahead.people.component.ImageviewNormal
-                android:id="@+id/ImgArtLay2"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_art_layout_off"
-                android:src="@drawable/layout_typo2_active" />
-
-            <com.raafstudio.goahead.people.component.ImageviewNormal
-                android:id="@+id/ImgArtLay3"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_art_layout_off"
-                android:src="@drawable/layout_typo3_active" />
-
-            <com.raafstudio.goahead.people.component.ImageviewNormal
-                android:id="@+id/ImgArtLay4"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_art_layout_off"
-                android:src="@drawable/layout_typo4_active" />
-
-            <com.raafstudio.goahead.people.component.ImageviewNormal
-                android:id="@+id/ImgArtLay5"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_art_layout_off"
-                android:src="@drawable/layout_typo5_active" />
-        </LinearLayout>
-    </HorizontalScrollView>
-
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
 
         <Button
             android:id="@+id/BtText1"
@@ -126,4 +86,54 @@
             android:src="@drawable/ic_btn_change_color" />
     </LinearLayout>
 
-</LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/hv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentLeft="true" >
+
+        <LinearLayout
+            android:id="@+id/LayoutArtGraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.raafstudio.goahead.people.component.ImageviewNormal
+                android:id="@+id/ImgArtLay1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_art_layout_off"
+                android:src="@drawable/layout_typo1_active" />
+
+            <com.raafstudio.goahead.people.component.ImageviewNormal
+                android:id="@+id/ImgArtLay2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_art_layout_off"
+                android:src="@drawable/layout_typo2_active" />
+
+            <com.raafstudio.goahead.people.component.ImageviewNormal
+                android:id="@+id/ImgArtLay3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_art_layout_off"
+                android:src="@drawable/layout_typo3_active" />
+
+            <com.raafstudio.goahead.people.component.ImageviewNormal
+                android:id="@+id/ImgArtLay4"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_art_layout_off"
+                android:src="@drawable/layout_typo4_active" />
+
+            <com.raafstudio.goahead.people.component.ImageviewNormal
+                android:id="@+id/ImgArtLay5"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_art_layout_off"
+                android:src="@drawable/layout_typo5_active" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

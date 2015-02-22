@@ -1,7 +1,8 @@
 package com.raafstudio.goahead.people.fragment;
- 
 
-import com.raafstudio.goahead.people.helper.API; 
+import com.raafstudio.goahead.people.ActivityMain;
+import com.raafstudio.goahead.people.helper.API;
+import com.raafstudio.goahead.people.helper.so;
 
 import android.annotation.SuppressLint;
 import android.os.Handler;
@@ -11,7 +12,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-@SuppressLint("HandlerLeak") public class FragmentBase extends Fragment {
+@SuppressLint("HandlerLeak")
+public class FragmentBase extends Fragment {
 	private int Pos = -1;
 	protected View rView;
 	protected ProgressBar pb;
@@ -25,6 +27,8 @@ import android.widget.TextView;
 
 	protected void handlerResponse(Message msg) {
 		API.ApiParser(msg);
+		if (so.meta.getCode() == 401)
+			((ActivityMain) getActivity()).doLogin();
 	}
 
 	public int getPos() {

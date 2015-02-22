@@ -105,10 +105,10 @@ public class FragmentArtworkGraph extends FragmentBase implements
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.ImgArtGraph1:
-			ChangeCategory(Img1);
-			Img1.setImageDrawable(getResources().getDrawable(
-					R.drawable.ic_btn_pattern_on));
-			LoadGraph(1);
+		//	ChangeCategory(Img1);
+		//	Img1.setImageDrawable(getResources().getDrawable(
+		//			R.drawable.ic_btn_pattern_on));
+		//	LoadGraph(1);
 			break;
 		case R.id.ImgArtGraph2:
 			ChangeCategory(Img2);
@@ -137,8 +137,8 @@ public class FragmentArtworkGraph extends FragmentBase implements
 
 	private void ChangeCategory(ImageView Img) {
 
-		Img1.setBackground(getResources().getDrawable(
-				R.drawable.btn_art_graph_off));
+		//Img1.setBackground(getResources().getDrawable(
+		//		R.drawable.btn_art_graph_off));
 		Img2.setBackground(getResources().getDrawable(
 				R.drawable.btn_art_graph_off));
 		Img3.setBackground(getResources().getDrawable(
@@ -147,8 +147,8 @@ public class FragmentArtworkGraph extends FragmentBase implements
 				R.drawable.btn_art_graph_off));
 		Img5.setBackground(getResources().getDrawable(
 				R.drawable.btn_art_graph_off));
-		Img1.setImageDrawable(getResources().getDrawable(
-				R.drawable.ic_btn_pattern_off));
+		//Img1.setImageDrawable(getResources().getDrawable(
+		//		R.drawable.ic_btn_pattern_off));
 		Img2.setImageDrawable(getResources().getDrawable(
 				R.drawable.ic_btn_pattern_off));
 		Img3.setImageDrawable(getResources().getDrawable(

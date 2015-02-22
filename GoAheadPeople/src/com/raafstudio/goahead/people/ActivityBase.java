@@ -25,8 +25,8 @@ public class ActivityBase extends ActionBarActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		// mMyApp = (MyApp) this.getApplicationContext();
-		//Thread.setDefaultUncaughtExceptionHandler(new rExceptionHandler(this,
-		//		ErrorReporting.class));
+		// Thread.setDefaultUncaughtExceptionHandler(new rExceptionHandler(this,
+		// ErrorReporting.class));
 		if (so.ctx == null)
 			so.ctx = getApplicationContext();
 	}
@@ -69,7 +69,9 @@ public class ActivityBase extends ActionBarActivity {
 
 	protected void handlerResponse(Message msg) {
 		API.ApiParser(msg);
-		if (so.meta.getCode() == 200) {
+		if (so.meta.getCode() == 401)
+			doLogin();
+		else if (so.meta.getCode() == 200) {
 			if (so.meta.getModul() == so.modul_base && isBase) {
 				so.getUserOther().getArtworks().clear();
 				so.getUserOther().getProducts().clear();
@@ -90,6 +92,11 @@ public class ActivityBase extends ActionBarActivity {
 	int what_user = 1;
 	int User_id;
 	String String_id;
+
+	public void doLogin() {
+		startActivity(new Intent(this, ActivityLogin.class));
+		finish();
+	}
 
 	public void ShowProfile(int userid) {
 		isBase = true;

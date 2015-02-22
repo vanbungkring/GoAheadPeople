@@ -10,6 +10,7 @@ import com.raafstudio.goahead.people.fragment.FragmentArtworksLayout;
 import com.raafstudio.goahead.people.fragment.FragmentDiscover;
 import com.raafstudio.goahead.people.fragment.FragmentNotification;
 import com.raafstudio.goahead.people.fragment.FragmentSetting;
+import com.raafstudio.goahead.people.helper.Util;
 import com.raafstudio.goahead.people.helper.so;
 import com.raaf.rDialog;
 
@@ -46,10 +47,9 @@ public class ActivityArtwork extends ActivityBase implements
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				Util.showProgres(ActivityArtwork.this);
 				if (myTabHost.getCurrentTab() == 2) {
-					rDialog.ShowProgressDialog(ActivityArtwork.this,
-							"processing image", "please wait", true);
+					 
 					if (so.apply_image) {
 						Bitmap bmp = rImaging.getImageFromFile(so
 								.getFileArtGraph());
@@ -105,12 +105,19 @@ public class ActivityArtwork extends ActivityBase implements
 			}
 			v.setBackgroundResource(R.drawable.tab_bg);
 		}
+		myTabHost.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Util.showProgres(ActivityArtwork.this);
+			}
+		});
 		myTabHost.setOnTabChangedListener(new OnTabChangeListener() {
 
 			@Override
 			public void onTabChanged(String tabId) {
-				rDialog.ShowProgressDialog(ActivityArtwork.this,
-						"processing image", "please wait", true);
+			
 				if (tabId.equals("tab1")) {
 					getSupportActionBar().setTitle("Edit Layout");
 				} else if (tabId.equals("tab2")) {
@@ -119,6 +126,7 @@ public class ActivityArtwork extends ActivityBase implements
 					getSupportActionBar().setTitle("Add Frame");
 
 				}
+				rDialog.CloseProgressDialog();
 			}
 		});
 
@@ -127,15 +135,19 @@ public class ActivityArtwork extends ActivityBase implements
 	@Override
 	protected void onResume() {
 		super.onResume();
+		if (so.artwork_published){
+			finish();
+			return;
+		}
 		if (so.requester == 12)
 			finish();
 		else if (so.requester == 11) {
 			newArt = false;
-			rDialog.SetToast(this, "load art");
 
-		} else {
+		} else if (myTabHost.getCurrentTab() == 0) {
 			so.requester = 2;
 			startActivity(new Intent(ActivityArtwork.this, DialogCapture.class));
+
 		}
 	}
 

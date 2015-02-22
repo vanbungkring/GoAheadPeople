@@ -2,6 +2,9 @@ package com.raafstudio.goahead.people.helper;
 
 import java.io.File;
 
+import com.raaf.rDialog;
+
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Environment;
@@ -92,6 +95,11 @@ public class Util {
 					+ " ";
 		}
 		return str.substring(0, str.length() - 1);
+	}
+
+	public static void showProgres(Context ctx) {
+		rDialog.ShowProgressDialog(ctx, "processing image", "please wait",
+				true);
 	}
 
 }

@@ -40,6 +40,7 @@ public class so {
 	public static final String PREF_APP_VERSION = "PREF_APP_VERSION";
 	public static final String GCM_SENDER_ID = "470363429504";
 	public static Boolean apply_image = false;
+	public static Boolean artwork_published = false;
 	public static int requester = 0;
 	public static String PicturePath = "";
 	static ArrayList<Artwork> DiscoverArtworks;

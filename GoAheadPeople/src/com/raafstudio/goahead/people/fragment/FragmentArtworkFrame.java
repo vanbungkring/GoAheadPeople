@@ -73,6 +73,8 @@ public class FragmentArtworkFrame extends FragmentBase implements
 		Drawable d = new BitmapDrawable(getResources(),
 				rImaging.getImageFromFile(so.getFileArtGraph()));
 		ImgArtwork.setBackground(d);
+		ImgArtwork.setImageBitmap(rImaging.getImageFromFile(so
+				.getFileArtGraph()));
 		bmpBackgroud = rImaging.getPreview(
 				rImaging.getImageFromFile(so.getFileArtGraph()), 200);
 		ChangeCategory(ImgBasic);
@@ -193,12 +195,10 @@ public class FragmentArtworkFrame extends FragmentBase implements
 		}
 	}
 
-	 
-
 	@Override
 	public void onPause() {
 		// TODO Auto-generated method stub
-		
+
 		super.onPause();
 	}
 }

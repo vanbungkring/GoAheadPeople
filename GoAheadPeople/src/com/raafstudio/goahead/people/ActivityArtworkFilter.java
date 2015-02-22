@@ -61,6 +61,10 @@ public class ActivityArtworkFilter extends ActivityBase {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		if (so.artwork_published){
+			finish();
+			return;
+		}
 		ImgArtwork.setImageBitmap(rImaging.getImageFromFile(so
 				.getFileArtFrame()));
 		preview = rImaging.getPreview(

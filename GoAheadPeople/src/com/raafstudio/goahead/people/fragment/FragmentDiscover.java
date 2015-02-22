@@ -236,6 +236,7 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 		case R.id.LauncherAdd:
 			so.requester = 2;
 			so.apply_image = false;
+			so.artwork_published = false;
 			startActivity(new Intent(getActivity(), ActivityArtwork.class));
 
 			break;

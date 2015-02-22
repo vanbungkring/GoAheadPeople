@@ -3070,6 +3070,10 @@ com.raafstudio.goahead.people.R$drawable: int layout_typo3_active
 com.raafstudio.goahead.people.R$drawable: int layout_typo4_active
 com.raafstudio.goahead.people.R$drawable: int layout_typo5_active
 com.raafstudio.goahead.people.R$drawable: int list_selector
+com.raafstudio.goahead.people.R$drawable: int picture_frame
+com.raafstudio.goahead.people.R$drawable: int picture_frame_default
+com.raafstudio.goahead.people.R$drawable: int picture_frame_pressed
+com.raafstudio.goahead.people.R$drawable: int picture_frame_selected
 com.raafstudio.goahead.people.R$drawable: int powered_by_google_dark
 com.raafstudio.goahead.people.R$drawable: int powered_by_google_light
 com.raafstudio.goahead.people.R$drawable: int tab_bg
@@ -3148,6 +3152,7 @@ com.raafstudio.goahead.people.R$id: int ImgArtwork2
 com.raafstudio.goahead.people.R$id: int ImgArtwork3
 com.raafstudio.goahead.people.R$id: int ImgAvatar
 com.raafstudio.goahead.people.R$id: int ImgAvatarBackground
+com.raafstudio.goahead.people.R$id: int ImgBackground
 com.raafstudio.goahead.people.R$id: int ImgCaptureCam
 com.raafstudio.goahead.people.R$id: int ImgCaptureFile
 com.raafstudio.goahead.people.R$id: int ImgDemo
@@ -3248,7 +3253,7 @@ com.raafstudio.goahead.people.R$id: int holo_light
 com.raafstudio.goahead.people.R$id: int home
 com.raafstudio.goahead.people.R$id: int homeAsUp
 com.raafstudio.goahead.people.R$id: int horizontalScrollView1
-com.raafstudio.goahead.people.R$id: int horizontalScrollView2
+com.raafstudio.goahead.people.R$id: int hv
 com.raafstudio.goahead.people.R$id: int hybrid
 com.raafstudio.goahead.people.R$id: int icon
 com.raafstudio.goahead.people.R$id: int ifRoom
@@ -3256,6 +3261,7 @@ com.raafstudio.goahead.people.R$id: int image
 com.raafstudio.goahead.people.R$id: int imageView2
 com.raafstudio.goahead.people.R$id: int item_info
 com.raafstudio.goahead.people.R$id: int item_name
+com.raafstudio.goahead.people.R$id: int linearLayout1
 com.raafstudio.goahead.people.R$id: int listMode
 com.raafstudio.goahead.people.R$id: int list_item
 com.raafstudio.goahead.people.R$id: int match_parent

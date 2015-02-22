@@ -48,43 +48,44 @@ public class ActivityMain extends ActivityBase implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (so.getToken().length() == 0) {
-			startActivity(new Intent(ActivityMain.this, ActivityLogin.class));
-			finish();
-			return;
+			doLogin();
+		} else {
+
+			setContentView(R.layout.activity_main);
+			bindToolbar();
+			ImgSearch = (ImageView) findViewById(R.id.ToolbarImgSearch);
+			SpToolbar = (Spinner) findViewById(R.id.ToolbarSp);
+			LayoutToolbar = (LinearLayout) findViewById(R.id.ToolbarLayout);
+
+			getSupportActionBar().setTitle("");
+			// ArrayAdapter<CharSequence> adapter =
+			// ArrayAdapter.createFromResource(
+			// this, R.array.toolbar_spinner, R.layout.my_spinner);
+			String[] cmd = getResources().getStringArray(
+					R.array.toolbar_spinner);
+
+			SpToolbar.setAdapter(new MyAdapter(this, R.layout.my_spinner, cmd));
+			// SpToolbar.setAdapter(adapter);
+			mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
+					.findFragmentById(R.id.fragment_drawer);
+			mNavigationDrawerFragment.setup(R.id.fragment_drawer,
+					(DrawerLayout) findViewById(R.id.drawer), mToolbar);
+			ImgSearch.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					startActivity(new Intent(ActivityMain.this,
+							ActivitySearch.class));
+				}
+			});
+			fDiscover = new FragmentDiscover();
+			if (savedInstanceState == null)
+				getSupportFragmentManager().beginTransaction()
+						.replace(R.id.container, fDiscover).commit();
+			if (mNavigationDrawerFragment.isDrawerOpen())
+				mNavigationDrawerFragment.closeDrawer();
 		}
-
-		setContentView(R.layout.activity_main);
-		bindToolbar();
-		ImgSearch = (ImageView) findViewById(R.id.ToolbarImgSearch);
-		SpToolbar = (Spinner) findViewById(R.id.ToolbarSp);
-		LayoutToolbar = (LinearLayout) findViewById(R.id.ToolbarLayout);
-
-		getSupportActionBar().setTitle("");
-		// ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-		// this, R.array.toolbar_spinner, R.layout.my_spinner);
-		String[] cmd = getResources().getStringArray(R.array.toolbar_spinner);
-
-		SpToolbar.setAdapter(new MyAdapter(this, R.layout.my_spinner, cmd));
-		// SpToolbar.setAdapter(adapter);
-		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
-				.findFragmentById(R.id.fragment_drawer);
-		mNavigationDrawerFragment.setup(R.id.fragment_drawer,
-				(DrawerLayout) findViewById(R.id.drawer), mToolbar);
-		ImgSearch.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(ActivityMain.this,
-						ActivitySearch.class));
-			}
-		});
-		fDiscover = new FragmentDiscover();
-		if (savedInstanceState == null)
-			getSupportFragmentManager().beginTransaction()
-					.replace(R.id.container, fDiscover).commit();
-		if (mNavigationDrawerFragment.isDrawerOpen())
-			mNavigationDrawerFragment.closeDrawer();
 	}
 
 	public class MyAdapter extends ArrayAdapter<String> {

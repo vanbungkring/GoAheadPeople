@@ -100,11 +100,12 @@ public class FragmentArtworksLayout extends FragmentBase implements
 			// Drawable d = new BitmapDrawable(getResources(),
 			// rImaging.getImageFromFile(filename));
 			// ImgArtwork.setBackground(d);
-			ImgArtwork.setImageBitmap(rImaging.getImageFromFile(so
-					.getFileArtSource()));
+
 			so.apply_image = false;
 			so.requester = 2;
 		}
+		ImgArtwork.setImageBitmap(rImaging.getImageFromFile(so
+				.getFileArtSource()));
 		rDialog.CloseProgressDialog();
 	}
 

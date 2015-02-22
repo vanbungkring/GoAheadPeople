@@ -10,7 +10,7 @@ public class Notification {
 	String notification_type;
 	int is_read;
 	String user_avatar;
-	int user_action_id;
+	String user_action_id;
 	String duration;
 	String string_id;
 	User user_profile = new User();
@@ -75,11 +75,11 @@ public class Notification {
 		this.user_avatar = user_avatar;
 	}
 
-	public int getUser_action_id() {
+	public String getUser_action_id() {
 		return user_action_id;
 	}
 
-	public void setUser_action_id(int user_action_id) {
+	public void setUser_action_id(String user_action_id) {
 		this.user_action_id = user_action_id;
 	}
 

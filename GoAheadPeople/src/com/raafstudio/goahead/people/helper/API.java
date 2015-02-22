@@ -511,60 +511,68 @@ public class API {
 								.getString("notification_type"));
 						notif.setIs_read(jo.getInt("is_read"));
 						notif.setUser_avatar(jo.getString("user_avatar"));
-						notif.setUser_action_id(jo.getInt("user_action_id"));
+						notif.setUser_action_id(jo.getString("user_action_id"));
 						notif.setDuration(jo.getString("duration"));
-						notif.setString_id(jo.getString("string_id"));
-						notif.setIsNeedToNavigate(jo
-								.getBoolean("isNeedToNavigate"));
-						notif.setIs_admin(jo.getBoolean("is_admin"));
 						notif.setOriginal(jo.getString("original"));
-						jar1 = jo.getJSONArray("detail_artwork");
-						jo1 = jo.getJSONObject("user_profile");
-						notif.getUser_profile().setUser_id(
-								jo1.getInt("user_id"));
-						notif.getUser_profile().setFullname(
-								jo1.getString("fullname"));
-						notif.getUser_profile().setJob_profile(
-								jo1.getString("job_profile"));
-						notif.getUser_profile().setJob_location(
-								jo1.getString("job_location"));
-						notif.getUser_profile().setBio(jo1.getString("bio"));
-						notif.getUser_profile().setProfile_id(
-								jo1.getString("encrypted_id"));
-						for (int j = 0; j < jar1.length(); j++) {
-							jo1 = jar1.getJSONObject(j);
-							Artwork art = new Artwork();
+						
+						if (jo.has("string_id")) {
+							notif.setString_id(jo.getString("string_id"));
+							notif.setIsNeedToNavigate(jo
+									.getBoolean("isNeedToNavigate"));
+							notif.setIs_admin(jo.getBoolean("is_admin"));
 
-							art.setType(jo1.getString("type"));
-							art.setString_id(jo1.getString("string_id"));
-							art.setLike_stat(jo1.getInt("like_stat"));
-							art.setComment_stat(jo1.getInt("comment_stat"));
-							art.setView_stat(jo1.getInt("view_stat"));
-							art.setCreatedatetime(jo1
-									.getString("createdatetime"));
-							art.setTime(jo1.getString("time"));
-							art.setVerifydatetime(jo1
-									.getString("verifydatetime"));
-							art.setTitle(jo1.getString("title"));
-							art.setImage(jo1.getString("image"));
-							art.setImage_ori(jo1.getString("image_ori"));
-							art.setImageHeight(jo1.getInt("imageHeight"));
-							art.setImageWidth(jo1.getInt("imageWidth"));
-							art.setPriority(jo1.getInt("priority"));
-							art.setAuthor_id(jo1.getInt("author_id"));
-							art.setSub_type(jo1.getString("sub_type"));
-							art.setArtwork_class(jo1.getString("artwork_class"));
-							art.setIs_featured(jo1.getInt("is_featured"));
-							art.setFullname(jo1.getString("fullname"));
-							art.setUser_avatar(jo1.getString("user_avatar"));
-							art.setIs_you(jo1.getString("is_you"));
-							art.setJob_profile(jo1.getString("job_profile"));
-							art.setJob_location(jo1.getString("job_location"));
-							art.setBio(jo1.getString("bio"));
-							art.setUser_id(jo1.getInt("user_id"));
-							art.setLink(jo1.getString("link"));
-							art.setEncrypted_id(jo1.getString("encrypted_id"));
-							notif.getDetail_artwork().add(art);
+							jar1 = jo.getJSONArray("detail_artwork");
+							jo1 = jo.getJSONObject("user_profile");
+							notif.getUser_profile().setUser_id(
+									jo1.getInt("user_id"));
+							notif.getUser_profile().setFullname(
+									jo1.getString("fullname"));
+							notif.getUser_profile().setJob_profile(
+									jo1.getString("job_profile"));
+							notif.getUser_profile().setJob_location(
+									jo1.getString("job_location"));
+							notif.getUser_profile()
+									.setBio(jo1.getString("bio"));
+							notif.getUser_profile().setProfile_id(
+									jo1.getString("encrypted_id"));
+							for (int j = 0; j < jar1.length(); j++) {
+								jo1 = jar1.getJSONObject(j);
+								Artwork art = new Artwork();
+
+								art.setType(jo1.getString("type"));
+								art.setString_id(jo1.getString("string_id"));
+								art.setLike_stat(jo1.getInt("like_stat"));
+								art.setComment_stat(jo1.getInt("comment_stat"));
+								art.setView_stat(jo1.getInt("view_stat"));
+								art.setCreatedatetime(jo1
+										.getString("createdatetime"));
+								art.setTime(jo1.getString("time"));
+								art.setVerifydatetime(jo1
+										.getString("verifydatetime"));
+								art.setTitle(jo1.getString("title"));
+								art.setImage(jo1.getString("image"));
+								art.setImage_ori(jo1.getString("image_ori"));
+								art.setImageHeight(jo1.getInt("imageHeight"));
+								art.setImageWidth(jo1.getInt("imageWidth"));
+								art.setPriority(jo1.getInt("priority"));
+								art.setAuthor_id(jo1.getInt("author_id"));
+								art.setSub_type(jo1.getString("sub_type"));
+								art.setArtwork_class(jo1
+										.getString("artwork_class"));
+								art.setIs_featured(jo1.getInt("is_featured"));
+								art.setFullname(jo1.getString("fullname"));
+								art.setUser_avatar(jo1.getString("user_avatar"));
+								art.setIs_you(jo1.getString("is_you"));
+								art.setJob_profile(jo1.getString("job_profile"));
+								art.setJob_location(jo1
+										.getString("job_location"));
+								art.setBio(jo1.getString("bio"));
+								art.setUser_id(jo1.getInt("user_id"));
+								art.setLink(jo1.getString("link"));
+								art.setEncrypted_id(jo1
+										.getString("encrypted_id"));
+								notif.getDetail_artwork().add(art);
+							}
 						}
 						so.getNotifications().add(notif);
 					}
@@ -1075,12 +1083,12 @@ public class API {
 			JSONObject jObject;
 			try {
 				jObject = new JSONObject(message);
-				if( jObject.getBoolean("status"))
+				if (jObject.getBoolean("status"))
 					so.meta.setCode(200);
 				else
 					so.meta.setCode(201);
 				so.meta.setErrorDetail(jObject.getString("message"));
-				
+
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -1088,7 +1096,7 @@ public class API {
 				so.meta.setErrorType("http");
 				so.meta.setErrorDetail(message);
 			}
-			
+
 		} else {
 			so.meta = new Meta();
 			so.meta.setCode(-2);

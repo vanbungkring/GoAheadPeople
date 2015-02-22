@@ -1,5 +1,5 @@
 package com.raafstudio.goahead.people.fragment;
- 
+
 import android.app.Notification;
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.raaf.rDialog;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.adapter.DiscoverAdapter;
 import com.raafstudio.goahead.people.adapter.NotificationAdapter;
@@ -61,7 +62,9 @@ public class FragmentNotification extends FragmentBase {
 		super.handlerResponse(msg);
 		if (so.meta.getCode() == 200) {
 			adapter.notifyDataSetChanged();
-		}
+		} else
+			rDialog.SetToast(getActivity(),
+					so.meta.getCode() + " - " + so.meta.getErrorDetail());
 	}
 
 }

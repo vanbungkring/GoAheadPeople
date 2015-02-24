@@ -250,7 +250,7 @@ public class NavigationDrawerFragment extends FragmentBase implements
 		mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
 	}
 
-	public void openDrawer() {
+	public void openDrawer1() {
 		mDrawerLayout.openDrawer(mFragmentContainerView);
 	}
 

@@ -27,6 +27,7 @@ import android.view.animation.Animation;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -78,9 +79,7 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 						&& (totalItemCount - visibleItemCount) <= (firstVisibleItem + visibleThreshold)) {
 					// I load the next page of gigs using a background task,
 					// but you can call any function here.
-					API.DiscoverGet("", so.getDiscoverArtworks().size(),
-							handler);
-
+					LoadData(last_key);
 					isloading = true;
 				}
 			}
@@ -206,11 +205,21 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+
+	}
+
+	String last_key = "";
+
+	public void LoadData(String key) {
+		if (key!=last_key)
+			so.getDiscoverArtworks().clear();
 		if (!API.cekInet(getActivity()))
 
 			((TextView) rView.findViewById(R.id.TvNoNetwork))
 					.setVisibility(View.VISIBLE);
-
+		else
+			API.DiscoverGet(key, so.getDiscoverArtworks().size(), handler);
+		last_key = key;
 	}
 
 	@Override

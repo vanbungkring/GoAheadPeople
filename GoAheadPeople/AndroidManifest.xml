@@ -67,6 +67,9 @@
         </activity>
         <activity android:name="com.raafstudio.goahead.people.ActivityArtworkInfo" >
         </activity>
+        <activity android:name="com.raafstudio.goahead.people.ErrorReporting" >
+        </activity>
+        
     </application>
 
 </manifest>

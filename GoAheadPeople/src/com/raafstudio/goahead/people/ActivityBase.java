@@ -1,7 +1,6 @@
 package com.raafstudio.goahead.people;
 
-import com.raaf.rDialog;
-import com.raaf.rExceptionHandler;
+import com.raaf.rDialog; 
 import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
 
@@ -24,9 +23,8 @@ public class ActivityBase extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		// mMyApp = (MyApp) this.getApplicationContext();
-		// Thread.setDefaultUncaughtExceptionHandler(new rExceptionHandler(this,
-		// ErrorReporting.class));
+		// mMyApp = (MyApp) this.getApplicationContext(); 
+		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		if (so.ctx == null)
 			so.ctx = getApplicationContext();
 	}

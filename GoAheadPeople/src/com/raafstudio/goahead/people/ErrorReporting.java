@@ -16,7 +16,7 @@ public class ErrorReporting extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_error);
+		setContentView(R.layout.activity_eror_reporting);
 		eror = getIntent().getStringExtra("error");
 		((TextView) findViewById(R.id.TvError)).setText(eror);
 		((Button) findViewById(R.id.BtSendError))

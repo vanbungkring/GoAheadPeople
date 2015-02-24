@@ -24,6 +24,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -85,6 +87,41 @@ public class ActivityMain extends ActivityBase implements
 						.replace(R.id.container, fDiscover).commit();
 			if (mNavigationDrawerFragment.isDrawerOpen())
 				mNavigationDrawerFragment.closeDrawer();
+			
+			SpToolbar.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+				@Override
+				public void onItemSelected(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Auto-generated method stub
+					if (fDiscover!=null){
+						switch (position) {
+						case 1:
+							fDiscover.LoadData("feed");
+							break;
+						case 2:
+							fDiscover.LoadData("visual-art");
+							break;
+						case 3:
+							fDiscover.LoadData("style");
+							break;
+						case 4:
+							fDiscover.LoadData("photo");
+							break;
+						default:
+							fDiscover.LoadData("");
+							break;
+						}
+					}
+				//	rDialog.SetToast(ActivityMain.this, SpToolbar.getSelectedItem().toString() + " ; " + id);
+				}
+
+				@Override
+				public void onNothingSelected(AdapterView<?> parent) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
 		}
 	}
 

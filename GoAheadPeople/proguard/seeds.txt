@@ -2324,17 +2324,8 @@ com.google.android.gms.wearable.internal.x
 com.google.android.gms.wearable.internal.x: android.os.Parcelable$Creator CREATOR
 com.google.android.gms.wearable.internal.z
 com.google.android.gms.wearable.internal.z: android.os.Parcelable$Creator CREATOR
-com.raaf.R$attr: int bar_length
-com.raaf.R$attr: int bar_orientation_horizontal
-com.raaf.R$attr: int bar_pointer_halo_radius
-com.raaf.R$attr: int bar_pointer_radius
-com.raaf.R$attr: int bar_thickness
-com.raaf.R$attr: int color_center_halo_radius
-com.raaf.R$attr: int color_center_radius
-com.raaf.R$attr: int color_pointer_halo_radius
-com.raaf.R$attr: int color_pointer_radius
-com.raaf.R$attr: int color_wheel_radius
-com.raaf.R$attr: int color_wheel_thickness
+com.raaf.NFCWriteException$NFCErrorType: com.raaf.NFCWriteException$NFCErrorType[] values()
+com.raaf.NFCWriteException$NFCErrorType: com.raaf.NFCWriteException$NFCErrorType valueOf(java.lang.String)
 com.raaf.R$color: int black
 com.raaf.R$color: int blue
 com.raaf.R$color: int dark_blue
@@ -2371,73 +2362,11 @@ com.raaf.R$color: int transparent_white_percent_90
 com.raaf.R$color: int transparent_white_percent_95
 com.raaf.R$color: int white
 com.raaf.R$color: int yellow
-com.raaf.R$dimen: int bar_length
-com.raaf.R$dimen: int bar_pointer_halo_radius
-com.raaf.R$dimen: int bar_pointer_radius
-com.raaf.R$dimen: int bar_thickness
-com.raaf.R$dimen: int color_center_halo_radius
-com.raaf.R$dimen: int color_center_radius
-com.raaf.R$dimen: int color_pointer_halo_radius
-com.raaf.R$dimen: int color_pointer_radius
-com.raaf.R$dimen: int color_wheel_radius
-com.raaf.R$dimen: int color_wheel_thickness
 com.raaf.R$drawable: int ic_launcher
-com.raaf.R$drawable: int trans
-com.raaf.R$id: int ImgDemo
-com.raaf.R$layout: int demo_dialog
 com.raaf.R$string: int app_name
 com.raaf.R$style: int AppBaseTheme
 com.raaf.R$style: int AppTheme
-com.raaf.R$styleable: int[] ColorBars
-com.raaf.R$styleable: int ColorBars_bar_length
-com.raaf.R$styleable: int ColorBars_bar_orientation_horizontal
-com.raaf.R$styleable: int ColorBars_bar_pointer_halo_radius
-com.raaf.R$styleable: int ColorBars_bar_pointer_radius
-com.raaf.R$styleable: int ColorBars_bar_thickness
-com.raaf.R$styleable: int[] ColorPicker
-com.raaf.R$styleable: int ColorPicker_color_center_halo_radius
-com.raaf.R$styleable: int ColorPicker_color_center_radius
-com.raaf.R$styleable: int ColorPicker_color_pointer_halo_radius
-com.raaf.R$styleable: int ColorPicker_color_pointer_radius
-com.raaf.R$styleable: int ColorPicker_color_wheel_radius
-com.raaf.R$styleable: int ColorPicker_color_wheel_thickness
-com.raaf.colorpicker.ColorPicker: void setOnColorChangedListener(com.raaf.colorpicker.ColorPicker$OnColorChangedListener)
-com.raaf.colorpicker.ColorPicker: com.raaf.colorpicker.ColorPicker$OnColorChangedListener getOnColorChangedListener()
-com.raaf.colorpicker.ColorPicker: void setOnColorSelectedListener(com.raaf.colorpicker.ColorPicker$OnColorSelectedListener)
-com.raaf.colorpicker.ColorPicker: com.raaf.colorpicker.ColorPicker$OnColorSelectedListener getOnColorSelectedListener()
-com.raaf.colorpicker.ColorPicker: int getColor()
-com.raaf.colorpicker.ColorPicker: void setColor(int)
-com.raaf.colorpicker.ColorPicker: void setNewCenterColor(int)
-com.raaf.colorpicker.ColorPicker: void setOldCenterColor(int)
-com.raaf.colorpicker.ColorPicker: int getOldCenterColor()
-com.raaf.colorpicker.ColorPicker: void setShowOldCenterColor(boolean)
-com.raaf.colorpicker.ColorPicker: boolean getShowOldCenterColor()
-com.raaf.colorpicker.ColorPicker: void setTouchAnywhereOnColorWheelEnabled(boolean)
-com.raaf.colorpicker.ColorPicker: boolean getTouchAnywhereOnColorWheel()
-com.raaf.colorpicker.OpacityBar: void setOnOpacityChangedListener(com.raaf.colorpicker.OpacityBar$OnOpacityChangedListener)
-com.raaf.colorpicker.OpacityBar: com.raaf.colorpicker.OpacityBar$OnOpacityChangedListener getOnOpacityChangedListener()
-com.raaf.colorpicker.OpacityBar: void setColor(int)
-com.raaf.colorpicker.OpacityBar: void setOpacity(int)
-com.raaf.colorpicker.OpacityBar: int getOpacity()
-com.raaf.colorpicker.OpacityBar: int getColor()
-com.raaf.colorpicker.OpacityBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
-com.raaf.colorpicker.SVBar: void setSaturation(float)
-com.raaf.colorpicker.SVBar: void setValue(float)
-com.raaf.colorpicker.SVBar: void setColor(int)
-com.raaf.colorpicker.SVBar: int getColor()
-com.raaf.colorpicker.SVBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
-com.raaf.colorpicker.SaturationBar: void setOnSaturationChangedListener(com.raaf.colorpicker.SaturationBar$OnSaturationChangedListener)
-com.raaf.colorpicker.SaturationBar: com.raaf.colorpicker.SaturationBar$OnSaturationChangedListener getOnSaturationChangedListener()
-com.raaf.colorpicker.SaturationBar: void setColor(int)
-com.raaf.colorpicker.SaturationBar: void setSaturation(float)
-com.raaf.colorpicker.SaturationBar: int getColor()
-com.raaf.colorpicker.SaturationBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
-com.raaf.colorpicker.ValueBar: void setOnValueChangedListener(com.raaf.colorpicker.ValueBar$OnValueChangedListener)
-com.raaf.colorpicker.ValueBar: com.raaf.colorpicker.ValueBar$OnValueChangedListener getOnValueChangedListener()
-com.raaf.colorpicker.ValueBar: void setColor(int)
-com.raaf.colorpicker.ValueBar: void setValue(float)
-com.raaf.colorpicker.ValueBar: int getColor()
-com.raaf.colorpicker.ValueBar: void setColorPicker(com.raaf.colorpicker.ColorPicker)
+com.raaf.custom.DynamicListView: void setCheeseList(java.util.ArrayList)
 com.raaf.db.DbParam$data_type: com.raaf.db.DbParam$data_type[] values()
 com.raaf.db.DbParam$data_type: com.raaf.db.DbParam$data_type valueOf(java.lang.String)
 com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type[] values()
@@ -2473,6 +2402,8 @@ com.raafstudio.goahead.people.ActivitySettingTerms
 com.raafstudio.goahead.people.ActivitySettingTerms: ActivitySettingTerms()
 com.raafstudio.goahead.people.DialogCapture
 com.raafstudio.goahead.people.DialogCapture: DialogCapture()
+com.raafstudio.goahead.people.ErrorReporting
+com.raafstudio.goahead.people.ErrorReporting: ErrorReporting()
 com.raafstudio.goahead.people.R$anim: int abc_fade_in
 com.raafstudio.goahead.people.R$anim: int abc_fade_out
 com.raafstudio.goahead.people.R$anim: int abc_slide_in_bottom
@@ -2525,11 +2456,6 @@ com.raafstudio.goahead.people.R$attr: int background
 com.raafstudio.goahead.people.R$attr: int backgroundSplit
 com.raafstudio.goahead.people.R$attr: int backgroundStacked
 com.raafstudio.goahead.people.R$attr: int barSize
-com.raafstudio.goahead.people.R$attr: int bar_length
-com.raafstudio.goahead.people.R$attr: int bar_orientation_horizontal
-com.raafstudio.goahead.people.R$attr: int bar_pointer_halo_radius
-com.raafstudio.goahead.people.R$attr: int bar_pointer_radius
-com.raafstudio.goahead.people.R$attr: int bar_thickness
 com.raafstudio.goahead.people.R$attr: int border_color
 com.raafstudio.goahead.people.R$attr: int border_width
 com.raafstudio.goahead.people.R$attr: int buttonBarButtonStyle
@@ -2557,12 +2483,6 @@ com.raafstudio.goahead.people.R$attr: int colorControlNormal
 com.raafstudio.goahead.people.R$attr: int colorPrimary
 com.raafstudio.goahead.people.R$attr: int colorPrimaryDark
 com.raafstudio.goahead.people.R$attr: int colorSwitchThumbNormal
-com.raafstudio.goahead.people.R$attr: int color_center_halo_radius
-com.raafstudio.goahead.people.R$attr: int color_center_radius
-com.raafstudio.goahead.people.R$attr: int color_pointer_halo_radius
-com.raafstudio.goahead.people.R$attr: int color_pointer_radius
-com.raafstudio.goahead.people.R$attr: int color_wheel_radius
-com.raafstudio.goahead.people.R$attr: int color_wheel_thickness
 com.raafstudio.goahead.people.R$attr: int commitIcon
 com.raafstudio.goahead.people.R$attr: int contentInsetEnd
 com.raafstudio.goahead.people.R$attr: int contentInsetLeft
@@ -2907,16 +2827,6 @@ com.raafstudio.goahead.people.R$dimen: int abc_text_size_title_material
 com.raafstudio.goahead.people.R$dimen: int abc_text_size_title_material_toolbar
 com.raafstudio.goahead.people.R$dimen: int activity_horizontal_margin
 com.raafstudio.goahead.people.R$dimen: int activity_vertical_margin
-com.raafstudio.goahead.people.R$dimen: int bar_length
-com.raafstudio.goahead.people.R$dimen: int bar_pointer_halo_radius
-com.raafstudio.goahead.people.R$dimen: int bar_pointer_radius
-com.raafstudio.goahead.people.R$dimen: int bar_thickness
-com.raafstudio.goahead.people.R$dimen: int color_center_halo_radius
-com.raafstudio.goahead.people.R$dimen: int color_center_radius
-com.raafstudio.goahead.people.R$dimen: int color_pointer_halo_radius
-com.raafstudio.goahead.people.R$dimen: int color_pointer_radius
-com.raafstudio.goahead.people.R$dimen: int color_wheel_radius
-com.raafstudio.goahead.people.R$dimen: int color_wheel_thickness
 com.raafstudio.goahead.people.R$dimen: int dialog_fixed_height_major
 com.raafstudio.goahead.people.R$dimen: int dialog_fixed_height_minor
 com.raafstudio.goahead.people.R$dimen: int dialog_fixed_width_major
@@ -3099,6 +3009,7 @@ com.raafstudio.goahead.people.R$id: int ArtTvDesc
 com.raafstudio.goahead.people.R$id: int ArtTvFullname
 com.raafstudio.goahead.people.R$id: int ArtTvLike
 com.raafstudio.goahead.people.R$id: int ArtTvLikeCount
+com.raafstudio.goahead.people.R$id: int ArtTvMissing
 com.raafstudio.goahead.people.R$id: int ArtTvTime
 com.raafstudio.goahead.people.R$id: int ArtTvTitlle
 com.raafstudio.goahead.people.R$id: int BtApplyImage
@@ -3155,7 +3066,6 @@ com.raafstudio.goahead.people.R$id: int ImgAvatarBackground
 com.raafstudio.goahead.people.R$id: int ImgBackground
 com.raafstudio.goahead.people.R$id: int ImgCaptureCam
 com.raafstudio.goahead.people.R$id: int ImgCaptureFile
-com.raafstudio.goahead.people.R$id: int ImgDemo
 com.raafstudio.goahead.people.R$id: int ImgProduct
 com.raafstudio.goahead.people.R$id: int Launcher
 com.raafstudio.goahead.people.R$id: int LauncherAdd
@@ -3350,7 +3260,7 @@ com.raafstudio.goahead.people.R$layout: int activity_artwork_detail
 com.raafstudio.goahead.people.R$layout: int activity_artwork_filter
 com.raafstudio.goahead.people.R$layout: int activity_artwork_info
 com.raafstudio.goahead.people.R$layout: int activity_artwork_publish
-com.raafstudio.goahead.people.R$layout: int activity_error
+com.raafstudio.goahead.people.R$layout: int activity_eror_reporting
 com.raafstudio.goahead.people.R$layout: int activity_login
 com.raafstudio.goahead.people.R$layout: int activity_main
 com.raafstudio.goahead.people.R$layout: int activity_main_demo
@@ -3361,7 +3271,6 @@ com.raafstudio.goahead.people.R$layout: int activity_setting_basic
 com.raafstudio.goahead.people.R$layout: int activity_setting_help
 com.raafstudio.goahead.people.R$layout: int activity_setting_terms
 com.raafstudio.goahead.people.R$layout: int activity_splash
-com.raafstudio.goahead.people.R$layout: int demo_dialog
 com.raafstudio.goahead.people.R$layout: int demo_login
 com.raafstudio.goahead.people.R$layout: int dialog_image
 com.raafstudio.goahead.people.R$layout: int drawer_row
@@ -3757,19 +3666,6 @@ com.raafstudio.goahead.people.R$styleable: int AdsAttrs_adUnitId
 com.raafstudio.goahead.people.R$styleable: int[] CircleImageView
 com.raafstudio.goahead.people.R$styleable: int CircleImageView_border_color
 com.raafstudio.goahead.people.R$styleable: int CircleImageView_border_width
-com.raafstudio.goahead.people.R$styleable: int[] ColorBars
-com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_length
-com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_orientation_horizontal
-com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_pointer_halo_radius
-com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_pointer_radius
-com.raafstudio.goahead.people.R$styleable: int ColorBars_bar_thickness
-com.raafstudio.goahead.people.R$styleable: int[] ColorPicker
-com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_center_halo_radius
-com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_center_radius
-com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_pointer_halo_radius
-com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_pointer_radius
-com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_wheel_radius
-com.raafstudio.goahead.people.R$styleable: int ColorPicker_color_wheel_thickness
 com.raafstudio.goahead.people.R$styleable: int[] CompatTextView
 com.raafstudio.goahead.people.R$styleable: int CompatTextView_textAllCaps
 com.raafstudio.goahead.people.R$styleable: int[] DrawerArrowToggle
@@ -4463,7 +4359,6 @@ org.apache.http.entity.AbstractHttpEntity: void setContentEncoding(org.apache.ht
 org.apache.http.entity.AbstractHttpEntity: void setContentEncoding(java.lang.String)
 org.apache.http.entity.AbstractHttpEntity: void setChunked(boolean)
 org.apache.http.entity.AbstractHttpEntity: void consumeContent()
-org.apache.http.entity.AbstractHttpEntity: java.lang.String toString()
 org.apache.http.entity.BasicHttpEntity
 org.apache.http.entity.BasicHttpEntity: BasicHttpEntity()
 org.apache.http.entity.BasicHttpEntity: long getContentLength()

@@ -28,6 +28,14 @@
                 android:progress="1"
                 android:visibility="visible" />
 
+            <TextView
+                android:id="@+id/ArtTvMissing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white" />
+
             <com.raafstudio.goahead.people.component.ImageviewNormal
                 android:id="@+id/ArtImg"
                 android:layout_width="wrap_content"

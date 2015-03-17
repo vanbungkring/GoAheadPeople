@@ -102,12 +102,12 @@ public class ActivitySettingBasic extends ActivityBase {
 		EtUserName.setText(so.getUser().getFullname());
 		EtUserOccup.setText(so.getUser().getJob_profile());
 		EtUserLocation.setText(so.getUser().getJob_location());
-		EtUserAbout.setText(Html.fromHtml(so.getUser().getBio() + " "
-				+ so.getUser().getJob_profile()));
+		EtUserAbout.setText(Html.fromHtml(so.getUser().getBio()));
 
 		if (so.apply_image)
 			filename = Util.getDir() + "/"
-					+ rSecurity.getMD5(so.getUser().getUser_id() + "") + ".jpeg";
+					+ rSecurity.getMD5(so.getUser().getUser_id() + "")
+					+ ".jpeg";
 		else
 			filename = Util.getDir() + "/"
 					+ rSecurity.getMD5(so.getUser().getUser_id() + "");

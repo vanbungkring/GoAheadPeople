@@ -1,9 +1,7 @@
 package com.raafstudio.goahead.people;
-
-import com.raaf.rColorPicker;
+ 
 import com.raaf.rIO;
-import com.raaf.rImaging;
-import com.raaf.rColorPicker.OnColorChangedListener;
+import com.raaf.rImaging; 
 import com.raafstudio.goahead.people.fragment.FragmentArtworkFrame;
 import com.raafstudio.goahead.people.fragment.FragmentArtworkGraph;
 import com.raafstudio.goahead.people.fragment.FragmentArtworksLayout;
@@ -29,10 +27,8 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
-public class ActivityArtwork extends ActivityBase implements
-		OnColorChangedListener {
-	private FragmentTabHost myTabHost;
-	rColorPicker rc;
+public class ActivityArtwork extends ActivityBase   {
+	private FragmentTabHost myTabHost; 
 	Boolean newArt = true;
 
 	@Override
@@ -70,8 +66,7 @@ public class ActivityArtwork extends ActivityBase implements
 					myTabHost.setCurrentTab(myTabHost.getCurrentTab() + 1);
 			}
 		});
-		rc = new rColorPicker(ActivityArtwork.this, this, "", Color.BLACK,
-				Color.WHITE);
+		 
 		getSupportActionBar().setTitle("Edit Layout");
 
 		myTabHost = (FragmentTabHost) findViewById(R.id.tabhost);
@@ -178,9 +173,5 @@ public class ActivityArtwork extends ActivityBase implements
 		}
 	}
 
-	@Override
-	public void colorChanged(String key, int color) {
-		// TODO Auto-generated method stub
-		rDialog.SetToast(this, key + " " + color);
-	}
+	 
 }

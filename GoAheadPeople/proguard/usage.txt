@@ -8908,30 +8908,23 @@ com.jhlabs.vecmath.Tuple3f
 com.jhlabs.vecmath.Tuple4f
 com.jhlabs.vecmath.Vector3f
 com.jhlabs.vecmath.Vector4f
-com.raaf.R:
-    9:9:public R()
-com.raaf.R$attr
+com.raaf.Log
+com.raaf.NFCWriteException
+com.raaf.NFCWriteException$NFCErrorType
+com.raaf.R
 com.raaf.R$color
-com.raaf.R$dimen
 com.raaf.R$drawable
-com.raaf.R$id:
-    77:77:public R$id()
-com.raaf.R$layout:
-    80:80:public R$layout()
 com.raaf.R$string
 com.raaf.R$style
-com.raaf.R$styleable
 com.raaf.Rupiah
-com.raaf.colorpicker.ColorPicker
-com.raaf.colorpicker.ColorPicker$OnColorChangedListener
-com.raaf.colorpicker.ColorPicker$OnColorSelectedListener
-com.raaf.colorpicker.OpacityBar
-com.raaf.colorpicker.OpacityBar$OnOpacityChangedListener
-com.raaf.colorpicker.SVBar
-com.raaf.colorpicker.SaturationBar
-com.raaf.colorpicker.SaturationBar$OnSaturationChangedListener
-com.raaf.colorpicker.ValueBar
-com.raaf.colorpicker.ValueBar$OnValueChangedListener
+com.raaf.custom.DynamicListView
+com.raaf.custom.DynamicListView$1
+com.raaf.custom.DynamicListView$2
+com.raaf.custom.DynamicListView$3
+com.raaf.custom.DynamicListView$4
+com.raaf.custom.DynamicListView$5
+com.raaf.custom.DynamicListView$6
+com.raaf.custom.StableArrayAdapter
 com.raaf.db.DbAssistant
 com.raaf.db.DbAssistant$Exporter
 com.raaf.db.DbAssistant$Importer
@@ -8944,10 +8937,10 @@ com.raaf.db.DbTable
 com.raaf.http.GetXMLTask
 com.raaf.http.HttpReader
 com.raaf.http.rLoader:
-    60:62:public rLoader(java.lang.String)
-    71:74:public rLoader(java.lang.String,android.os.Handler)
-    88:91:public rLoader(java.lang.String,android.os.Handler,android.os.Bundle,java.lang.String)
-    99:103:public rLoader(java.lang.String,android.os.Handler,android.os.Bundle,com.raaf.http.rLoader$Http_type,java.util.List,java.util.List)
+    61:63:public rLoader(java.lang.String)
+    72:75:public rLoader(java.lang.String,android.os.Handler)
+    89:92:public rLoader(java.lang.String,android.os.Handler,android.os.Bundle,java.lang.String)
+    100:104:public rLoader(java.lang.String,android.os.Handler,android.os.Bundle,com.raaf.http.rLoader$Http_type,java.util.List,java.util.List)
 com.raaf.http.rLoader$PhotoUploadResponseHandler
 com.raaf.rActivityLog
 com.raaf.rDate
@@ -8960,31 +8953,29 @@ com.raaf.rDialog:
     131:132:public static void setProgress(int)
     135:137:public static void setProgress(int,java.lang.String)
 com.raaf.rDialog$1
-com.raaf.rExceptionHandler
-com.raaf.rGps
-com.raaf.rGps$1
-com.raaf.rGps$2
 com.raaf.rIO:
-    15:15:public rIO()
-    17:28:public static void CopyStream(java.io.InputStream,java.io.OutputStream)
-    32:52:public static java.lang.Boolean SaveImageToFile(android.graphics.Bitmap,java.lang.String,android.graphics.Bitmap$CompressFormat,int)
+    16:16:public rIO()
+    18:29:public static void CopyStream(java.io.InputStream,java.io.OutputStream)
+    33:53:public static java.lang.Boolean SaveImageToFile(android.graphics.Bitmap,java.lang.String,android.graphics.Bitmap$CompressFormat,int)
 com.raaf.rImageLoader
 com.raaf.rImageLoader$BitmapDisplayer
 com.raaf.rImageLoader$PhotoToLoad
 com.raaf.rImageLoader$PhotosLoader
 com.raaf.rImageLoader$PhotosQueue
 com.raaf.rImaging:
-    32:32:public rImaging()
-    34:34:public static int getcolorfromrgb(int,int,int)
-    39:68:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,android.graphics.Bitmap,java.lang.String,int,int,int,int)
-    73:75:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,int,java.lang.String,int,int,int,int)
-    123:167:public static android.graphics.Bitmap downloadBitmap(java.lang.String)
-    171:186:public static android.graphics.Bitmap getPreview(java.lang.String)
+    30:30:public rImaging()
+    32:32:public static int getcolorfromrgb(int,int,int)
+    37:66:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,android.graphics.Bitmap,java.lang.String,int,int,int,int)
+    71:73:public static android.graphics.Bitmap drawTextToBitmap(android.content.Context,int,java.lang.String,int,int,int,int)
+    120:164:public static android.graphics.Bitmap downloadBitmap(java.lang.String)
+com.raaf.rIntent:
+    11:11:public rIntent()
+    20:22:public static void TakeVideo(android.app.Activity,java.lang.String,int)
+    26:28:public static void recordSound(android.app.Activity,java.lang.String,int)
 com.raaf.rJson
 com.raaf.rLanguage
 com.raaf.rLanguage$tag
 com.raaf.rListParam
-com.raaf.rLog
 com.raaf.rMap
 com.raaf.rMap$1
 com.raaf.rMap$2
@@ -8999,16 +8990,22 @@ com.raaf.rNet:
     60:63:public void GetFileFromUrl(java.lang.String,java.lang.String,android.os.Handler)
 com.raaf.rNet$GetBitmapFromUrl
 com.raaf.rNet$GetFileFromUrl
+com.raaf.rNfcManager
+com.raaf.rNfcManager$1
+com.raaf.rNfcManager$2
+com.raaf.rNfcManager$TagDetectListener
+com.raaf.rNfcManager$TagReadListener
+com.raaf.rNfcManager$TagWriteErrorListener
+com.raaf.rNfcManager$TagWriteListener
 com.raaf.rParam
 com.raaf.rPrayTime
 com.raaf.rSecurity:
     7:7:public rSecurity()
-    9:18:private static java.lang.String convertToHex(byte[])
-    22:25:public static java.lang.String getSHA1(java.lang.String)
+    9:19:private static java.lang.String convertToHex(byte[])
+    24:27:public static java.lang.String getSHA1(java.lang.String)
 com.raaf.rTimer
 com.raaf.rTimer$mainTask
 com.raaf.rUtil
-com.raaf.tes
 com.raaf.weather.ConditionDefinition
 com.raaf.weather.WOEIDUtils
 com.raaf.weather.WeatherInfo
@@ -9022,8 +9019,6 @@ com.raafstudio.goahead.people.ActivitySettingBasic:
     android.widget.Button BtSave
 com.raafstudio.goahead.people.ActivitySplash
 com.raafstudio.goahead.people.BuildConfig
-com.raafstudio.goahead.people.ErrorReporting
-com.raafstudio.goahead.people.ErrorReporting$1
 com.raafstudio.goahead.people.MyApp
 com.raafstudio.goahead.people.R:
     10:10:public R()
@@ -9043,7 +9038,7 @@ com.raafstudio.goahead.people.R$raw
 com.raafstudio.goahead.people.R$string
 com.raafstudio.goahead.people.R$style
 com.raafstudio.goahead.people.R$styleable:
-    3288:3288:public R$styleable()
+    3165:3165:public R$styleable()
 com.raafstudio.goahead.people.adapter.ArtworkAdapter
 com.raafstudio.goahead.people.adapter.ArtworkAdapter$ViewHolder
 com.raafstudio.goahead.people.adapter.NotificationAdapter:
@@ -9194,7 +9189,7 @@ com.raafstudio.goahead.people.model.Notification:
     39:39:public java.lang.String getTime()
     43:44:public void setTime(java.lang.String)
     55:55:public java.lang.String getNotification_type()
-    79:79:public int getUser_action_id()
+    79:79:public java.lang.String getUser_action_id()
     95:95:public java.lang.String getString_id()
     107:108:public void setUser_profile(com.raafstudio.goahead.people.model.User)
     115:116:public void setDetail_artwork(java.util.ArrayList)
@@ -9278,7 +9273,7 @@ com.raafstudio.goahead.people.navdraw.NavigationDrawerFragment:
     private static final java.lang.String PREFERENCES_FILE
     200:200:public android.support.v7.app.ActionBarDrawerToggle getActionBarDrawerToggle()
     205:206:public void setActionBarDrawerToggle(android.support.v7.app.ActionBarDrawerToggle)
-    254:255:public void openDrawer()
+    254:255:public void openDrawer1()
     314:314:public android.support.v4.widget.DrawerLayout getDrawerLayout()
     318:319:public void setDrawerLayout(android.support.v4.widget.DrawerLayout)
 com.raafstudio.goahead.people.navdraw.NavigationItem:

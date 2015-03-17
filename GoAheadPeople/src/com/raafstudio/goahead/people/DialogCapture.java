@@ -7,6 +7,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.raaf.rDialog;
 import com.raaf.rImaging;
+import com.raaf.rIntent;
 import com.raaf.rSecurity;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.Util;
@@ -29,6 +30,7 @@ import android.widget.TextView;
 
 public class DialogCapture extends Activity {
 	private static int RESULT_LOAD_IMAGE = 1;
+	private static int RESULT_CAMERA_IMAGE = 2;
 	CircleImageView imageView;
 	Button BtApply;
 	TextView TvTitle;
@@ -52,7 +54,8 @@ public class DialogCapture extends Activity {
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
-
+						rIntent.TakePicture(DialogCapture.this, getFileName(),
+								RESULT_CAMERA_IMAGE);
 					}
 				});
 		((ImageView) findViewById(R.id.ImgCaptureFile))
@@ -83,58 +86,64 @@ public class DialogCapture extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == RESULT_OK) {
+			if (requestCode == RESULT_LOAD_IMAGE
+					|| requestCode == RESULT_CAMERA_IMAGE) {
+				if (data != null) {
+					Uri selectedImage = data.getData();
+					String[] filePathColumn = { MediaStore.Images.Media.DATA };
 
-		if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK
-				&& null != data) {
-			Uri selectedImage = data.getData();
-			String[] filePathColumn = { MediaStore.Images.Media.DATA };
+					Cursor cursor = getContentResolver().query(selectedImage,
+							filePathColumn, null, null, null);
+					cursor.moveToFirst();
 
-			Cursor cursor = getContentResolver().query(selectedImage,
-					filePathColumn, null, null, null);
-			cursor.moveToFirst();
+					int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+					so.PicturePath = cursor.getString(columnIndex);
+					cursor.close();
+				} else
+					so.PicturePath = getFileName();
+				imageView.setVisibility(View.VISIBLE);
+				BtApply.setVisibility(View.VISIBLE);
+				Glide.with(this).load(so.PicturePath).asBitmap().centerCrop()
+						.override(220, 220)
+						.listener(new RequestListener<String, Bitmap>() {
 
-			int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-			so.PicturePath = cursor.getString(columnIndex);
-			cursor.close();
-			imageView.setVisibility(View.VISIBLE);
-			BtApply.setVisibility(View.VISIBLE);
-			Glide.with(this).load(so.PicturePath).asBitmap().centerCrop()
-					.override(220, 220)
-					.listener(new RequestListener<String, Bitmap>() {
+							@Override
+							public boolean onResourceReady(Bitmap arg0,
+									String arg1, Target<Bitmap> arg2,
+									boolean arg3, boolean arg4) {
+								String filename = getFileName();
+								File fl = new File(filename);
+								if (fl.exists())
+									fl.delete();
+								rImaging.SaveImageToFile(arg0, filename,
+										CompressFormat.JPEG, 100);
+								return false;
+							}
 
-						@Override
-						public boolean onResourceReady(Bitmap arg0,
-								String arg1, Target<Bitmap> arg2, boolean arg3,
-								boolean arg4) {
-							String filename;
-							if (so.requester == 1)
-								filename = Util.getDir()
-										+ "/"
-										+ rSecurity.getMD5(so.getUser()
-												.getUser_id() + "") + ".jpeg";
-							else
-								filename = Util.getDirArt() + "/"
-										+ rSecurity.getMD5("new_art");
-							//rDialog.SetToast(DialogCapture.this, filename);
-							File fl = new File(filename);
-							if (fl.exists())
-								fl.delete();
-							rImaging.SaveImageToFile(arg0, filename,
-									CompressFormat.JPEG, 100);
-							return false;
-						}
-
-						@Override
-						public boolean onException(Exception arg0, String arg1,
-								Target<Bitmap> arg2, boolean arg3) {
-							// TODO Auto-generated method stub
-							return false;
-						}
-					}).into(imageView);
-			// imageView.setImageBitmap(rImaging.getPreview());
+							@Override
+							public boolean onException(Exception arg0,
+									String arg1, Target<Bitmap> arg2,
+									boolean arg3) {
+								// TODO Auto-generated method stub
+								return false;
+							}
+						}).into(imageView);
+			}
 
 		}
 
+	}
+
+	private String getFileName() {
+		String filename;
+		if (so.requester == 1)
+			filename = Util.getDir() + "/"
+					+ rSecurity.getMD5(so.getUser().getUser_id() + "")
+					+ ".jpeg";
+		else
+			filename = Util.getDirArt() + "/" + rSecurity.getMD5("new_art");
+		return filename;
 	}
 
 	@Override

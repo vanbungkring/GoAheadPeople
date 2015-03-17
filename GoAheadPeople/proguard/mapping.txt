@@ -19009,13 +19009,7 @@ com.google.android.gms.wearable.internal.z -> com.google.android.gms.wearable.in
     android.os.ParcelFileDescriptor axN -> c
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.raaf.R -> com.b.a:
-com.raaf.R$id -> com.b.b:
-    int ImgDemo -> ImgDemo
-com.raaf.R$layout -> com.b.c:
-    int demo_dialog -> demo_dialog
 com.raaf.custom.DemoDialog -> com.b.a.a:
-    void onClick(android.view.View) -> onClick
 com.raaf.http.rLoader -> com.b.b.a:
     org.apache.http.client.HttpClient Client -> k
     java.lang.String url -> a
@@ -19039,7 +19033,8 @@ com.raaf.http.rLoader$Http_type -> com.b.b.b:
     com.raaf.http.rLoader$Http_type pure_url -> c
     com.raaf.http.rLoader$Http_type multipart -> d
     com.raaf.http.rLoader$Http_type json -> e
-    com.raaf.http.rLoader$Http_type[] ENUM$VALUES -> f
+    com.raaf.http.rLoader$Http_type put -> f
+    com.raaf.http.rLoader$Http_type[] ENUM$VALUES -> g
     com.raaf.http.rLoader$Http_type[] values() -> values
     com.raaf.http.rLoader$Http_type valueOf(java.lang.String) -> valueOf
 com.raaf.io.rFile -> com.b.c.a:
@@ -19055,35 +19050,7 @@ com.raaf.io.rFile -> com.b.c.a:
     void setFileName(java.lang.String) -> b
     java.lang.String getParam() -> d
     void setParam(java.lang.String) -> c
-com.raaf.rColorPicker -> com.b.d:
-    com.raaf.rColorPicker$OnColorChangedListener mListener -> a
-    int mInitialColor -> b
-    int mDefaultColor -> c
-    java.lang.String mKey -> d
-    void onCreate(android.os.Bundle) -> onCreate
-    com.raaf.rColorPicker$OnColorChangedListener access$0(com.raaf.rColorPicker) -> a
-    java.lang.String access$1(com.raaf.rColorPicker) -> b
-com.raaf.rColorPicker$1 -> com.b.e:
-    com.raaf.rColorPicker this$0 -> a
-    void colorChanged(java.lang.String,int) -> a
-com.raaf.rColorPicker$ColorPickerView -> com.b.f:
-    android.graphics.Paint mPaint -> a
-    float mCurrentHue -> b
-    int mCurrentX -> c
-    int mCurrentY -> d
-    int mCurrentColor -> e
-    int mDefaultColor -> f
-    int[] mHueBarColors -> g
-    int[] mMainColors -> h
-    com.raaf.rColorPicker$OnColorChangedListener mListener -> i
-    int getCurrentMainColor() -> a
-    void updateMainColors() -> b
-    void onDraw(android.graphics.Canvas) -> onDraw
-    void onMeasure(int,int) -> onMeasure
-    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-com.raaf.rColorPicker$OnColorChangedListener -> com.b.g:
-    void colorChanged(java.lang.String,int) -> a
-com.raaf.rDialog -> com.b.h:
+com.raaf.rDialog -> com.b.a:
     android.app.ProgressDialog pd -> a
     android.os.Handler _handler -> b
     android.os.Handler _handler1 -> c
@@ -19096,22 +19063,25 @@ com.raaf.rDialog -> com.b.h:
     void CloseProgressDialog() -> a
     void access$0() -> b
     void access$1() -> c
-com.raaf.rDialog$2 -> com.b.i:
+com.raaf.rDialog$2 -> com.b.b:
     void onClick(android.content.DialogInterface,int) -> onClick
-com.raaf.rDialog$3 -> com.b.j:
+com.raaf.rDialog$3 -> com.b.c:
     void onClick(android.content.DialogInterface,int) -> onClick
-com.raaf.rIO -> com.b.k:
+com.raaf.rIO -> com.b.d:
     void copyFile(java.lang.String,java.lang.String) -> a
-com.raaf.rImaging -> com.b.l:
+com.raaf.rImaging -> com.b.e:
     android.graphics.Bitmap doOverlay(android.graphics.Bitmap,android.graphics.Bitmap,float,float) -> a
     java.lang.Boolean SaveImageToFile(android.graphics.Bitmap,java.lang.String,android.graphics.Bitmap$CompressFormat,int) -> a
     android.graphics.Bitmap getImageFromFile(java.lang.String) -> a
     android.graphics.Bitmap getBitmapFromAssets(android.content.Context,java.lang.String) -> a
     android.graphics.Bitmap getPreview(android.graphics.Bitmap,int) -> a
     android.graphics.Bitmap ScaleImage(android.graphics.Bitmap,int,int) -> a
-com.raaf.rNet -> com.b.m:
+com.raaf.rIntent -> com.b.f:
+    void TakePicture(android.app.Activity,java.lang.String,int) -> a
+    void callIntent(android.app.Activity,android.content.Intent,android.net.Uri,int) -> a
+com.raaf.rNet -> com.b.g:
     boolean isNetworkConnected(android.content.Context) -> a
-com.raaf.rSecurity -> com.b.n:
+com.raaf.rSecurity -> com.b.h:
     java.lang.String getMD5(java.lang.String) -> a
 com.raafstudio.goahead.people.ActivityArtDetail -> com.raafstudio.goahead.people.ActivityArtDetail:
     com.raafstudio.goahead.people.component.ImageviewNormal ArtImg -> n
@@ -19156,14 +19126,12 @@ com.raafstudio.goahead.people.ActivityArtDetail$6 -> com.raafstudio.goahead.peop
     android.widget.TextView val$TvName -> b
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.ActivityArtwork -> com.raafstudio.goahead.people.ActivityArtwork:
-    android.support.v4.app.FragmentTabHost myTabHost -> p
-    com.raaf.rColorPicker rc -> n
-    java.lang.Boolean newArt -> o
+    android.support.v4.app.FragmentTabHost myTabHost -> o
+    java.lang.Boolean newArt -> n
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void onBackPressed() -> onBackPressed
-    void colorChanged(java.lang.String,int) -> a
     android.support.v4.app.FragmentTabHost access$0(com.raafstudio.goahead.people.ActivityArtwork) -> a
 com.raafstudio.goahead.people.ActivityArtwork$1 -> com.raafstudio.goahead.people.g:
     com.raafstudio.goahead.people.ActivityArtwork this$0 -> a
@@ -19261,7 +19229,11 @@ com.raafstudio.goahead.people.ActivityMain$1 -> com.raafstudio.goahead.people.p:
 com.raafstudio.goahead.people.ActivityMain$2 -> com.raafstudio.goahead.people.q:
     com.raafstudio.goahead.people.ActivityMain this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ActivityMain$MyAdapter -> com.raafstudio.goahead.people.r:
+com.raafstudio.goahead.people.ActivityMain$3 -> com.raafstudio.goahead.people.r:
+    com.raafstudio.goahead.people.ActivityMain this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.raafstudio.goahead.people.ActivityMain$MyAdapter -> com.raafstudio.goahead.people.s:
     java.lang.String[] spinnerSubs -> a
     com.raafstudio.goahead.people.ActivityMain this$0 -> b
     android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
@@ -19269,7 +19241,7 @@ com.raafstudio.goahead.people.ActivityMain$MyAdapter -> com.raafstudio.goahead.p
     android.view.View getCustomView(int,android.view.View,android.view.ViewGroup,int) -> a
 com.raafstudio.goahead.people.ActivityMainDemo -> com.raafstudio.goahead.people.ActivityMainDemo:
     void onCreate(android.os.Bundle) -> onCreate
-com.raafstudio.goahead.people.ActivityMainDemo$1 -> com.raafstudio.goahead.people.s:
+com.raafstudio.goahead.people.ActivityMainDemo$1 -> com.raafstudio.goahead.people.t:
     com.raafstudio.goahead.people.ActivityMainDemo this$0 -> a
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.ActivityProfile -> com.raafstudio.goahead.people.ActivityProfile:
@@ -19288,32 +19260,32 @@ com.raafstudio.goahead.people.ActivityProfile -> com.raafstudio.goahead.people.A
     void onResume() -> onResume
     void loadArtwork() -> k
     void loadProduct() -> n
-com.raafstudio.goahead.people.ActivityProfile$1 -> com.raafstudio.goahead.people.t:
+com.raafstudio.goahead.people.ActivityProfile$1 -> com.raafstudio.goahead.people.u:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-com.raafstudio.goahead.people.ActivityProfile$2 -> com.raafstudio.goahead.people.u:
+com.raafstudio.goahead.people.ActivityProfile$2 -> com.raafstudio.goahead.people.v:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-com.raafstudio.goahead.people.ActivityProfile$3 -> com.raafstudio.goahead.people.v:
+com.raafstudio.goahead.people.ActivityProfile$3 -> com.raafstudio.goahead.people.w:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ActivityProfile$4 -> com.raafstudio.goahead.people.w:
+com.raafstudio.goahead.people.ActivityProfile$4 -> com.raafstudio.goahead.people.x:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     void onResourceReady(android.graphics.Bitmap,com.bumptech.glide.request.animation.GlideAnimation) -> a
     void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
-com.raafstudio.goahead.people.ActivityProfile$5 -> com.raafstudio.goahead.people.x:
+com.raafstudio.goahead.people.ActivityProfile$5 -> com.raafstudio.goahead.people.y:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     java.lang.String val$sid -> b
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ActivityProfile$6 -> com.raafstudio.goahead.people.y:
+com.raafstudio.goahead.people.ActivityProfile$6 -> com.raafstudio.goahead.people.z:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     java.lang.String val$sid -> b
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ActivityProfile$7 -> com.raafstudio.goahead.people.z:
+com.raafstudio.goahead.people.ActivityProfile$7 -> com.raafstudio.goahead.people.aa:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     java.lang.String val$sid -> b
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ActivityProfile$8 -> com.raafstudio.goahead.people.aa:
+com.raafstudio.goahead.people.ActivityProfile$8 -> com.raafstudio.goahead.people.ab:
     com.raafstudio.goahead.people.ActivityProfile this$0 -> a
     boolean onResourceReady(android.graphics.Bitmap,java.lang.String,com.bumptech.glide.request.target.Target,boolean,boolean) -> a
     boolean onException(java.lang.Exception,java.lang.String,com.bumptech.glide.request.target.Target,boolean) -> a
@@ -19340,11 +19312,11 @@ com.raafstudio.goahead.people.ActivitySettingAccount -> com.raafstudio.goahead.p
     void BindCity(java.lang.Boolean,int) -> a
     void handlerResponse(android.os.Message) -> a
     void access$0(com.raafstudio.goahead.people.ActivitySettingAccount,java.lang.Boolean,int) -> a
-com.raafstudio.goahead.people.ActivitySettingAccount$1 -> com.raafstudio.goahead.people.ab:
+com.raafstudio.goahead.people.ActivitySettingAccount$1 -> com.raafstudio.goahead.people.ac:
     com.raafstudio.goahead.people.ActivitySettingAccount this$0 -> a
     void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
     void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
-com.raafstudio.goahead.people.ActivitySettingAccount$2 -> com.raafstudio.goahead.people.ac:
+com.raafstudio.goahead.people.ActivitySettingAccount$2 -> com.raafstudio.goahead.people.ad:
     com.raafstudio.goahead.people.ActivitySettingAccount this$0 -> a
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.ActivitySettingBasic -> com.raafstudio.goahead.people.ActivitySettingBasic:
@@ -19357,10 +19329,10 @@ com.raafstudio.goahead.people.ActivitySettingBasic -> com.raafstudio.goahead.peo
     void onCreate(android.os.Bundle) -> onCreate
     void handlerResponse(android.os.Message) -> a
     void onResume() -> onResume
-com.raafstudio.goahead.people.ActivitySettingBasic$1 -> com.raafstudio.goahead.people.ad:
+com.raafstudio.goahead.people.ActivitySettingBasic$1 -> com.raafstudio.goahead.people.ae:
     com.raafstudio.goahead.people.ActivitySettingBasic this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ActivitySettingBasic$2 -> com.raafstudio.goahead.people.ae:
+com.raafstudio.goahead.people.ActivitySettingBasic$2 -> com.raafstudio.goahead.people.af:
     com.raafstudio.goahead.people.ActivitySettingBasic this$0 -> a
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.ActivitySettingHelp -> com.raafstudio.goahead.people.ActivitySettingHelp:
@@ -19371,30 +19343,44 @@ com.raafstudio.goahead.people.ActivitySettingTerms -> com.raafstudio.goahead.peo
     void handlerResponse(android.os.Message) -> a
 com.raafstudio.goahead.people.DialogCapture -> com.raafstudio.goahead.people.DialogCapture:
     int RESULT_LOAD_IMAGE -> d
+    int RESULT_CAMERA_IMAGE -> e
     com.raafstudio.goahead.people.component.CircleImageView imageView -> a
     android.widget.Button BtApply -> b
     android.widget.TextView TvTitle -> c
     void onCreate(android.os.Bundle) -> onCreate
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    java.lang.String getFileName() -> c
     void onBackPressed() -> onBackPressed
-    int access$0() -> a
-com.raafstudio.goahead.people.DialogCapture$1 -> com.raafstudio.goahead.people.af:
+    java.lang.String access$0(com.raafstudio.goahead.people.DialogCapture) -> a
+    int access$1() -> a
+    int access$2() -> b
+com.raafstudio.goahead.people.DialogCapture$1 -> com.raafstudio.goahead.people.ag:
     com.raafstudio.goahead.people.DialogCapture this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.DialogCapture$2 -> com.raafstudio.goahead.people.ag:
+com.raafstudio.goahead.people.DialogCapture$2 -> com.raafstudio.goahead.people.ah:
     com.raafstudio.goahead.people.DialogCapture this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.DialogCapture$3 -> com.raafstudio.goahead.people.ah:
+com.raafstudio.goahead.people.DialogCapture$3 -> com.raafstudio.goahead.people.ai:
     com.raafstudio.goahead.people.DialogCapture this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.DialogCapture$4 -> com.raafstudio.goahead.people.ai:
+com.raafstudio.goahead.people.DialogCapture$4 -> com.raafstudio.goahead.people.aj:
     com.raafstudio.goahead.people.DialogCapture this$0 -> a
     boolean onResourceReady(android.graphics.Bitmap,java.lang.String,com.bumptech.glide.request.target.Target,boolean,boolean) -> a
     boolean onException(java.lang.Exception,java.lang.String,com.bumptech.glide.request.target.Target,boolean) -> a
     boolean onException(java.lang.Exception,java.lang.Object,com.bumptech.glide.request.target.Target,boolean) -> a
     boolean onResourceReady(java.lang.Object,java.lang.Object,com.bumptech.glide.request.target.Target,boolean,boolean) -> a
-com.raafstudio.goahead.people.R -> com.raafstudio.goahead.people.aj:
-com.raafstudio.goahead.people.R$styleable -> com.raafstudio.goahead.people.ak:
+com.raafstudio.goahead.people.ErrorReporting -> com.raafstudio.goahead.people.ErrorReporting:
+    java.lang.String eror -> a
+    void onCreate(android.os.Bundle) -> onCreate
+com.raafstudio.goahead.people.ErrorReporting$1 -> com.raafstudio.goahead.people.ak:
+    com.raafstudio.goahead.people.ErrorReporting this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.ExceptionHandler -> com.raafstudio.goahead.people.al:
+    android.app.Activity myContext -> a
+    java.lang.String LINE_SEPARATOR -> b
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+com.raafstudio.goahead.people.R -> com.raafstudio.goahead.people.am:
+com.raafstudio.goahead.people.R$styleable -> com.raafstudio.goahead.people.an:
     int[] ActionBar -> ActionBar
     int ActionBar_background -> ActionBar_background
     int ActionBar_backgroundSplit -> ActionBar_backgroundSplit
@@ -19445,19 +19431,6 @@ com.raafstudio.goahead.people.R$styleable -> com.raafstudio.goahead.people.ak:
     int[] CircleImageView -> CircleImageView
     int CircleImageView_border_color -> CircleImageView_border_color
     int CircleImageView_border_width -> CircleImageView_border_width
-    int[] ColorBars -> ColorBars
-    int ColorBars_bar_length -> ColorBars_bar_length
-    int ColorBars_bar_orientation_horizontal -> ColorBars_bar_orientation_horizontal
-    int ColorBars_bar_pointer_halo_radius -> ColorBars_bar_pointer_halo_radius
-    int ColorBars_bar_pointer_radius -> ColorBars_bar_pointer_radius
-    int ColorBars_bar_thickness -> ColorBars_bar_thickness
-    int[] ColorPicker -> ColorPicker
-    int ColorPicker_color_center_halo_radius -> ColorPicker_color_center_halo_radius
-    int ColorPicker_color_center_radius -> ColorPicker_color_center_radius
-    int ColorPicker_color_pointer_halo_radius -> ColorPicker_color_pointer_halo_radius
-    int ColorPicker_color_pointer_radius -> ColorPicker_color_pointer_radius
-    int ColorPicker_color_wheel_radius -> ColorPicker_color_wheel_radius
-    int ColorPicker_color_wheel_thickness -> ColorPicker_color_wheel_thickness
     int[] CompatTextView -> CompatTextView
     int CompatTextView_textAllCaps -> CompatTextView_textAllCaps
     int[] DrawerArrowToggle -> DrawerArrowToggle
@@ -19745,10 +19718,12 @@ com.raafstudio.goahead.people.adapter.DiscoverAdapter$ViewHolder -> com.raafstud
     android.widget.TextView TvTitlle -> b
     android.widget.TextView TvFullname -> c
     android.widget.TextView TvLike -> d
-    com.raafstudio.goahead.people.component.ImageviewNormal ImgArt -> e
-    com.raafstudio.goahead.people.component.CircleImageView ImgUser -> f
-    android.widget.ImageView ImgLike -> g
-    android.widget.LinearLayout LayoutUser -> h
+    android.widget.TextView TvMissing -> e
+    com.raafstudio.goahead.people.component.ImageviewNormal ImgArt -> f
+    com.raafstudio.goahead.people.component.CircleImageView ImgUser -> g
+    android.widget.ImageView ImgLike -> h
+    android.widget.LinearLayout LayoutUser -> i
+    android.widget.ProgressBar ArtPb -> j
 com.raafstudio.goahead.people.adapter.NotificationAdapter -> com.raafstudio.goahead.people.a.f:
     android.content.Context context -> a
     int layoutResourceId -> b
@@ -19914,11 +19889,13 @@ com.raafstudio.goahead.people.fragment.FragmentDiscover -> com.raafstudio.goahea
     android.widget.ListView list -> ak
     com.raafstudio.goahead.people.adapter.DiscoverAdapter adapter -> al
     java.lang.Boolean isloading -> am
-    int previousTotal -> ap
-    int currentPage -> aq
-    int visibleThreshold -> ar
+    int previousTotal -> aq
+    int currentPage -> ar
+    int visibleThreshold -> as
+    java.lang.String last_key -> ap
     android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
     void onResume() -> j
+    void LoadData(java.lang.String) -> a
     void onClick(android.view.View) -> onClick
     void handlerResponse(android.os.Message) -> a
     int access$0(com.raafstudio.goahead.people.fragment.FragmentDiscover) -> a
@@ -20226,7 +20203,7 @@ com.raafstudio.goahead.people.model.Notification -> com.raafstudio.goahead.peopl
     java.lang.String notification_type -> d
     int is_read -> e
     java.lang.String user_avatar -> f
-    int user_action_id -> g
+    java.lang.String user_action_id -> g
     java.lang.String duration -> h
     java.lang.String string_id -> i
     com.raafstudio.goahead.people.model.User user_profile -> j
@@ -20243,15 +20220,15 @@ com.raafstudio.goahead.people.model.Notification -> com.raafstudio.goahead.peopl
     void setIs_read(int) -> c
     java.lang.String getUser_avatar() -> c
     void setUser_avatar(java.lang.String) -> c
-    void setUser_action_id(int) -> d
+    void setUser_action_id(java.lang.String) -> d
     java.lang.String getDuration() -> d
-    void setDuration(java.lang.String) -> d
-    void setString_id(java.lang.String) -> e
+    void setDuration(java.lang.String) -> e
+    void setString_id(java.lang.String) -> f
     com.raafstudio.goahead.people.model.User getUser_profile() -> e
     java.util.ArrayList getDetail_artwork() -> f
     void setIsNeedToNavigate(java.lang.Boolean) -> a
     void setIs_admin(java.lang.Boolean) -> b
-    void setOriginal(java.lang.String) -> f
+    void setOriginal(java.lang.String) -> g
 com.raafstudio.goahead.people.model.Product -> com.raafstudio.goahead.people.d.i:
     java.lang.String encrypted_id -> a
     java.lang.String string_id -> b
@@ -20942,7 +20919,6 @@ org.apache.http.entity.AbstractHttpEntity -> org.apache.http.entity.AbstractHttp
     void setContentEncoding(java.lang.String) -> setContentEncoding
     void setChunked(boolean) -> setChunked
     void consumeContent() -> consumeContent
-    java.lang.String toString() -> toString
 org.apache.http.entity.BasicHttpEntity -> org.apache.http.entity.BasicHttpEntity:
     java.io.InputStream content -> d
     long length -> e
@@ -21320,7 +21296,8 @@ org.apache.http.impl.BHttpConnectionBase -> org.apache.http.impl.BHttpConnection
     org.apache.http.impl.HttpConnectionMetricsImpl connMetrics -> c
     org.apache.http.entity.ContentLengthStrategy incomingContentStrategy -> d
     org.apache.http.entity.ContentLengthStrategy outgoingContentStrategy -> e
-    java.util.concurrent.atomic.AtomicReference socketHolder -> f
+    boolean open -> f
+    java.net.Socket socket -> g
     void ensureOpen() -> a
     java.io.InputStream getSocketInputStream(java.net.Socket) -> a
     java.io.OutputStream getSocketOutputStream(java.net.Socket) -> b

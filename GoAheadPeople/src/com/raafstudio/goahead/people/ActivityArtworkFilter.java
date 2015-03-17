@@ -1,8 +1,7 @@
 package com.raafstudio.goahead.people;
-
+ 
 import cn.Ragnarok.BitmapFilter;
 
-import com.raaf.rColorPicker;
 import com.raaf.rDialog;
 import com.raaf.rIO;
 import com.raaf.rImaging;

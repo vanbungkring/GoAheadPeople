@@ -26,7 +26,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
-import com.raaf.rDialog; 
+import com.raaf.rDialog;
 import com.raafstudio.goahead.people.ActivityMain;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.component.CircleImageView;
@@ -67,6 +67,9 @@ public class DiscoverAdapter extends ArrayAdapter<Artwork> {
 			holder.TvLike = (TextView) row.findViewById(R.id.ArtTvLike);
 			holder.TvTime = (TextView) row.findViewById(R.id.ArtTvTime);
 			holder.TvTitlle = (TextView) row.findViewById(R.id.ArtTvTitlle);
+			holder.TvMissing = (TextView) row.findViewById(R.id.ArtTvMissing);
+			holder.ArtPb = (ProgressBar) row.findViewById(R.id.ArtPb);
+
 			holder.LayoutUser = (LinearLayout) row
 					.findViewById(R.id.LayoutUser);
 
@@ -84,19 +87,25 @@ public class DiscoverAdapter extends ArrayAdapter<Artwork> {
 				((ActivityMain) context).ShowProfile(art.getUser_id());
 			}
 		});
-		holder.ImgArt.setOnClickListener(new OnClickListener() {
+		if (art.getImage().equals("missing image")) {
+			holder.TvMissing.setText("missing image");
+			holder.ImgArt.setVisibility(View.INVISIBLE);
+			holder.ArtPb.setVisibility(View.INVISIBLE);
+		} else {
+			holder.ImgArt.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				((ActivityMain) context).ShowArt(art.getUser_id(),
-						art.getString_id());
-			}
-		});
-		
-		Glide.with(context).load(art.getImage()).asBitmap()
-				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
-				.placeholder(R.drawable.trans).into(holder.ImgArt);
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					((ActivityMain) context).ShowArt(art.getUser_id(),
+							art.getString_id());
+				}
+			});
+
+			Glide.with(context).load(art.getImage()).asBitmap()
+					.diskCacheStrategy(DiskCacheStrategy.SOURCE)
+					.placeholder(R.drawable.trans).into(holder.ImgArt);
+		}
 		Glide.with(context).load(art.getUser_avatar()).asBitmap()
 				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
 				.placeholder(R.drawable.trans).into(holder.ImgUser);
@@ -117,10 +126,11 @@ public class DiscoverAdapter extends ArrayAdapter<Artwork> {
 	}
 
 	static class ViewHolder {
-		TextView TvTime, TvTitlle, TvFullname, TvLike;
+		TextView TvTime, TvTitlle, TvFullname, TvLike, TvMissing;
 		ImageviewNormal ImgArt;
 		CircleImageView ImgUser;
 		ImageView ImgLike;
 		LinearLayout LayoutUser;
+		ProgressBar ArtPb;
 	}
 }

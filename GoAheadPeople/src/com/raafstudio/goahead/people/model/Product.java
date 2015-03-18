@@ -10,6 +10,7 @@ public class Product {
 	String product_thumbnail;
 	int user_id;
 	String price;
+	String price_want;
 	int stock;
 	int category_id;
 	String submitted_by;
@@ -35,6 +36,28 @@ public class Product {
 	String is_want;
 	int like_count;
 
+	int source_top;
+	int source_left;
+	int source_width;
+	int source_height;
+	int dest_top;
+	int dest_left;
+	int dest_width;
+	int dest_height;
+	int canvas_width;
+	int canvas_height;
+	int bg_red;
+	int bg_green;
+	int bg_blue;
+
+	public String getPrice_want() {
+		return price_want;
+	}
+
+	public void setPrice_want(String price_want) {
+		this.price_want = price_want;
+	}
+
 	public int getProduct_id() {
 		return product_id;
 	}
@@ -42,8 +65,6 @@ public class Product {
 	public void setProduct_id(int product_id) {
 		this.product_id = product_id;
 	}
-	
-	
 
 	public String getEncrypted_id() {
 		return encrypted_id;
@@ -299,6 +320,110 @@ public class Product {
 
 	public void setLike_count(int like_count) {
 		this.like_count = like_count;
+	}
+
+	public int getSource_top() {
+		return source_top;
+	}
+
+	public void setSource_top(int source_top) {
+		this.source_top = source_top;
+	}
+
+	public int getSource_left() {
+		return source_left;
+	}
+
+	public void setSource_left(int source_left) {
+		this.source_left = source_left;
+	}
+
+	public int getSource_width() {
+		return source_width;
+	}
+
+	public void setSource_width(int source_width) {
+		this.source_width = source_width;
+	}
+
+	public int getSource_height() {
+		return source_height;
+	}
+
+	public void setSource_height(int source_height) {
+		this.source_height = source_height;
+	}
+
+	public int getDest_top() {
+		return dest_top;
+	}
+
+	public void setDest_top(int dest_top) {
+		this.dest_top = dest_top;
+	}
+
+	public int getDest_left() {
+		return dest_left;
+	}
+
+	public void setDest_left(int dest_left) {
+		this.dest_left = dest_left;
+	}
+
+	public int getDest_width() {
+		return dest_width;
+	}
+
+	public void setDest_width(int dest_width) {
+		this.dest_width = dest_width;
+	}
+
+	public int getDest_height() {
+		return dest_height;
+	}
+
+	public void setDest_height(int dest_height) {
+		this.dest_height = dest_height;
+	}
+
+	public int getCanvas_width() {
+		return canvas_width;
+	}
+
+	public void setCanvas_width(int canvas_width) {
+		this.canvas_width = canvas_width;
+	}
+
+	public int getCanvas_height() {
+		return canvas_height;
+	}
+
+	public void setCanvas_height(int canvas_height) {
+		this.canvas_height = canvas_height;
+	}
+
+	public int getBg_red() {
+		return bg_red;
+	}
+
+	public void setBg_red(int bg_red) {
+		this.bg_red = bg_red;
+	}
+
+	public int getBg_green() {
+		return bg_green;
+	}
+
+	public void setBg_green(int bg_green) {
+		this.bg_green = bg_green;
+	}
+
+	public int getBg_blue() {
+		return bg_blue;
+	}
+
+	public void setBg_blue(int bg_blue) {
+		this.bg_blue = bg_blue;
 	}
 
 }

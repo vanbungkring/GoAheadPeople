@@ -415,6 +415,183 @@ public class API {
 		loader.start();
 	}
 
+	public static void MarketLanding(String category, int limit, int offset,
+			String mode, Handler handler) {
+		String uri = so.getApiUrl() + "marketplace";
+		uri += "?token=" + so.getToken();
+		uri += "&category=" + category;
+		uri += "&limit=" + limit;
+		uri += "&offset=" + offset;
+		uri += "&mode=" + mode;
+
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 1);
+		rLoader loader = new rLoader(uri, handler, b);
+		loader.start();
+	}
+
+	public static void MarketProduct(String string_id, Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/product";
+		uri += "?token=" + so.getToken();
+		uri += "&string_id=" + string_id;
+
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 2);
+		rLoader loader = new rLoader(uri, handler, b);
+		loader.start();
+	}
+
+	public static void MarketLike(String product_id, Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/wantProduct";
+		params = new ArrayList<NameValuePair>(2);
+		params.add(new BasicNameValuePair("token", so.getToken()));
+		params.add(new BasicNameValuePair("product_id", product_id));
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 3);
+		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
+				"");
+		loader.start();
+	}
+
+	public static void MarketBuy(String creatorid, int printerousproductid,
+			int qt, Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/buyProduct";
+		params = new ArrayList<NameValuePair>(2);
+		params.add(new BasicNameValuePair("token", so.getToken()));
+		params.add(new BasicNameValuePair("creatorid", creatorid));
+		params.add(new BasicNameValuePair("printerousproductid",
+				printerousproductid + ""));
+		params.add(new BasicNameValuePair("qt", qt + ""));
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 4);
+		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
+				"");
+		loader.start();
+	}
+
+	public static void MarketDisclaimer(Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/enter";
+		uri += "?token=" + so.getToken();
+
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 5);
+		rLoader loader = new rLoader(uri, handler, b);
+		loader.start();
+	}
+
+	public static void MarketValidArtwork(int offset, int limit, Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/enter";
+		uri += "?token=" + so.getToken();
+		uri += "&offset=" + offset;
+		uri += "&limit=" + limit;
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 6);
+		rLoader loader = new rLoader(uri, handler, b);
+		loader.start();
+	}
+
+	public static void MarketInsertProduct(Product p, rFile file,
+			Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/buyProduct";
+		params = new ArrayList<NameValuePair>(2);
+		params.add(new BasicNameValuePair("token", so.getToken()));
+		params.add(new BasicNameValuePair("product_type", p.getType()));
+		// params.add(new BasicNameValuePair("product_size_id", p.get));
+		params.add(new BasicNameValuePair("price", p.getPrice()));
+		params.add(new BasicNameValuePair("set_price", p.getPrice_want()));
+		params.add(new BasicNameValuePair("title", p.getProduct_title()));
+		params.add(new BasicNameValuePair("cat", p.getCategory_id() + ""));
+		params.add(new BasicNameValuePair("desc", p.getProduct_description()));
+		params.add(new BasicNameValuePair("status_published", p
+				.getIs_published()));
+		params.add(new BasicNameValuePair("image_source", p.getImage()));
+		params.add(new BasicNameValuePair("source_top", "" + p.getSource_top()));
+		params.add(new BasicNameValuePair("source_left", ""
+				+ p.getSource_left()));
+		params.add(new BasicNameValuePair("source_width", ""
+				+ p.getSource_width()));
+		params.add(new BasicNameValuePair("source_height", ""
+				+ p.getSource_height()));
+		params.add(new BasicNameValuePair("dest_top", "" + p.getDest_top()));
+		params.add(new BasicNameValuePair("dest_left", "" + p.getDest_left()));
+		params.add(new BasicNameValuePair("dest_width", "" + p.getDest_width()));
+		params.add(new BasicNameValuePair("dest_height", ""
+				+ p.getDest_height()));
+		params.add(new BasicNameValuePair("canvas_width", ""
+				+ p.getCanvas_width()));
+		params.add(new BasicNameValuePair("canvas_height", ""
+				+ p.getCanvas_height()));
+		params.add(new BasicNameValuePair("bg_red", "" + p.getBg_red()));
+		params.add(new BasicNameValuePair("bg_green", "" + p.getBg_green()));
+		params.add(new BasicNameValuePair("bg_blue", "" + p.getBg_blue()));
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 7);
+		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
+				"");
+		loader.start();
+	}
+
+	public static void MarketKlikRedem(String stringid, Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/klikredeem";
+		params = new ArrayList<NameValuePair>(2);
+		params.add(new BasicNameValuePair("token", so.getToken()));
+		params.add(new BasicNameValuePair("stringid", stringid));
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 8);
+		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
+				"");
+		loader.start();
+	}
+
+	public static void MarketRedem(String stringid, String email, String phone,
+			String city, String prov, String address, String zip_code,
+			Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/redeem";
+		params = new ArrayList<NameValuePair>(2);
+		params.add(new BasicNameValuePair("token", so.getToken()));
+		params.add(new BasicNameValuePair("stringid", stringid));
+		params.add(new BasicNameValuePair("email", email));
+		params.add(new BasicNameValuePair("phone", phone));
+		params.add(new BasicNameValuePair("city", city));
+		params.add(new BasicNameValuePair("prov", prov));
+		params.add(new BasicNameValuePair("address", address));
+		params.add(new BasicNameValuePair("zip_code", zip_code));
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 9);
+		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
+				"");
+		loader.start();
+	}
+
+	public static void MarketEdit(String printpid, String marketpid,
+			String title, String desc, int totalprice, int setprice,
+			Handler handler) {
+		String uri = so.getApiUrl() + "marketplace/redeem";
+		params = new ArrayList<NameValuePair>(2);
+		params.add(new BasicNameValuePair("token", so.getToken()));
+		params.add(new BasicNameValuePair("printpid", printpid));
+		params.add(new BasicNameValuePair("marketpid", marketpid));
+		params.add(new BasicNameValuePair("title", title));
+		params.add(new BasicNameValuePair("desc", desc));
+		params.add(new BasicNameValuePair("totalprice", totalprice + ""));
+		params.add(new BasicNameValuePair("setprice", setprice + ""));
+		Bundle b = new Bundle();
+		b.putInt("modul", so.modul_marketplace);
+		b.putInt("mode", 10);
+		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
+				"");
+		loader.start();
+	}
+
 	public static void BrandList(Handler handler) {
 		String uri = so.getApiUrl() + "registerdata/brandParents";
 		Bundle b = new Bundle();

@@ -43,7 +43,7 @@ public class ActivityArtwork extends ActivityBase   {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Util.showProgres(ActivityArtwork.this);
+				//Util.showProgres(ActivityArtwork.this);
 				if (myTabHost.getCurrentTab() == 2) {
 					 
 					if (so.apply_image) {
@@ -105,7 +105,7 @@ public class ActivityArtwork extends ActivityBase   {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Util.showProgres(ActivityArtwork.this);
+				//Util.showProgres(ActivityArtwork.this);
 			}
 		});
 		myTabHost.setOnTabChangedListener(new OnTabChangeListener() {

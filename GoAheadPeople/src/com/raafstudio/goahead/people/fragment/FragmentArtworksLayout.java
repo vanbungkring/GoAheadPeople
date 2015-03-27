@@ -63,40 +63,40 @@ public class FragmentArtworksLayout extends FragmentBase implements
 
 			// rDialog.SetToast(getActivity(), so.PicturePath);
 
-			File imageFile = new File(so.PicturePath);
-			Bitmap bitmap = null;
-			double pembanding = 0;
-			if (imageFile.exists()) {
-				bitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
-				Boolean isLandscape = (bitmap.getWidth() > bitmap.getHeight());
-				if (isLandscape) {
-					if ((0.75 * (double) bitmap.getWidth()) > (double) bitmap
-							.getHeight()) {
-						double newWidth = (4 * (double) bitmap.getHeight()) / 3;
-						double newX = ((double) bitmap.getWidth() - newWidth) / 2;
-						bitmap = Bitmap.createBitmap(bitmap, (int) newX, 0,
-								(int) newWidth, bitmap.getHeight());
-					}
-					pembanding = (double) bitmap.getHeight()
-							/ (double) bitmap.getWidth();
-					bitmap = rImaging.ScaleImage(bitmap, 1000,
-							(int) (1000 * pembanding));
-				} else {
-					double newHeight = (double) bitmap.getWidth();
-					double newY = ((double) bitmap.getHeight() - newHeight) / 2;
-					bitmap = Bitmap.createBitmap(bitmap, 0, (int) newY,
-							bitmap.getWidth(), (int) newHeight);
-
-					bitmap = rImaging.ScaleImage(bitmap, 1000, 1000);
-				}
-
-				imageFile = new File(so.getFileArtSource());
-				if (imageFile.exists())
-					imageFile.delete();
-				rImaging.SaveImageToFile(bitmap, so.getFileArtSource(),
-						CompressFormat.JPEG, 70);
-				bitmap.recycle();
-			}
+			// File imageFile = new File(so.PicturePath);
+			// Bitmap bitmap = null;
+			// double pembanding = 0;
+			// if (imageFile.exists()) {
+			// bitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
+			// Boolean isLandscape = (bitmap.getWidth() > bitmap.getHeight());
+			// if (isLandscape) {
+			// if ((0.75 * (double) bitmap.getWidth()) > (double) bitmap
+			// .getHeight()) {
+			// double newWidth = (4 * (double) bitmap.getHeight()) / 3;
+			// double newX = ((double) bitmap.getWidth() - newWidth) / 2;
+			// bitmap = Bitmap.createBitmap(bitmap, (int) newX, 0,
+			// (int) newWidth, bitmap.getHeight());
+			// }
+			// pembanding = (double) bitmap.getHeight()
+			// / (double) bitmap.getWidth();
+			// bitmap = rImaging.ScaleImage(bitmap, 1000,
+			// (int) (1000 * pembanding));
+			// } else {
+			// double newHeight = (double) bitmap.getWidth();
+			// double newY = ((double) bitmap.getHeight() - newHeight) / 2;
+			// bitmap = Bitmap.createBitmap(bitmap, 0, (int) newY,
+			// bitmap.getWidth(), (int) newHeight);
+			//
+			// bitmap = rImaging.ScaleImage(bitmap, 1000, 1000);
+			// }
+			//
+			// imageFile = new File(so.getFileArtSource());
+			// if (imageFile.exists())
+			// imageFile.delete();
+			// rImaging.SaveImageToFile(bitmap, so.getFileArtSource(),
+			// CompressFormat.JPEG, 100);
+			// bitmap.recycle();
+			// }
 			// Drawable d = new BitmapDrawable(getResources(),
 			// rImaging.getImageFromFile(filename));
 			// ImgArtwork.setBackground(d);
@@ -177,21 +177,27 @@ public class FragmentArtworksLayout extends FragmentBase implements
 	@Override
 	public void onPause() {
 		// TODO Auto-generated method stub
-		if (so.apply_image) {
-			tv.Save(so.getFileArtLayout() + "png");
-			Bitmap bmp = rImaging.getImageFromFile(so.getFileArtSource());
-			Bitmap bmp1 = rImaging.getImageFromFile(so.getFileArtLayout()
-					+ "png");
-			bmp1 = rImaging.getPreview(bmp1, bmp.getWidth());
-			Bitmap bmpov = rImaging.doOverlay(bmp, bmp1, 0, 0);
-			bmp.recycle();
-			bmp1.recycle();
-			rImaging.SaveImageToFile(bmpov, so.getFileArtLayout(),
-					CompressFormat.JPEG, 100);
-			bmpov.recycle();
-		} else {
-			rIO.copyFile(so.getFileArtSource(), so.getFileArtLayout());
+		try {
+			if (so.apply_image) {
+				tv.Save(so.getFileArtLayout() + "png");
+				Bitmap bmp = rImaging.getImageFromFile(so.getFileArtSource());
+				Bitmap bmp1 = rImaging.getImageFromFile(so.getFileArtLayout()
+						+ "png");
+				bmp1 = rImaging.getPreview(bmp1, bmp.getWidth());
+				Bitmap bmpov = rImaging.doOverlay(bmp, bmp1, 0, 0);
+				bmp.recycle();
+				bmp1.recycle();
+				rImaging.SaveImageToFile(bmpov, so.getFileArtLayout(),
+						CompressFormat.JPEG, 100);
+				bmpov.recycle();
+			} else {
+				rIO.copyFile(so.getFileArtSource(), so.getFileArtLayout());
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
+
 		super.onPause();
 	}
 }

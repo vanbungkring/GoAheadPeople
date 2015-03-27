@@ -4,6 +4,7 @@ import com.raaf.rDialog;
 import com.raaf.custom.DemoDialog;
 import com.raafstudio.goahead.people.fragment.FragmentDiscover;
 import com.raafstudio.goahead.people.fragment.FragmentEarnings;
+import com.raafstudio.goahead.people.fragment.FragmentMarketplace;
 import com.raafstudio.goahead.people.fragment.FragmentNotification;
 import com.raafstudio.goahead.people.fragment.FragmentSetting;
 import com.raafstudio.goahead.people.helper.API;
@@ -37,14 +38,17 @@ public class ActivityMain extends ActivityBase implements
 		NavigationDrawerCallbacks {
 
 	private NavigationDrawerFragment mNavigationDrawerFragment;
-	private ImageView ImgSearch;
-	private Spinner SpToolbar;
+	private ImageView ToolbarImg;
+	private Spinner SpDiscover, SpMarket;
 	private LinearLayout LayoutToolbar;
 
 	FragmentDiscover fDiscover;
+	FragmentMarketplace fMarketplace;
 	FragmentNotification fNotification;
 	FragmentEarnings fEarnings;
 	FragmentSetting fSetting;
+
+	String[] cmd_discover, cmd_market;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,30 +59,32 @@ public class ActivityMain extends ActivityBase implements
 
 			setContentView(R.layout.activity_main);
 			bindToolbar();
-			ImgSearch = (ImageView) findViewById(R.id.ToolbarImgSearch);
-			SpToolbar = (Spinner) findViewById(R.id.ToolbarSp);
+			ToolbarImg = (ImageView) findViewById(R.id.ToolbarImg);
+			SpDiscover = (Spinner) findViewById(R.id.ToolbarSpDiscover);
+			SpMarket = (Spinner) findViewById(R.id.ToolbarSpMarket);
 			LayoutToolbar = (LinearLayout) findViewById(R.id.ToolbarLayout);
 
 			getSupportActionBar().setTitle("");
 			// ArrayAdapter<CharSequence> adapter =
 			// ArrayAdapter.createFromResource(
 			// this, R.array.toolbar_spinner, R.layout.my_spinner);
-			String[] cmd = getResources().getStringArray(
-					R.array.toolbar_spinner);
 
-			SpToolbar.setAdapter(new MyAdapter(this, R.layout.my_spinner, cmd));
 			// SpToolbar.setAdapter(adapter);
 			mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
 					.findFragmentById(R.id.fragment_drawer);
 			mNavigationDrawerFragment.setup(R.id.fragment_drawer,
 					(DrawerLayout) findViewById(R.id.drawer), mToolbar);
-			ImgSearch.setOnClickListener(new OnClickListener() {
+			ToolbarImg.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					startActivity(new Intent(ActivityMain.this,
-							ActivitySearch.class));
+					if (mNavigationDrawerFragment.getCurrentPosition() == 0)
+						startActivity(new Intent(ActivityMain.this,
+								ActivitySearch.class));
+					else
+						startActivity(new Intent(ActivityMain.this,
+								ActivityProduct.class));
 				}
 			});
 			fDiscover = new FragmentDiscover();
@@ -87,14 +93,20 @@ public class ActivityMain extends ActivityBase implements
 						.replace(R.id.container, fDiscover).commit();
 			if (mNavigationDrawerFragment.isDrawerOpen())
 				mNavigationDrawerFragment.closeDrawer();
-			
-			SpToolbar.setOnItemSelectedListener(new OnItemSelectedListener() {
+			cmd_discover = getResources().getStringArray(
+					R.array.spinner_discover);
+			cmd_market = getResources().getStringArray(R.array.spinner_market);
+			SpDiscover.setAdapter(new MyAdapter(this, R.layout.my_spinner,
+					cmd_discover));
+			SpMarket.setAdapter(new MyAdapter(this, R.layout.my_spinner,
+					cmd_market));
+			SpDiscover.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 				@Override
 				public void onItemSelected(AdapterView<?> parent, View view,
 						int position, long id) {
 					// TODO Auto-generated method stub
-					if (fDiscover!=null){
+					if (fDiscover != null) {
 						switch (position) {
 						case 1:
 							fDiscover.LoadData("feed");
@@ -113,13 +125,33 @@ public class ActivityMain extends ActivityBase implements
 							break;
 						}
 					}
-				//	rDialog.SetToast(ActivityMain.this, SpToolbar.getSelectedItem().toString() + " ; " + id);
+					// rDialog.SetToast(ActivityMain.this,
+					// SpToolbar.getSelectedItem().toString() + " ; " + id);
 				}
 
 				@Override
 				public void onNothingSelected(AdapterView<?> parent) {
 					// TODO Auto-generated method stub
-					
+
+				}
+			});
+			SpMarket.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+				@Override
+				public void onItemSelected(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Auto-generated method stub
+					if (fMarketplace != null) {
+						fMarketplace.Reload();
+					}
+					// rDialog.SetToast(ActivityMain.this,
+					// SpToolbar.getSelectedItem().toString() + " ; " + id);
+				}
+
+				@Override
+				public void onNothingSelected(AdapterView<?> parent) {
+					// TODO Auto-generated method stub
+
 				}
 			});
 		}
@@ -159,6 +191,7 @@ public class ActivityMain extends ActivityBase implements
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+
 	}
 
 	public void ShowDemo() {
@@ -191,6 +224,10 @@ public class ActivityMain extends ActivityBase implements
 			if (fDiscover == null)
 				fDiscover = new FragmentDiscover();
 			f = fDiscover;
+			SpDiscover.setVisibility(View.VISIBLE);
+			SpMarket.setVisibility(View.GONE);
+			ToolbarImg
+					.setImageResource(R.drawable.abc_ic_search_api_mtrl_alpha);
 			break;
 		case 1:
 			getSupportActionBar().setTitle("Notification");
@@ -212,6 +249,17 @@ public class ActivityMain extends ActivityBase implements
 			if (fSetting == null)
 				fSetting = new FragmentSetting();
 			f = fSetting;
+			break;
+		case 5:
+			getSupportActionBar().setTitle("");
+			LayoutToolbar.setVisibility(View.VISIBLE);
+			if (fMarketplace == null)
+				fMarketplace = new FragmentMarketplace();
+			f = fMarketplace;
+			SpDiscover.setVisibility(View.GONE);
+			SpMarket.setVisibility(View.VISIBLE);
+			ToolbarImg
+			.setImageResource(R.drawable.ic_action_plus);
 			break;
 		default:
 			rDialog.ConfirmDialog(this, "Sign Out Aplication",
@@ -245,5 +293,13 @@ public class ActivityMain extends ActivityBase implements
 			mNavigationDrawerFragment.selectItem(0);
 		else
 			super.onBackPressed();
+	}
+
+	public void ChangeModule(int position) {
+		mNavigationDrawerFragment.selectItem(position);
+	}
+
+	public int getMarketCategory() {
+		return SpMarket.getSelectedItemPosition() + 1;
 	}
 }

@@ -14,9 +14,15 @@
         android:paddingRight="16dp" >
 
         <Spinner
-            android:id="@+id/ToolbarSp"
+            android:id="@+id/ToolbarSpDiscover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/ToolbarSpMarket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
         <View
             android:layout_width="0dp"
@@ -24,7 +30,7 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:id="@+id/ToolbarImgSearch"
+            android:id="@+id/ToolbarImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

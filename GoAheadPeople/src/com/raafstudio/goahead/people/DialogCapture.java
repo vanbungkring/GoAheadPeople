@@ -3,12 +3,15 @@ package com.raafstudio.goahead.people;
 import java.io.File;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.raaf.rDialog;
+import com.raaf.rIO;
 import com.raaf.rImaging;
 import com.raaf.rIntent;
 import com.raaf.rSecurity;
+import com.raaf.io.rFile;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.Util;
 import com.raafstudio.goahead.people.helper.so;
@@ -76,6 +79,12 @@ public class DialogCapture extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				if (so.requester == 2) {
+					File f = new File(so.getFileArtSource());
+					if (f.exists())
+						f.delete();
+					rIO.copyFile(getFileName(), so.getFileArtSource());
+				}
 				so.requester = 11;
 				so.apply_image = true;
 				finish();
@@ -104,31 +113,70 @@ public class DialogCapture extends Activity {
 					so.PicturePath = getFileName();
 				imageView.setVisibility(View.VISIBLE);
 				BtApply.setVisibility(View.VISIBLE);
-				Glide.with(this).load(so.PicturePath).asBitmap().centerCrop()
-						.override(220, 220)
-						.listener(new RequestListener<String, Bitmap>() {
+				File imageFile = new File(so.PicturePath);
+				Bitmap bitmap = null;
+				double pembanding = 0;
+				if (imageFile.exists()) {
+					bitmap = BitmapFactory.decodeFile(imageFile
+							.getAbsolutePath());
+					Boolean isLandscape = (bitmap.getWidth() > bitmap
+							.getHeight());
+					if (isLandscape) {
+						if ((0.75 * (double) bitmap.getWidth()) > (double) bitmap
+								.getHeight()) {
+							double newWidth = (4 * (double) bitmap.getHeight()) / 3;
+							double newX = ((double) bitmap.getWidth() - newWidth) / 2;
+							bitmap = Bitmap.createBitmap(bitmap, (int) newX, 0,
+									(int) newWidth, bitmap.getHeight());
+						}
+						pembanding = (double) bitmap.getHeight()
+								/ (double) bitmap.getWidth();
+						bitmap = rImaging.ScaleImage(bitmap, 1000,
+								(int) (1000 * pembanding));
+					} else {
+						double newHeight = (double) bitmap.getWidth();
+						double newY = ((double) bitmap.getHeight() - newHeight) / 2;
+						bitmap = Bitmap.createBitmap(bitmap, 0, (int) newY,
+								bitmap.getWidth(), (int) newHeight);
 
-							@Override
-							public boolean onResourceReady(Bitmap arg0,
-									String arg1, Target<Bitmap> arg2,
-									boolean arg3, boolean arg4) {
-								String filename = getFileName();
-								File fl = new File(filename);
-								if (fl.exists())
-									fl.delete();
-								rImaging.SaveImageToFile(arg0, filename,
-										CompressFormat.JPEG, 100);
-								return false;
-							}
+						bitmap = rImaging.ScaleImage(bitmap, 1000, 1000);
+					}
 
-							@Override
-							public boolean onException(Exception arg0,
-									String arg1, Target<Bitmap> arg2,
-									boolean arg3) {
-								// TODO Auto-generated method stub
-								return false;
-							}
-						}).into(imageView);
+					imageFile = new File(getFileName());
+					if (imageFile.exists())
+						imageFile.delete();
+					rImaging.SaveImageToFile(bitmap, getFileName(),
+							CompressFormat.JPEG, 100);
+					bitmap.recycle();
+				}
+				imageView.setImageBitmap(rImaging
+						.getImageFromFile(getFileName()));
+				// Glide.with(this).load(so.PicturePath).asBitmap().centerCrop()
+				// .override(220, 220)
+				// .diskCacheStrategy(DiskCacheStrategy.NONE)
+				// .listener(new RequestListener<String, Bitmap>() {
+				//
+				// @Override
+				// public boolean onResourceReady(Bitmap arg0,
+				// String arg1, Target<Bitmap> arg2,
+				// boolean arg3, boolean arg4) {
+				// String filename = getFileName();
+				// File fl = new File(filename);
+				// if (fl.exists())
+				// fl.delete();
+				// rImaging.SaveImageToFile(arg0, filename,
+				// CompressFormat.JPEG, 100);
+				// return false;
+				// }
+				//
+				// @Override
+				// public boolean onException(Exception arg0,
+				// String arg1, Target<Bitmap> arg2,
+				// boolean arg3) {
+				// // TODO Auto-generated method stub
+				// return false;
+				// }
+				// }).into(imageView);
 			}
 
 		}

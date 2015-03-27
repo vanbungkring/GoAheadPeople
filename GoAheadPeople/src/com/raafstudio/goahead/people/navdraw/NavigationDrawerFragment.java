@@ -79,6 +79,10 @@ public class NavigationDrawerFragment extends FragmentBase implements
 	ImageView ImgAvatarBackground;
 	LinearLayout NavdrawHeader;
 
+	public int getCurrentPosition(){
+		return mCurrentSelectedPosition;
+	}
+	
 	@Nullable
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

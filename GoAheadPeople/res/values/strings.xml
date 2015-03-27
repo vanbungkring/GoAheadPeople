@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Go Ahead People</string>
-    <string name="api_url">http://staging.goaheadpeople.com/mobileapps/</string>
+    <string name="api_url">http://staging.goaheadpeople.com/</string>
     <string name="drawer_open">Menu opened</string>
     <string name="drawer_close">Menu closed</string>
     <string name="action_settings">Settings</string>
@@ -11,12 +11,19 @@
     <string name="follow">Follow</string>
     <string name="no_network">please connect to network</string>
 
-    <string-array name="toolbar_spinner">
+    <string-array name="spinner_discover">
         <item>Discover</item>
         <item>Friends Feed</item>
         <item>Visual Art</item>
         <item>Style</item>
         <item>Photography</item>
+    </string-array>
+    <string-array name="spinner_market">
+        <item>All Category</item>
+        <item>Most Wanted</item>
+        <item>Local Brands</item>
+        <item>User Product</item>
+        <item>Merchandise</item>
     </string-array>
     <string-array name="spinner_art_type">
         <item>VA</item>

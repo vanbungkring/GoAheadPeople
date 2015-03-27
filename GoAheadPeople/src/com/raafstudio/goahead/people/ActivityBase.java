@@ -1,6 +1,6 @@
 package com.raafstudio.goahead.people;
 
-import com.raaf.rDialog; 
+import com.raaf.rDialog;
 import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
 
@@ -23,7 +23,7 @@ public class ActivityBase extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		// mMyApp = (MyApp) this.getApplicationContext(); 
+		// mMyApp = (MyApp) this.getApplicationContext();
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		if (so.ctx == null)
 			so.ctx = getApplicationContext();
@@ -75,7 +75,9 @@ public class ActivityBase extends ActionBarActivity {
 				so.getUserOther().getProducts().clear();
 				loadData();
 			}
-		}
+		} else
+			rDialog.SetToast(this,
+					so.meta.getErrorType() + "\n" + so.meta.getErrorDetail());
 	}
 
 	@Override
@@ -122,6 +124,19 @@ public class ActivityBase extends ActionBarActivity {
 		}
 	}
 
+	public void ShowProduct(int userid, String string_id) {
+		isBase = true;
+		rDialog.ShowProgressDialog(this, "loading product", "please wait..",
+				true);
+		what_user = 3;
+		String_id = string_id;
+		if (userid == so.getUserOther().getUser_id())
+			loadData();
+		else {
+			API.getProfile(userid, handler);
+		}
+	}
+
 	Boolean isBase = false;
 
 	private void loadData() {
@@ -133,6 +148,9 @@ public class ActivityBase extends ActionBarActivity {
 			break;
 		case 2:
 			it = new Intent(this, ActivityArtDetail.class);
+			break;
+		case 3:
+			it = new Intent(this, ActivityProduct.class);
 			break;
 		}
 		it.putExtra("user_id", User_id);

@@ -41,8 +41,10 @@ public class so {
 	public static final String GCM_SENDER_ID = "470363429504";
 	public static Boolean apply_image = false;
 	public static Boolean artwork_published = false;
+	public static Boolean load_more = false;
 	public static int requester = 0;
 	public static String PicturePath = "";
+	static ArrayList<Product> Marketplace;
 	static ArrayList<Artwork> DiscoverArtworks;
 	static ArrayList<Province> Provinces;
 	static ArrayList<Brand> Brands;
@@ -75,7 +77,14 @@ public class so {
 		if (ctx == null)
 			return "";
 		else
-			return ctx.getString(R.string.api_url);
+			return ctx.getString(R.string.api_url) + "mobileapps/";
+	}
+	
+	public static String getMarketMediaUrl() {
+		if (ctx == null)
+			return "";
+		else
+			return ctx.getString(R.string.api_url) + "media/marketsubmit/";
 	}
 
 	public static User getUser() {
@@ -136,6 +145,12 @@ public class so {
 		if (DiscoverArtworks == null)
 			DiscoverArtworks = new ArrayList<Artwork>();
 		return DiscoverArtworks;
+	}
+
+	public static ArrayList<Product> getMarketplace() {
+		if (Marketplace == null)
+			Marketplace = new ArrayList<Product>();
+		return Marketplace;
 	}
 
 	public static ArrayList<Province> getProvinces() {

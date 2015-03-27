@@ -30,7 +30,7 @@ public class ErrorReporting extends Activity {
 						shareIntent.setType("text/plain");
 						shareIntent.putExtra(
 								android.content.Intent.EXTRA_SUBJECT,
-								"Depo Mobile Error");
+								"GAP Error");
 						shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,
 								eror);
 						startActivity(Intent.createChooser(shareIntent,

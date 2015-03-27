@@ -25,16 +25,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class ActivityArtDetail extends ActivityBase {
 
 	ImageviewNormal ArtImg;
 	TextView ArtTvTitlle, ArtTvLikeCount, ArtTvCommentCount, ArtTvDesc,
-			ArtTvLike, ArtTvComment, ArtTvFullname, ArtTvCommentSum;
-	ImageView ArtImgMenu, ArtImgFollow;
+			ArtTvLike, ArtTvComment, ArtTvFullname, ArtTvCommentSum, TvMissing;
+	ImageView ArtImgMenu;
 	CircleImageView ArtImgUserAvatar;
 	LinearLayout mListArtwork, ArtLayoutComment;
+	ProgressBar ArtPb;
+	Button BtnFollow;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,10 @@ public class ActivityArtDetail extends ActivityBase {
 		setContentView(R.layout.activity_artwork_detail);
 		bindToolbar();
 		getSupportActionBar().setTitle("Artwork Detail");
+		BtnFollow = (Button) findViewById(R.id.ArtBtnFollow);
+		ArtPb = (ProgressBar) findViewById(R.id.ArtPb);
 		ArtImg = (ImageviewNormal) findViewById(R.id.ArtImg);
+		TvMissing = (TextView) findViewById(R.id.TvMissing);
 		ArtTvTitlle = (TextView) findViewById(R.id.ArtTvTitlle);
 		ArtTvLikeCount = (TextView) findViewById(R.id.ArtTvLikeCount);
 		ArtTvCommentCount = (TextView) findViewById(R.id.ArtTvCommentCount);
@@ -53,7 +59,6 @@ public class ActivityArtDetail extends ActivityBase {
 		ArtTvFullname = (TextView) findViewById(R.id.ArtTvFullname);
 		ArtTvCommentSum = (TextView) findViewById(R.id.ArtTvCommentSum);
 		ArtImgMenu = (ImageView) findViewById(R.id.ArtImgMenu);
-		ArtImgFollow = (ImageView) findViewById(R.id.ArtImgFollow);
 		ArtImgUserAvatar = (CircleImageView) findViewById(R.id.ArtImgUserAvatar);
 		mListArtwork = (LinearLayout) findViewById(R.id.ArtLayout);
 		ArtLayoutComment = (LinearLayout) findViewById(R.id.ArtLayoutComment);
@@ -69,6 +74,14 @@ public class ActivityArtDetail extends ActivityBase {
 			@Override
 			public void onClick(View v) {
 				API.DiscoverLikeArtwork(ArtTvLike.getTag().toString(), handler);
+			}
+		}); 
+		BtnFollow.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				API.doProfileFollow(so.getUserOther().getProfile_id(), handler);
 			}
 		});
 		ArtTvComment.setOnClickListener(new OnClickListener() {
@@ -102,6 +115,17 @@ public class ActivityArtDetail extends ActivityBase {
 		// TODO Auto-generated method stub
 		super.handlerResponse(msg);
 		if (so.meta.getCode() == 200) {
+			if (so.meta.getModul() == so.modul_profile) {
+				switch (so.meta.getMode()) {
+				case 6:
+					if (BtnFollow.getText().toString().equals("FOLLOW"))
+						BtnFollow.setText("UNFOLLOW");
+					else
+						BtnFollow.setText("FOLLOW");
+					break;
+				}
+
+			}
 			if (so.meta.getModul() == so.modul_discover) {
 				switch (so.meta.getMode()) {
 				case 1:
@@ -149,9 +173,14 @@ public class ActivityArtDetail extends ActivityBase {
 		View v = null;
 		for (Artwork art : so.getUserOther().getArtworks()) {
 			if (art.getString_id().equals(String_id)) {
-				Glide.with(this).load(art.getImage()).asBitmap()
-						.diskCacheStrategy(DiskCacheStrategy.SOURCE)
-						.placeholder(R.drawable.trans).into(ArtImg);
+				if (art.getImage().equals("missing image")) {
+					TvMissing.setText("missing image");
+					ArtImg.setVisibility(View.INVISIBLE);
+					ArtPb.setVisibility(View.INVISIBLE);
+				} else
+					Glide.with(this).load(art.getImage()).asBitmap()
+							.diskCacheStrategy(DiskCacheStrategy.SOURCE)
+							.placeholder(R.drawable.trans).into(ArtImg);
 				ArtTvTitlle.setTag(art.getArtwork_id());
 				ArtTvTitlle.setText(art.getTitle());
 				ArtTvDesc.setText(art.getDescription());
@@ -162,6 +191,10 @@ public class ActivityArtDetail extends ActivityBase {
 					ArtTvLike.setText("UNLIKE");
 				else
 					ArtTvLike.setText("LIKE");
+				if (art.getIs_follow().equals("FALSE"))
+					BtnFollow.setText("FOLLOW");
+				else
+					BtnFollow.setText("UNFOLLOW");
 
 			} else {
 				v = inflater.inflate(R.layout.item_artwork, null);

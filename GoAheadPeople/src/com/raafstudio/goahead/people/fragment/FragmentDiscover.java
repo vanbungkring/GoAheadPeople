@@ -1,13 +1,17 @@
 package com.raafstudio.goahead.people.fragment;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import com.raaf.rDialog;
+import com.raaf.rSecurity;
 import com.raafstudio.goahead.people.ActivityArtwork;
+import com.raafstudio.goahead.people.ActivityMain;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.adapter.DiscoverAdapter;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.API;
+import com.raafstudio.goahead.people.helper.Util;
 import com.raafstudio.goahead.people.helper.so;
 import com.raafstudio.goahead.people.model.Artwork;
 
@@ -46,12 +50,7 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rView = inflater.inflate(R.layout.fragment_discover, container, false);
-		Launcher = (CircleImageView) rView.findViewById(R.id.Launcher);
-		LauncherShop = (CircleImageView) rView
-				.findViewById(R.id.LauncherMerchant);
-		LauncherAdd = (CircleImageView) rView.findViewById(R.id.LauncherAdd);
-		LauncherEye = (CircleImageView) rView
-				.findViewById(R.id.LauncherDiscover);
+
 		list = (ListView) rView.findViewById(R.id.ListArt);
 
 		View v = inflater.inflate(R.layout.footer_discover, null);
@@ -87,6 +86,19 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 		adapter = new DiscoverAdapter(getActivity(), R.layout.item_discover,
 				so.getDiscoverArtworks(), handler);
 		list.setAdapter(adapter);
+		InitLauncher();
+
+		return rView;
+	}
+
+	private void InitLauncher() {
+		// TODO Auto-generated method stub
+		Launcher = (CircleImageView) rView.findViewById(R.id.Launcher);
+		LauncherShop = (CircleImageView) rView
+				.findViewById(R.id.LauncherMerchant);
+		LauncherAdd = (CircleImageView) rView.findViewById(R.id.LauncherAdd);
+		LauncherEye = (CircleImageView) rView
+				.findViewById(R.id.LauncherDiscover);
 		Launcher.setOnClickListener(this);
 		LauncherShop.setOnClickListener(this);
 		LauncherAdd.setOnClickListener(this);
@@ -197,8 +209,6 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 			}
 
 		});
-
-		return rView;
 	}
 
 	@Override
@@ -211,15 +221,17 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 	String last_key = "";
 
 	public void LoadData(String key) {
-		if (key!=last_key)
-			so.getDiscoverArtworks().clear();
-		if (!API.cekInet(getActivity()))
+		if (isAdded()) {
+			if (key != last_key)
+				so.getDiscoverArtworks().clear();
+			if (!API.cekInet(getActivity()))
 
-			((TextView) rView.findViewById(R.id.TvNoNetwork))
-					.setVisibility(View.VISIBLE);
-		else
-			API.DiscoverGet(key, so.getDiscoverArtworks().size(), handler);
-		last_key = key;
+				((TextView) rView.findViewById(R.id.TvNoNetwork))
+						.setVisibility(View.VISIBLE);
+			else
+				API.DiscoverGet(key, so.getDiscoverArtworks().size(), handler);
+			last_key = key;
+		}
 	}
 
 	@Override
@@ -240,17 +252,29 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 			}
 			break;
 		case R.id.LauncherMerchant:
-			rDialog.SetToast(getActivity(), "Shop");
+			((ActivityMain) getActivity()).ChangeModule(5);
 			break;
 		case R.id.LauncherAdd:
 			so.requester = 2;
 			so.apply_image = false;
 			so.artwork_published = false;
+			File imageFile = new File(so.PicturePath);
+			if (imageFile.exists())
+				imageFile.delete();
+			imageFile = new File(so.getFileArtSource());
+			if (imageFile.exists())
+				imageFile.delete();
+			imageFile = new File(Util.getDirArt() + "/"
+					+ rSecurity.getMD5("new_art"));
+			if (imageFile.exists())
+				imageFile.delete();
 			startActivity(new Intent(getActivity(), ActivityArtwork.class));
 
 			break;
 		case R.id.LauncherDiscover:
-			rDialog.SetToast(getActivity(), "Discover");
+			anim4.start();
+			anim5.start();
+			anim6.start();
 			break;
 		default:
 

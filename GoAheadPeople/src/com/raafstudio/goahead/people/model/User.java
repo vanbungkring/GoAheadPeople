@@ -12,7 +12,7 @@ public class User {
 	String province = "";
 	String zip_code = "";
 	String phone = "";
-	int user_consumer_id = 0;
+	String user_consumer_id = "";
 	String fullname = "";
 	Boolean is_kol;
 	int point;
@@ -107,11 +107,11 @@ public class User {
 		this.phone = phone;
 	}
 
-	public int getUser_consumer_id() {
+	public String getUser_consumer_id() {
 		return user_consumer_id;
 	}
 
-	public void setUser_consumer_id(int	 user_consumer_id) {
+	public void setUser_consumer_id(String	 user_consumer_id) {
 		this.user_consumer_id = user_consumer_id;
 	}
 

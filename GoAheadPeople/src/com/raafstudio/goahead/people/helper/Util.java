@@ -97,7 +97,7 @@ public class Util {
 		return str.substring(0, str.length() - 1);
 	}
 
-	public static void showProgres(Context ctx) {
+	public static void showProgres1(Context ctx) {
 		rDialog.ShowProgressDialog(ctx, "processing image", "please wait",
 				true);
 	}

@@ -1,5 +1,6 @@
 package com.raafstudio.goahead.people.fragment;
 
+import com.raaf.rDialog;
 import com.raafstudio.goahead.people.ActivityMain;
 import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
@@ -29,6 +30,9 @@ public class FragmentBase extends Fragment {
 		API.ApiParser(msg);
 		if (so.meta.getCode() == 401)
 			((ActivityMain) getActivity()).doLogin();
+		else if (so.meta.getCode() != 200)
+			rDialog.SetToast(getActivity(), so.meta.getErrorType() + " - "
+					+ so.meta.getErrorDetail());
 	}
 
 	public int getPos() {

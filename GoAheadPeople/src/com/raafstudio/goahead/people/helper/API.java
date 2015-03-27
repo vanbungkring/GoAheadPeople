@@ -415,7 +415,7 @@ public class API {
 		loader.start();
 	}
 
-	public static void MarketLanding(String category, int limit, int offset,
+	public static void MarketLanding(int category, int limit, int offset,
 			String mode, Handler handler) {
 		String uri = so.getApiUrl() + "marketplace";
 		uri += "?token=" + so.getToken();
@@ -804,7 +804,7 @@ public class API {
 						so.getUser().setZip_code(jo.getString("zip_code"));
 						so.getUser().setPhone(jo.getString("phone"));
 						so.getUser().setUser_consumer_id(
-								jo.getInt("user_consumer_id"));
+								jo.getString("user_consumer_id"));
 						so.getUser().setFullname(jo.getString("fullname"));
 						so.getUser().setIs_kol(jo.getBoolean("is_kol"));
 						so.getUser().setPoint(jo.getInt("point"));
@@ -847,7 +847,7 @@ public class API {
 					so.getUserOther().setZip_code(jo.getString("zip_code"));
 					so.getUserOther().setPhone(jo.getString("phone"));
 					so.getUserOther().setUser_consumer_id(
-							jo.getInt("user_consumer_id"));
+							jo.getString("user_consumer_id"));
 					so.getUserOther().setFullname(jo.getString("fullname"));
 					so.getUserOther().setUser_avatar(
 							jo.getString("user_avatar"));
@@ -1033,6 +1033,7 @@ public class API {
 						String string_id = jo1.getString("string_id");
 						Boolean found = false;
 						Artwork art = new Artwork();
+						art.setString_id(string_id);
 						art.setArtwork_id(jo1.getString("artwork_id"));
 						art.setTitle(jo1.getString("artwork_title"));
 						art.setArtwork_thumb("http://staging.goaheadpeople.com/media/submit/"
@@ -1083,7 +1084,7 @@ public class API {
 								User u = new User();
 								u.setUser_id(jo.getInt("user_id"));
 								u.setUser_consumer_id(jo
-										.getInt("user_consumer_id"));
+										.getString("user_consumer_id"));
 								u.setFullname(jo.getString("fullname"));
 								u.setUser_avatar(jo.getString("avatar"));
 								c.setUser(u);
@@ -1128,6 +1129,119 @@ public class API {
 						break;
 					case 7:// report artwork
 
+						break;
+					}
+					break;
+				case so.modul_marketplace:
+					switch (mode) {
+					case 1:// market landing
+						jar = jo.getJSONArray("products");
+						jo = new JSONObject(message);
+						jo = jo.getJSONObject("loadmore");
+						so.load_more = (jo.getString("status").equals("TRUE"));
+						if (jar != null) {
+							for (int i = 0; i < jar.length(); i++) {
+								jo = jar.getJSONObject(i);
+								Product pro = new Product();
+								pro.setEncrypted_id(jo.getString("product_id"));
+								pro.setString_id(jo.getString("string_id"));
+								pro.setProduct_title(jo
+										.getString("product_title"));
+								pro.setProduct_description(jo
+										.getString("product_description"));
+								pro.setProduct_image(jo
+										.getString("product_image"));
+								pro.setProduct_thumbnail(jo
+										.getString("product_thumbnail"));
+								pro.setUser_id(jo.getInt("user_id"));
+								pro.setPrice(jo.getString("price"));
+								pro.setStock(jo.getInt("stock"));
+								pro.setCategory_id(jo.getInt("category_id"));
+								pro.setSubmitted_by(jo
+										.getString("submitted_by"));
+								pro.setPurchase_type(jo
+										.getString("purchase_type"));
+								pro.setPublisher_id(jo.getInt("publisher_id"));
+								pro.setProduct_respawn(jo
+										.getString("product_respawn"));
+								pro.setIs_published(jo
+										.getString("is_published"));
+								pro.setVerifydatetime(jo
+										.getString("verifydatetime"));
+								pro.setPost_type(jo.getString("post_type"));
+								pro.setIs_highlighted(jo
+										.getString("is_highlighted"));
+								pro.setHighlight_from(jo
+										.getString("highlight_from"));
+								pro.setHighlight_until(jo
+										.getString("highlight_until"));
+								pro.setCreatedatetime(jo
+										.getString("createdatetime"));
+								pro.setBrand(jo.getString("brand"));
+								pro.setBrand_url(jo.getString("brand_url"));
+								pro.setPrinterous_product_id(jo
+										.getString("printerous_product_id"));
+								pro.setImage(jo.getString("image"));
+								pro.setFullname(jo.getString("fullname"));
+								pro.setCount(jo.getInt("count"));
+								// pro.setView_stat(jo.getInt("view_stat"));
+								pro.setType(jo.getString("type"));
+								// pro.setLike_stat(jo.getInt("like_stat"));
+								pro.setIs_want(jo.getString("is_want"));
+								pro.setLike_count(jo.getInt("like_count"));
+								so.getMarketplace().add(pro);
+							}
+						}
+						break;
+					case 2:
+						Product pro = new Product();
+						pro.setEncrypted_id(jo.getString("product_id"));
+						pro.setString_id(jo.getString("string_id"));
+						pro.setProduct_title(jo
+								.getString("product_title"));
+						pro.setProduct_description(jo
+								.getString("product_description"));
+						pro.setProduct_image(jo
+								.getString("product_image"));
+						pro.setProduct_thumbnail(jo
+								.getString("product_thumbnail"));
+						pro.setUser_id(jo.getInt("user_id"));
+						pro.setPrice(jo.getString("price"));
+						pro.setStock(jo.getInt("stock"));
+						pro.setCategory_id(jo.getInt("category_id"));
+						pro.setSubmitted_by(jo
+								.getString("submitted_by"));
+						pro.setPurchase_type(jo
+								.getString("purchase_type"));
+						pro.setPublisher_id(jo.getInt("publisher_id"));
+						pro.setProduct_respawn(jo
+								.getString("product_respawn"));
+						pro.setIs_published(jo
+								.getString("is_published"));
+						pro.setVerifydatetime(jo
+								.getString("verifydatetime"));
+						pro.setPost_type(jo.getString("post_type"));
+						pro.setIs_highlighted(jo
+								.getString("is_highlighted"));
+						pro.setHighlight_from(jo
+								.getString("highlight_from"));
+						pro.setHighlight_until(jo
+								.getString("highlight_until"));
+						pro.setCreatedatetime(jo
+								.getString("createdatetime"));
+						pro.setBrand(jo.getString("brand"));
+						pro.setBrand_url(jo.getString("brand_url"));
+						pro.setPrinterous_product_id(jo
+								.getString("printerous_product_id"));
+						pro.setImage(jo.getString("image"));
+						pro.setFullname(jo.getString("fullname"));
+						pro.setCount(jo.getInt("count"));
+						// pro.setView_stat(jo.getInt("view_stat"));
+						pro.setType(jo.getString("type"));
+						// pro.setLike_stat(jo.getInt("like_stat"));
+						pro.setIs_want(jo.getString("is_want"));
+						pro.setLike_count(jo.getInt("like_count"));
+						so.getUserOther().getProducts().add(pro);
 						break;
 					}
 					break;

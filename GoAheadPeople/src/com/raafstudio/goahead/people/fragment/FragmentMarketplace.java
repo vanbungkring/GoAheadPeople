@@ -93,6 +93,7 @@ public class FragmentMarketplace extends FragmentBase implements
 		});
 
 		InitLauncher();
+		
 		return rView;
 	}
 
@@ -231,7 +232,7 @@ public class FragmentMarketplace extends FragmentBase implements
 			last_i = 0;
 			loadProduct();
 		}
-
+		((ActivityMain) getActivity()).ShowDemo(2);
 		Pb1.setVisibility(View.GONE);
 	}
 

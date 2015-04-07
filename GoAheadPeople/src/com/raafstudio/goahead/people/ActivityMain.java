@@ -194,14 +194,15 @@ public class ActivityMain extends ActivityBase implements
 
 	}
 
-	public void ShowDemo() {
-		if (!so.getSp().getBoolean("activity_main", false)) {
-			DemoDialog dd = new DemoDialog(this, getResources().getDrawable(
-					R.drawable.discover_mark));
-			dd.show();
-			// startActivity(new Intent(ActivityMain.this,
-			// ActivityMainDemo.class));
-			so.setParamBoolean("activity_main", true);
+	public void ShowDemo(int fragment) {
+		if (!so.getSp().getBoolean("fragment_" + fragment, false)) {
+			// DemoDialog dd = new DemoDialog(this, getResources().getDrawable(
+			// R.drawable.discover_mark));
+			// dd.show();
+			Intent it = new Intent(ActivityMain.this, ActivityMainDemo.class);
+			it.putExtra("fragment", fragment);
+			startActivity(it);
+			
 		}
 	}
 
@@ -258,8 +259,7 @@ public class ActivityMain extends ActivityBase implements
 			f = fMarketplace;
 			SpDiscover.setVisibility(View.GONE);
 			SpMarket.setVisibility(View.VISIBLE);
-			ToolbarImg
-			.setImageResource(R.drawable.ic_action_plus);
+			ToolbarImg.setImageResource(R.drawable.ic_action_plus);
 			break;
 		default:
 			rDialog.ConfirmDialog(this, "Sign Out Aplication",

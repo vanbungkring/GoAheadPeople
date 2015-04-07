@@ -143,8 +143,6 @@ android.support.v4.app.Fragment:
     799:804:public void setRetainInstance(boolean)
     807:807:public final boolean getRetainInstance()
     818:824:public void setHasOptionsMenu(boolean)
-    836:842:public void setMenuVisibility(boolean)
-    858:863:public void setUserVisibleHint(boolean)
     870:870:public boolean getUserVisibleHint()
     877:885:public android.support.v4.app.LoaderManager getLoaderManager()
     904:908:public void startActivityForResult(android.content.Intent,int)
@@ -230,7 +228,9 @@ android.support.v4.app.FragmentManagerImpl$FragmentTag:
     public static final int Fragment_name
     public static final int Fragment_tag
     2215:2215:FragmentManagerImpl$FragmentTag()
-android.support.v4.app.FragmentPagerAdapter
+android.support.v4.app.FragmentPagerAdapter:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
 android.support.v4.app.FragmentStatePagerAdapter
 android.support.v4.app.FragmentTabHost:
     188:193:public void setup(android.content.Context,android.support.v4.app.FragmentManager)
@@ -1104,7 +1104,6 @@ android.support.v4.view.MotionEventCompatEclair:
 android.support.v4.view.PagerAdapter:
     public static final int POSITION_UNCHANGED
     public static final int POSITION_NONE
-    78:79:public PagerAdapter()
     276:277:public void notifyDataSetChanged()
     307:307:public java.lang.CharSequence getPageTitle(int)
 android.support.v4.view.PagerTabStrip
@@ -1462,9 +1461,6 @@ android.support.v4.view.ViewPager:
     public static final int SCROLL_STATE_IDLE
     public static final int SCROLL_STATE_DRAGGING
     public static final int SCROLL_STATE_SETTLING
-    349:351:public ViewPager(android.content.Context)
-    354:356:public ViewPager(android.content.Context,android.util.AttributeSet)
-    359:384:void initViewPager()
     613:625:public void setPageTransformer(boolean,android.support.v4.view.ViewPager$PageTransformer)
     659:661:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     783:784:void smoothScrollTo(int,int)
@@ -1472,11 +1468,6 @@ android.support.v4.view.ViewPager:
     2304:2325:public void endFakeDrag()
     2335:2373:public void fakeDragBy(float)
     2385:2385:public boolean isFakeDragging()
-    89:89:static synthetic void access$000(android.support.v4.view.ViewPager,int)
-    89:89:static synthetic android.support.v4.view.PagerAdapter access$200(android.support.v4.view.ViewPager)
-    89:89:static synthetic int access$300(android.support.v4.view.ViewPager)
-android.support.v4.view.ViewPager$3
-android.support.v4.view.ViewPager$MyAccessibilityDelegate
 android.support.v4.view.ViewPager$SimpleOnPageChangeListener
 android.support.v4.view.ViewParentCompat
 android.support.v4.view.ViewParentCompat$ViewParentCompatICSImpl
@@ -1971,7 +1962,6 @@ android.support.v4.view.accessibility.AccessibilityNodeProviderCompatKitKat:
 android.support.v4.view.accessibility.AccessibilityRecordCompat:
     539:539:public java.lang.Object getImpl()
     550:550:public static android.support.v4.view.accessibility.AccessibilityRecordCompat obtain(android.support.v4.view.accessibility.AccessibilityRecordCompat)
-    560:560:public static android.support.v4.view.accessibility.AccessibilityRecordCompat obtain()
     571:572:public void setSource(android.view.View)
     589:590:public void setSource(android.view.View,int)
     605:605:public android.support.v4.view.accessibility.AccessibilityNodeInfoCompat getSource()
@@ -2013,7 +2003,6 @@ android.support.v4.view.accessibility.AccessibilityRecordCompat:
     1001:1002:public void setParcelableData(android.os.Parcelable)
     1014:1015:public void recycle()
 android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsImpl:
-    271:271:public java.lang.Object obtain()
     276:276:public java.lang.Object obtain(java.lang.Object)
     281:281:public int getAddedCount(java.lang.Object)
     286:286:public java.lang.CharSequence getBeforeText(java.lang.Object)
@@ -2056,7 +2045,6 @@ android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRec
     489:490:public void setMaxScrollX(java.lang.Object,int)
     494:495:public void setMaxScrollY(java.lang.Object,int)
 android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordImpl:
-    public abstract java.lang.Object obtain()
     public abstract java.lang.Object obtain(java.lang.Object)
     public abstract void setSource(java.lang.Object,android.view.View)
     public abstract void setSource(java.lang.Object,android.view.View,int)
@@ -2101,7 +2089,6 @@ android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRec
 android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl:
     501:502:public void setSource(java.lang.Object,android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordStubImpl:
-    84:84:public java.lang.Object obtain()
     88:88:public java.lang.Object obtain(java.lang.Object)
     92:92:public int getAddedCount(java.lang.Object)
     96:96:public java.lang.CharSequence getBeforeText(java.lang.Object)
@@ -2145,7 +2132,6 @@ android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRec
     261:261:public void setSource(java.lang.Object,android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityRecordCompatIcs:
     28:28:AccessibilityRecordCompatIcs()
-    31:31:public static java.lang.Object obtain()
     35:35:public static java.lang.Object obtain(java.lang.Object)
     39:39:public static int getAddedCount(java.lang.Object)
     43:43:public static java.lang.CharSequence getBeforeText(java.lang.Object)
@@ -9083,6 +9069,7 @@ com.raaf.R$drawable
 com.raaf.R$string
 com.raaf.R$style
 com.raaf.Rupiah
+com.raaf.custom.DemoDialog
 com.raaf.custom.DynamicListView
 com.raaf.custom.DynamicListView$1
 com.raaf.custom.DynamicListView$2
@@ -9183,7 +9170,8 @@ com.raafstudio.goahead.people.ActivityProfile:
     com.raafstudio.goahead.people.adapter.ArtworkAdapter ArtAdapter
 com.raafstudio.goahead.people.ActivitySettingBasic:
     android.widget.Button BtSave
-com.raafstudio.goahead.people.ActivitySplash
+com.raafstudio.goahead.people.ActivitySplash$SectionsPagerAdapter:
+    85:87:public java.lang.CharSequence getPageTitle(int)
 com.raafstudio.goahead.people.BuildConfig
 com.raafstudio.goahead.people.MyApp
 com.raafstudio.goahead.people.R:
@@ -9204,7 +9192,7 @@ com.raafstudio.goahead.people.R$raw
 com.raafstudio.goahead.people.R$string
 com.raafstudio.goahead.people.R$style
 com.raafstudio.goahead.people.R$styleable:
-    3217:3217:public R$styleable()
+    3232:3232:public R$styleable()
 com.raafstudio.goahead.people.adapter.ArtworkAdapter
 com.raafstudio.goahead.people.adapter.ArtworkAdapter$ViewHolder
 com.raafstudio.goahead.people.adapter.NotificationAdapter:

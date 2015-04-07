@@ -21,6 +21,7 @@ public class ActivityLogin extends ActivityBase {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		onlogin = true;
 		setContentView(R.layout.activity_login);
 		TvEmail = (EditText) findViewById(R.id.EtEmail);
 		TvPassword = (EditText) findViewById(R.id.EtPassword);
@@ -30,6 +31,11 @@ public class ActivityLogin extends ActivityBase {
 					@Override
 					public void onClick(View v) {
 						// /"maulfi.02@gmail.com", "kumahaaing", "",
+						if (TvEmail.getText().length() == 0
+								|| TvPassword.getText().length() == 0) {
+							rDialog.SetToast(ActivityLogin.this, "Email / Password cannot empty");
+							return;
+						}
 						API.doLogin(TvEmail.getText().toString(), TvPassword
 								.getText().toString(), "", handler);
 						rDialog.ShowProgressDialog(ActivityLogin.this,
@@ -43,7 +49,8 @@ public class ActivityLogin extends ActivityBase {
 		// TODO Auto-generated method stub
 		super.handlerResponse(msg);
 		if (so.meta.getCode() == 200 && so.meta.getModul() == so.modul_login) {
-			startActivity(new Intent(ActivityLogin.this, ActivityMain.class));
+			// startActivity(new Intent(ActivityLogin.this,
+			// ActivityMain.class));
 			finish();
 		} else
 			rDialog.SetToast(ActivityLogin.this, so.meta.getErrorDetail());

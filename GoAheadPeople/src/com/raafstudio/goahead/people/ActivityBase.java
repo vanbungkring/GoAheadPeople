@@ -18,6 +18,7 @@ public class ActivityBase extends ActionBarActivity {
 	// protected MyApp mMyApp;
 	protected Toolbar mToolbar;
 	protected TextView TvNext;
+	Boolean onlogin = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,9 +68,10 @@ public class ActivityBase extends ActionBarActivity {
 
 	protected void handlerResponse(Message msg) {
 		API.ApiParser(msg);
-		if (so.meta.getCode() == 401)
-			doLogin();
-		else if (so.meta.getCode() == 200) {
+		if (so.meta.getCode() == 401) {
+			if (!onlogin)
+				doLogin();
+		} else if (so.meta.getCode() == 200) {
 			if (so.meta.getModul() == so.modul_base && isBase) {
 				so.getUserOther().getArtworks().clear();
 				so.getUserOther().getProducts().clear();
@@ -94,7 +96,7 @@ public class ActivityBase extends ActionBarActivity {
 	String String_id;
 
 	public void doLogin() {
-		startActivity(new Intent(this, ActivityLogin.class));
+		startActivity(new Intent(this, ActivitySplash.class));
 		finish();
 	}
 

@@ -87,7 +87,7 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 				so.getDiscoverArtworks(), handler);
 		list.setAdapter(adapter);
 		InitLauncher();
-
+		
 		return rView;
 	}
 
@@ -215,7 +215,7 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-
+		((ActivityMain) getActivity()).ShowDemo(1);
 	}
 
 	String last_key = "";

@@ -137,7 +137,7 @@ public class NavigationDrawerFragment extends FragmentBase implements
 	}
 
 	private void ShowProfile() {
-		((ActivityMain) getActivity()).ShowDemo();
+		
 		TvUserName.setText(so.getUser().getFullname());
 		TvUserPoint.setText(NumberFormat.getNumberInstance(Locale.US).format(
 				so.getUser().getPoint())

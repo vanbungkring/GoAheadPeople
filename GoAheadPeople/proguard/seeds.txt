@@ -51,6 +51,9 @@ android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
 android.support.v4.view.PagerTitleStrip: void setTextColor(int)
 android.support.v4.view.PagerTitleStrip: void setGravity(int)
 android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context)
+android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
 android.support.v4.view.ViewPager: void setScrollState(int)
 android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
 android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
@@ -2453,6 +2456,8 @@ com.raafstudio.goahead.people.ActivitySettingHelp
 com.raafstudio.goahead.people.ActivitySettingHelp: ActivitySettingHelp()
 com.raafstudio.goahead.people.ActivitySettingTerms
 com.raafstudio.goahead.people.ActivitySettingTerms: ActivitySettingTerms()
+com.raafstudio.goahead.people.ActivitySplash
+com.raafstudio.goahead.people.ActivitySplash: ActivitySplash()
 com.raafstudio.goahead.people.DialogCapture
 com.raafstudio.goahead.people.DialogCapture: DialogCapture()
 com.raafstudio.goahead.people.ErrorReporting
@@ -2964,6 +2969,10 @@ com.raafstudio.goahead.people.R$drawable: int abc_textfield_search_default_mtrl_
 com.raafstudio.goahead.people.R$drawable: int abc_textfield_search_material
 com.raafstudio.goahead.people.R$drawable: int avatar
 com.raafstudio.goahead.people.R$drawable: int bg_list
+com.raafstudio.goahead.people.R$drawable: int bg_splash
+com.raafstudio.goahead.people.R$drawable: int boarding_create
+com.raafstudio.goahead.people.R$drawable: int boarding_discover
+com.raafstudio.goahead.people.R$drawable: int boarding_market
 com.raafstudio.goahead.people.R$drawable: int bounding_box
 com.raafstudio.goahead.people.R$drawable: int bounding_box1
 com.raafstudio.goahead.people.R$drawable: int box
@@ -2972,8 +2981,10 @@ com.raafstudio.goahead.people.R$drawable: int btn_art_graph_on
 com.raafstudio.goahead.people.R$drawable: int btn_art_layout_off
 com.raafstudio.goahead.people.R$drawable: int btn_art_layout_on
 com.raafstudio.goahead.people.R$drawable: int button_red
+com.raafstudio.goahead.people.R$drawable: int button_red_corner
 com.raafstudio.goahead.people.R$drawable: int button_tab
 com.raafstudio.goahead.people.R$drawable: int button_tab_enable
+com.raafstudio.goahead.people.R$drawable: int button_trans_corner
 com.raafstudio.goahead.people.R$drawable: int button_white
 com.raafstudio.goahead.people.R$drawable: int common_full_open_on_phone
 com.raafstudio.goahead.people.R$drawable: int common_ic_googleplayservices
@@ -3003,6 +3014,7 @@ com.raafstudio.goahead.people.R$drawable: int common_signin_btn_text_pressed_dar
 com.raafstudio.goahead.people.R$drawable: int common_signin_btn_text_pressed_light
 com.raafstudio.goahead.people.R$drawable: int discover_mark
 com.raafstudio.goahead.people.R$drawable: int frame_selected
+com.raafstudio.goahead.people.R$drawable: int gap
 com.raafstudio.goahead.people.R$drawable: int header_background
 com.raafstudio.goahead.people.R$drawable: int ic_action_add
 com.raafstudio.goahead.people.R$drawable: int ic_action_plus
@@ -3048,6 +3060,7 @@ com.raafstudio.goahead.people.R$drawable: int layout_typo3_active
 com.raafstudio.goahead.people.R$drawable: int layout_typo4_active
 com.raafstudio.goahead.people.R$drawable: int layout_typo5_active
 com.raafstudio.goahead.people.R$drawable: int list_selector
+com.raafstudio.goahead.people.R$drawable: int market_mark
 com.raafstudio.goahead.people.R$drawable: int picture_frame
 com.raafstudio.goahead.people.R$drawable: int picture_frame_default
 com.raafstudio.goahead.people.R$drawable: int picture_frame_pressed
@@ -3082,6 +3095,8 @@ com.raafstudio.goahead.people.R$id: int ArtTvTime
 com.raafstudio.goahead.people.R$id: int ArtTvTitlle
 com.raafstudio.goahead.people.R$id: int BtApplyImage
 com.raafstudio.goahead.people.R$id: int BtCommentSend
+com.raafstudio.goahead.people.R$id: int BtLogin
+com.raafstudio.goahead.people.R$id: int BtRegister
 com.raafstudio.goahead.people.R$id: int BtSave
 com.raafstudio.goahead.people.R$id: int BtSearchArtworks
 com.raafstudio.goahead.people.R$id: int BtSearchProducts
@@ -3133,6 +3148,7 @@ com.raafstudio.goahead.people.R$id: int ImgArtwork3
 com.raafstudio.goahead.people.R$id: int ImgAvatar
 com.raafstudio.goahead.people.R$id: int ImgAvatarBackground
 com.raafstudio.goahead.people.R$id: int ImgBackground
+com.raafstudio.goahead.people.R$id: int ImgBoarding
 com.raafstudio.goahead.people.R$id: int ImgCaptureCam
 com.raafstudio.goahead.people.R$id: int ImgCaptureFile
 com.raafstudio.goahead.people.R$id: int ImgProduct
@@ -3188,6 +3204,7 @@ com.raafstudio.goahead.people.R$id: int TvUserFullName
 com.raafstudio.goahead.people.R$id: int TvUserJob
 com.raafstudio.goahead.people.R$id: int TvUserJobLocation
 com.raafstudio.goahead.people.R$id: int TvUserPoint
+com.raafstudio.goahead.people.R$id: int VpPanel
 com.raafstudio.goahead.people.R$id: int action_bar
 com.raafstudio.goahead.people.R$id: int action_bar_activity_content
 com.raafstudio.goahead.people.R$id: int action_bar_container
@@ -3299,6 +3316,8 @@ com.raafstudio.goahead.people.R$id: int terrain
 com.raafstudio.goahead.people.R$id: int textView1
 com.raafstudio.goahead.people.R$id: int textView2
 com.raafstudio.goahead.people.R$id: int textView3
+com.raafstudio.goahead.people.R$id: int textView4
+com.raafstudio.goahead.people.R$id: int textView5
 com.raafstudio.goahead.people.R$id: int title
 com.raafstudio.goahead.people.R$id: int up
 com.raafstudio.goahead.people.R$id: int useLogo
@@ -3357,6 +3376,7 @@ com.raafstudio.goahead.people.R$layout: int footer_discover
 com.raafstudio.goahead.people.R$layout: int fragment_artwork_frame
 com.raafstudio.goahead.people.R$layout: int fragment_artwork_graphic
 com.raafstudio.goahead.people.R$layout: int fragment_artwork_layout
+com.raafstudio.goahead.people.R$layout: int fragment_boarding
 com.raafstudio.goahead.people.R$layout: int fragment_discover
 com.raafstudio.goahead.people.R$layout: int fragment_earnings
 com.raafstudio.goahead.people.R$layout: int fragment_list_artwork

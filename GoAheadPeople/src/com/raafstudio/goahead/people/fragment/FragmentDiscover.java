@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 import com.raaf.rDialog;
 import com.raaf.rSecurity;
-import com.raafstudio.goahead.people.ActivityArtwork;
-import com.raafstudio.goahead.people.ActivityMain;
 import com.raafstudio.goahead.people.R;
+import com.raafstudio.goahead.people.activity.ActivityMain;
+import com.raafstudio.goahead.people.activity.artwork.ActivityArtwork;
 import com.raafstudio.goahead.people.adapter.DiscoverAdapter;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.API;
@@ -87,7 +87,7 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 				so.getDiscoverArtworks(), handler);
 		list.setAdapter(adapter);
 		InitLauncher();
-		
+
 		return rView;
 	}
 
@@ -228,11 +228,17 @@ public class FragmentDiscover extends FragmentBase implements OnClickListener {
 
 				((TextView) rView.findViewById(R.id.TvNoNetwork))
 						.setVisibility(View.VISIBLE);
-			else
-				API.DiscoverGet(key, so.getDiscoverArtworks().size(), handler);
+			else {
+				if (so.getDiscoverArtworks().size() > lastrequest) {
+					lastrequest = so.getDiscoverArtworks().size();
+					API.DiscoverGet(key, lastrequest, handler);
+				}
+			}
 			last_key = key;
 		}
 	}
+
+	int lastrequest = -1;
 
 	@Override
 	public void onClick(View v) {

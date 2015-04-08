@@ -2425,39 +2425,6 @@ com.raaf.db.DbParam$data_type: com.raaf.db.DbParam$data_type[] values()
 com.raaf.db.DbParam$data_type: com.raaf.db.DbParam$data_type valueOf(java.lang.String)
 com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type[] values()
 com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type valueOf(java.lang.String)
-com.raafstudio.goahead.people.ActivityArtDetail
-com.raafstudio.goahead.people.ActivityArtDetail: ActivityArtDetail()
-com.raafstudio.goahead.people.ActivityArtwork
-com.raafstudio.goahead.people.ActivityArtwork: ActivityArtwork()
-com.raafstudio.goahead.people.ActivityArtworkFilter
-com.raafstudio.goahead.people.ActivityArtworkFilter: ActivityArtworkFilter()
-com.raafstudio.goahead.people.ActivityArtworkInfo
-com.raafstudio.goahead.people.ActivityArtworkInfo: ActivityArtworkInfo()
-com.raafstudio.goahead.people.ActivityArtworkPublish
-com.raafstudio.goahead.people.ActivityArtworkPublish: ActivityArtworkPublish()
-com.raafstudio.goahead.people.ActivityBase: ActivityBase()
-com.raafstudio.goahead.people.ActivityLogin
-com.raafstudio.goahead.people.ActivityLogin: ActivityLogin()
-com.raafstudio.goahead.people.ActivityMain
-com.raafstudio.goahead.people.ActivityMain: ActivityMain()
-com.raafstudio.goahead.people.ActivityMainDemo
-com.raafstudio.goahead.people.ActivityMainDemo: ActivityMainDemo()
-com.raafstudio.goahead.people.ActivityProduct
-com.raafstudio.goahead.people.ActivityProduct: ActivityProduct()
-com.raafstudio.goahead.people.ActivityProfile
-com.raafstudio.goahead.people.ActivityProfile: ActivityProfile()
-com.raafstudio.goahead.people.ActivitySearch
-com.raafstudio.goahead.people.ActivitySearch: ActivitySearch()
-com.raafstudio.goahead.people.ActivitySettingAccount
-com.raafstudio.goahead.people.ActivitySettingAccount: ActivitySettingAccount()
-com.raafstudio.goahead.people.ActivitySettingBasic
-com.raafstudio.goahead.people.ActivitySettingBasic: ActivitySettingBasic()
-com.raafstudio.goahead.people.ActivitySettingHelp
-com.raafstudio.goahead.people.ActivitySettingHelp: ActivitySettingHelp()
-com.raafstudio.goahead.people.ActivitySettingTerms
-com.raafstudio.goahead.people.ActivitySettingTerms: ActivitySettingTerms()
-com.raafstudio.goahead.people.ActivitySplash
-com.raafstudio.goahead.people.ActivitySplash: ActivitySplash()
 com.raafstudio.goahead.people.DialogCapture
 com.raafstudio.goahead.people.DialogCapture: DialogCapture()
 com.raafstudio.goahead.people.ErrorReporting
@@ -2794,6 +2761,7 @@ com.raafstudio.goahead.people.R$color: int purple
 com.raafstudio.goahead.people.R$color: int purple_dark
 com.raafstudio.goahead.people.R$color: int purple_light
 com.raafstudio.goahead.people.R$color: int red
+com.raafstudio.goahead.people.R$color: int red_background_product
 com.raafstudio.goahead.people.R$color: int red_dark
 com.raafstudio.goahead.people.R$color: int red_light
 com.raafstudio.goahead.people.R$color: int ripple_material_dark
@@ -3074,6 +3042,18 @@ com.raafstudio.goahead.people.R$drawable: int tab_selected_pressed_holo
 com.raafstudio.goahead.people.R$drawable: int tab_unselected_focused_holo
 com.raafstudio.goahead.people.R$drawable: int tab_unselected_holo
 com.raafstudio.goahead.people.R$drawable: int tab_unselected_pressed_holo
+com.raafstudio.goahead.people.R$drawable: int template_bag
+com.raafstudio.goahead.people.R$drawable: int template_bag_active
+com.raafstudio.goahead.people.R$drawable: int template_canvas
+com.raafstudio.goahead.people.R$drawable: int template_canvas_active
+com.raafstudio.goahead.people.R$drawable: int template_ipad
+com.raafstudio.goahead.people.R$drawable: int template_ipad_active
+com.raafstudio.goahead.people.R$drawable: int template_mac
+com.raafstudio.goahead.people.R$drawable: int template_mac_active
+com.raafstudio.goahead.people.R$drawable: int template_pillow
+com.raafstudio.goahead.people.R$drawable: int template_pillow_active
+com.raafstudio.goahead.people.R$drawable: int template_smartphone
+com.raafstudio.goahead.people.R$drawable: int template_smartphone_active
 com.raafstudio.goahead.people.R$drawable: int trans
 com.raafstudio.goahead.people.R$id: int ArtBtnFollow
 com.raafstudio.goahead.people.R$id: int ArtImg
@@ -3095,6 +3075,7 @@ com.raafstudio.goahead.people.R$id: int ArtTvTime
 com.raafstudio.goahead.people.R$id: int ArtTvTitlle
 com.raafstudio.goahead.people.R$id: int BtApplyImage
 com.raafstudio.goahead.people.R$id: int BtCommentSend
+com.raafstudio.goahead.people.R$id: int BtForgot
 com.raafstudio.goahead.people.R$id: int BtLogin
 com.raafstudio.goahead.people.R$id: int BtRegister
 com.raafstudio.goahead.people.R$id: int BtSave
@@ -3148,10 +3129,16 @@ com.raafstudio.goahead.people.R$id: int ImgArtwork3
 com.raafstudio.goahead.people.R$id: int ImgAvatar
 com.raafstudio.goahead.people.R$id: int ImgAvatarBackground
 com.raafstudio.goahead.people.R$id: int ImgBackground
+com.raafstudio.goahead.people.R$id: int ImgBag
 com.raafstudio.goahead.people.R$id: int ImgBoarding
+com.raafstudio.goahead.people.R$id: int ImgCanvas
 com.raafstudio.goahead.people.R$id: int ImgCaptureCam
 com.raafstudio.goahead.people.R$id: int ImgCaptureFile
+com.raafstudio.goahead.people.R$id: int ImgIpad
+com.raafstudio.goahead.people.R$id: int ImgMac
+com.raafstudio.goahead.people.R$id: int ImgPillow
 com.raafstudio.goahead.people.R$id: int ImgProduct
+com.raafstudio.goahead.people.R$id: int ImgSmartphone
 com.raafstudio.goahead.people.R$id: int Launcher
 com.raafstudio.goahead.people.R$id: int LauncherAdd
 com.raafstudio.goahead.people.R$id: int LauncherDiscover
@@ -3192,6 +3179,7 @@ com.raafstudio.goahead.people.R$id: int TvCommentName
 com.raafstudio.goahead.people.R$id: int TvCommentTime
 com.raafstudio.goahead.people.R$id: int TvDialogTitle
 com.raafstudio.goahead.people.R$id: int TvError
+com.raafstudio.goahead.people.R$id: int TvForgotPassword
 com.raafstudio.goahead.people.R$id: int TvMissing
 com.raafstudio.goahead.people.R$id: int TvNoNetwork
 com.raafstudio.goahead.people.R$id: int TvProductBy
@@ -3357,18 +3345,21 @@ com.raafstudio.goahead.people.R$layout: int activity_artwork_detail
 com.raafstudio.goahead.people.R$layout: int activity_artwork_filter
 com.raafstudio.goahead.people.R$layout: int activity_artwork_info
 com.raafstudio.goahead.people.R$layout: int activity_artwork_publish
+com.raafstudio.goahead.people.R$layout: int activity_boarding
 com.raafstudio.goahead.people.R$layout: int activity_eror_reporting
 com.raafstudio.goahead.people.R$layout: int activity_login
+com.raafstudio.goahead.people.R$layout: int activity_login_forgot
 com.raafstudio.goahead.people.R$layout: int activity_main
 com.raafstudio.goahead.people.R$layout: int activity_main_demo
 com.raafstudio.goahead.people.R$layout: int activity_product
+com.raafstudio.goahead.people.R$layout: int activity_product_detail
+com.raafstudio.goahead.people.R$layout: int activity_product_template
 com.raafstudio.goahead.people.R$layout: int activity_profile
 com.raafstudio.goahead.people.R$layout: int activity_search
 com.raafstudio.goahead.people.R$layout: int activity_setting_account
 com.raafstudio.goahead.people.R$layout: int activity_setting_basic
 com.raafstudio.goahead.people.R$layout: int activity_setting_help
 com.raafstudio.goahead.people.R$layout: int activity_setting_terms
-com.raafstudio.goahead.people.R$layout: int activity_splash
 com.raafstudio.goahead.people.R$layout: int demo_login
 com.raafstudio.goahead.people.R$layout: int dialog_image
 com.raafstudio.goahead.people.R$layout: int drawer_row
@@ -4046,6 +4037,36 @@ com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletD
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsLogoImageType
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsLogoTextColor
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsTextAppearance
+com.raafstudio.goahead.people.activity.ActivityBase: ActivityBase()
+com.raafstudio.goahead.people.activity.ActivityLogin
+com.raafstudio.goahead.people.activity.ActivityLogin: ActivityLogin()
+com.raafstudio.goahead.people.activity.ActivityLoginForgot
+com.raafstudio.goahead.people.activity.ActivityLoginForgot: ActivityLoginForgot()
+com.raafstudio.goahead.people.activity.ActivityMain
+com.raafstudio.goahead.people.activity.ActivityMain: ActivityMain()
+com.raafstudio.goahead.people.activity.ActivityMainDemo
+com.raafstudio.goahead.people.activity.ActivityMainDemo: ActivityMainDemo()
+com.raafstudio.goahead.people.activity.ActivityProfile
+com.raafstudio.goahead.people.activity.ActivityProfile: ActivityProfile()
+com.raafstudio.goahead.people.activity.ActivitySearch
+com.raafstudio.goahead.people.activity.ActivitySearch: ActivitySearch()
+com.raafstudio.goahead.people.activity.ActivitySplash
+com.raafstudio.goahead.people.activity.ActivitySplash: ActivitySplash()
+com.raafstudio.goahead.people.activity.artwork.ActivityArtwork
+com.raafstudio.goahead.people.activity.artwork.ActivityArtwork: ActivityArtwork()
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkDetail
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkDetail: ActivityArtworkDetail()
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkFilter
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkFilter: ActivityArtworkFilter()
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkInfo
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkInfo: ActivityArtworkInfo()
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish
+com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish: ActivityArtworkPublish()
+com.raafstudio.goahead.people.activity.product.ActivityProductDetail
+com.raafstudio.goahead.people.activity.product.ActivityProductDetail: ActivityProductDetail()
+com.raafstudio.goahead.people.activity.product.ActivityProductTemplate
+com.raafstudio.goahead.people.activity.product.ActivityProductTemplate: ActivityProductTemplate()
+com.raafstudio.goahead.people.activity.product.ActivityProductTemplate: void onClick(android.view.View)
 com.raafstudio.goahead.people.component.CircleImageView
 com.raafstudio.goahead.people.component.CircleImageView: CircleImageView(android.content.Context)
 com.raafstudio.goahead.people.component.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet)
@@ -4082,6 +4103,14 @@ com.raafstudio.goahead.people.component.ScrimInsetsFrameLayout: void setOnInsets
 com.raafstudio.goahead.people.fragment.FragmentBase: FragmentBase()
 com.raafstudio.goahead.people.navdraw.NavigationDrawerFragment
 com.raafstudio.goahead.people.navdraw.NavigationDrawerFragment: NavigationDrawerFragment()
+com.raafstudio.goahead.people.setting.ActivitySettingAccount
+com.raafstudio.goahead.people.setting.ActivitySettingAccount: ActivitySettingAccount()
+com.raafstudio.goahead.people.setting.ActivitySettingBasic
+com.raafstudio.goahead.people.setting.ActivitySettingBasic: ActivitySettingBasic()
+com.raafstudio.goahead.people.setting.ActivitySettingHelp
+com.raafstudio.goahead.people.setting.ActivitySettingHelp: ActivitySettingHelp()
+com.raafstudio.goahead.people.setting.ActivitySettingTerms
+com.raafstudio.goahead.people.setting.ActivitySettingTerms: ActivitySettingTerms()
 org.apache.http.ConnectionClosedException
 org.apache.http.ConnectionClosedException: ConnectionClosedException(java.lang.String)
 org.apache.http.ConnectionReuseStrategy

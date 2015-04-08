@@ -13,14 +13,14 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <application 
+    <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.raafstudio.goahead.people.ActivityMain"
+            android:name="com.raafstudio.goahead.people.activity.ActivityMain"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,54 +29,60 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.raafstudio.goahead.people.ActivityMainDemo"
+            android:name="com.raafstudio.goahead.people.activity.ActivityMainDemo"
             android:label="@string/app_name"
             android:theme="@style/MainDemo" >
         </activity>
         <activity
-            android:name="com.raafstudio.goahead.people.ActivitySplash"
+            android:name="com.raafstudio.goahead.people.activity.ActivitySplash"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme" >
         </activity>
         <activity
-            android:name="com.raafstudio.goahead.people.ActivityLogin"
+            android:name="com.raafstudio.goahead.people.activity.ActivityLogin"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme" >
         </activity>
         <activity
-            android:name="com.raafstudio.goahead.people.ActivitySearch"
+            android:name="com.raafstudio.goahead.people.activity.ActivityLoginForgot"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme" >
+        </activity>
+        <activity
+            android:name="com.raafstudio.goahead.people.activity.ActivitySearch"
             android:label="@string/app_name" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityProfile" >
-        </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityArtDetail" >
-        </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityProduct" >
+        <activity android:name="com.raafstudio.goahead.people.activity.ActivityProfile" >
         </activity>
         <activity
             android:name="com.raafstudio.goahead.people.DialogCapture"
             android:label="Change Avatar"
             android:theme="@style/dialog_style" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivitySettingAccount" >
+        <activity android:name="com.raafstudio.goahead.people.setting.ActivitySettingAccount" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivitySettingBasic" >
+        <activity android:name="com.raafstudio.goahead.people.setting.ActivitySettingBasic" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivitySettingHelp" >
+        <activity android:name="com.raafstudio.goahead.people.setting.ActivitySettingHelp" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivitySettingTerms" >
+        <activity android:name="com.raafstudio.goahead.people.setting.ActivitySettingTerms" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityArtwork" >
+        <activity android:name="com.raafstudio.goahead.people.activity.artwork.ActivityArtwork" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityArtworkFilter" >
+        <activity android:name="com.raafstudio.goahead.people.activity.artwork.ActivityArtworkDetail" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityArtworkPublish" >
+        <activity android:name="com.raafstudio.goahead.people.activity.artwork.ActivityArtworkFilter" >
         </activity>
-        <activity android:name="com.raafstudio.goahead.people.ActivityArtworkInfo" >
+        <activity android:name="com.raafstudio.goahead.people.activity.artwork.ActivityArtworkInfo" >
+        </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish" >
+        </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductTemplate" >
+        </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductDetail" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.ErrorReporting" >
         </activity>
-        
     </application>
 
 </manifest>

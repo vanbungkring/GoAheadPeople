@@ -32,6 +32,7 @@ import android.os.Message;
 
 public class API {
 
+	static String last_uri = "";
 	static List<NameValuePair> params;
 
 	public static Boolean cekInet(Context ctx) {
@@ -326,8 +327,12 @@ public class API {
 		Bundle b = new Bundle();
 		b.putInt("modul", so.modul_discover);
 		b.putInt("mode", 1);
-		rLoader loader = new rLoader(uri, handler, b);
-		loader.start();
+		if (last_uri != uri) {
+			last_uri = uri;
+			rLoader loader = new rLoader(uri, handler, b);
+			loader.start();
+		}
+		// rDialog.SetToast(so.ctx, uri);
 	}
 
 	public static void DiscoverGetArtwork(String string_id, Handler handler) {
@@ -427,8 +432,13 @@ public class API {
 		Bundle b = new Bundle();
 		b.putInt("modul", so.modul_marketplace);
 		b.putInt("mode", 1);
-		rLoader loader = new rLoader(uri, handler, b);
-		loader.start();
+		if (!last_uri.equals(uri)) {
+			last_uri = uri;
+			rLoader loader = new rLoader(uri, handler, b);
+			loader.start();
+			//rDialog.SetToastLong(so.ctx, uri);
+		}
+
 	}
 
 	public static void MarketProduct(String string_id, Handler handler) {
@@ -1197,38 +1207,27 @@ public class API {
 						Product pro = new Product();
 						pro.setEncrypted_id(jo.getString("product_id"));
 						pro.setString_id(jo.getString("string_id"));
-						pro.setProduct_title(jo
-								.getString("product_title"));
+						pro.setProduct_title(jo.getString("product_title"));
 						pro.setProduct_description(jo
 								.getString("product_description"));
-						pro.setProduct_image(jo
-								.getString("product_image"));
+						pro.setProduct_image(jo.getString("product_image"));
 						pro.setProduct_thumbnail(jo
 								.getString("product_thumbnail"));
 						pro.setUser_id(jo.getInt("user_id"));
 						pro.setPrice(jo.getString("price"));
 						pro.setStock(jo.getInt("stock"));
 						pro.setCategory_id(jo.getInt("category_id"));
-						pro.setSubmitted_by(jo
-								.getString("submitted_by"));
-						pro.setPurchase_type(jo
-								.getString("purchase_type"));
+						pro.setSubmitted_by(jo.getString("submitted_by"));
+						pro.setPurchase_type(jo.getString("purchase_type"));
 						pro.setPublisher_id(jo.getInt("publisher_id"));
-						pro.setProduct_respawn(jo
-								.getString("product_respawn"));
-						pro.setIs_published(jo
-								.getString("is_published"));
-						pro.setVerifydatetime(jo
-								.getString("verifydatetime"));
+						pro.setProduct_respawn(jo.getString("product_respawn"));
+						pro.setIs_published(jo.getString("is_published"));
+						pro.setVerifydatetime(jo.getString("verifydatetime"));
 						pro.setPost_type(jo.getString("post_type"));
-						pro.setIs_highlighted(jo
-								.getString("is_highlighted"));
-						pro.setHighlight_from(jo
-								.getString("highlight_from"));
-						pro.setHighlight_until(jo
-								.getString("highlight_until"));
-						pro.setCreatedatetime(jo
-								.getString("createdatetime"));
+						pro.setIs_highlighted(jo.getString("is_highlighted"));
+						pro.setHighlight_from(jo.getString("highlight_from"));
+						pro.setHighlight_until(jo.getString("highlight_until"));
+						pro.setCreatedatetime(jo.getString("createdatetime"));
 						pro.setBrand(jo.getString("brand"));
 						pro.setBrand_url(jo.getString("brand_url"));
 						pro.setPrinterous_product_id(jo

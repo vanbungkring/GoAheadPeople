@@ -9165,13 +9165,6 @@ com.raaf.weather.WeatherInfo
 com.raaf.weather.YahooWeatherInfoListener
 com.raaf.weather.YahooWeatherUtils
 com.raaf.weather.YahooWeatherUtils$WeatherQueryTask
-com.raafstudio.goahead.people.ActivityProfile:
-    android.widget.GridView GvArtworks
-    com.raafstudio.goahead.people.adapter.ArtworkAdapter ArtAdapter
-com.raafstudio.goahead.people.ActivitySettingBasic:
-    android.widget.Button BtSave
-com.raafstudio.goahead.people.ActivitySplash$SectionsPagerAdapter:
-    85:87:public java.lang.CharSequence getPageTitle(int)
 com.raafstudio.goahead.people.BuildConfig
 com.raafstudio.goahead.people.MyApp
 com.raafstudio.goahead.people.R:
@@ -9192,7 +9185,12 @@ com.raafstudio.goahead.people.R$raw
 com.raafstudio.goahead.people.R$string
 com.raafstudio.goahead.people.R$style
 com.raafstudio.goahead.people.R$styleable:
-    3232:3232:public R$styleable()
+    3256:3256:public R$styleable()
+com.raafstudio.goahead.people.activity.ActivityProfile:
+    android.widget.GridView GvArtworks
+    com.raafstudio.goahead.people.adapter.ArtworkAdapter ArtAdapter
+com.raafstudio.goahead.people.activity.ActivitySplash$SectionsPagerAdapter:
+    88:90:public java.lang.CharSequence getPageTitle(int)
 com.raafstudio.goahead.people.adapter.ArtworkAdapter
 com.raafstudio.goahead.people.adapter.ArtworkAdapter$ViewHolder
 com.raafstudio.goahead.people.adapter.NotificationAdapter:
@@ -9221,26 +9219,26 @@ com.raafstudio.goahead.people.fragment.FragmentBase:
 com.raafstudio.goahead.people.fragment.FragmentProducts
 com.raafstudio.goahead.people.helper.API:
     33:33:public API()
-    143:153:public static void getProfileFollower(int,int,int,android.os.Handler)
-    157:167:public static void getProfileFollowing(int,int,int,android.os.Handler)
-    204:211:public static void SettingGetProfile(android.os.Handler)
-    214:221:public static void SettingCekToken(android.os.Handler)
-    257:270:public static void SettingUploadKtp(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    274:284:public static void StoreGet(java.lang.String,int,int,android.os.Handler)
-    287:295:public static void StoreGetDetail(java.lang.String,android.os.Handler)
-    298:305:public static void StoreHome(android.os.Handler)
-    308:318:public static void StoreRedem(java.lang.String,android.os.Handler)
-    404:416:public static void DiscoverReportArtwork(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    447:457:public static void MarketLike(java.lang.String,android.os.Handler)
-    461:474:public static void MarketBuy(java.lang.String,int,int,android.os.Handler)
-    477:485:public static void MarketDisclaimer(android.os.Handler)
-    488:497:public static void MarketValidArtwork(int,int,android.os.Handler)
-    501:539:public static void MarketInsertProduct(com.raafstudio.goahead.people.model.Product,com.raaf.io.rFile,android.os.Handler)
-    542:552:public static void MarketKlikRedem(java.lang.String,android.os.Handler)
-    557:573:public static void MarketRedem(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    578:593:public static void MarketEdit(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,android.os.Handler)
-    596:602:public static void BrandList(android.os.Handler)
-    642:649:public static void MenuGetEarnings(android.os.Handler)
+    144:154:public static void getProfileFollower(int,int,int,android.os.Handler)
+    158:168:public static void getProfileFollowing(int,int,int,android.os.Handler)
+    205:212:public static void SettingGetProfile(android.os.Handler)
+    215:222:public static void SettingCekToken(android.os.Handler)
+    258:271:public static void SettingUploadKtp(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    275:285:public static void StoreGet(java.lang.String,int,int,android.os.Handler)
+    288:296:public static void StoreGetDetail(java.lang.String,android.os.Handler)
+    299:306:public static void StoreHome(android.os.Handler)
+    309:319:public static void StoreRedem(java.lang.String,android.os.Handler)
+    409:421:public static void DiscoverReportArtwork(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    457:467:public static void MarketLike(java.lang.String,android.os.Handler)
+    471:484:public static void MarketBuy(java.lang.String,int,int,android.os.Handler)
+    487:495:public static void MarketDisclaimer(android.os.Handler)
+    498:507:public static void MarketValidArtwork(int,int,android.os.Handler)
+    511:549:public static void MarketInsertProduct(com.raafstudio.goahead.people.model.Product,com.raaf.io.rFile,android.os.Handler)
+    552:562:public static void MarketKlikRedem(java.lang.String,android.os.Handler)
+    567:583:public static void MarketRedem(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    588:603:public static void MarketEdit(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,android.os.Handler)
+    606:612:public static void BrandList(android.os.Handler)
+    652:659:public static void MenuGetEarnings(android.os.Handler)
 com.raafstudio.goahead.people.helper.DB
 com.raafstudio.goahead.people.helper.Util:
     12:12:public Util()
@@ -9479,6 +9477,8 @@ com.raafstudio.goahead.people.navdraw.NavigationItem:
     24:25:public void setText(java.lang.String)
     32:33:public void setDrawable(android.graphics.drawable.Drawable)
 com.raafstudio.goahead.people.rExceptionHandler
+com.raafstudio.goahead.people.setting.ActivitySettingBasic:
+    android.widget.Button BtSave
 org.apache.http.ConnectionClosedException:
     private static final long serialVersionUID
 org.apache.http.ContentTooLongException:

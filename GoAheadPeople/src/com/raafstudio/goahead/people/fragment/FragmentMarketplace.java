@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Message;
+import android.test.suitebuilder.annotation.LargeTest;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,10 +29,10 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.raaf.rDialog;
 import com.raaf.rSecurity;
-import com.raafstudio.goahead.people.ActivityArtwork;
-import com.raafstudio.goahead.people.ActivityMain;
-import com.raafstudio.goahead.people.ActivityProfile;
 import com.raafstudio.goahead.people.R;
+import com.raafstudio.goahead.people.activity.ActivityMain;
+import com.raafstudio.goahead.people.activity.ActivityProfile;
+import com.raafstudio.goahead.people.activity.artwork.ActivityArtwork;
 import com.raafstudio.goahead.people.adapter.NotificationAdapter;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.component.CustomScrollView;
@@ -78,10 +79,14 @@ public class FragmentMarketplace extends FragmentBase implements
 					// rDialog.SetToast(getActivity(), "end " + x + " - " +
 					// oldl);
 					if (so.load_more && !isLoadApi) {
-						Pb1.setVisibility(View.VISIBLE);
-						API.MarketLanding(((ActivityMain) getActivity())
-								.getMarketCategory(), so.getMarketplace()
-								.size(), 10, "", handler);
+						if (lastrequest < so.getMarketplace().size()) {
+							lastrequest = so.getMarketplace().size();
+							Pb1.setVisibility(View.VISIBLE);
+
+							API.MarketLanding(((ActivityMain) getActivity())
+									.getMarketCategory(), 10, lastrequest, "",
+									handler);
+						}
 						isLoadApi = true;
 					}
 					isshow = true;
@@ -93,10 +98,11 @@ public class FragmentMarketplace extends FragmentBase implements
 		});
 
 		InitLauncher();
-		
+
 		return rView;
 	}
 
+	int lastrequest = -1;
 	boolean isshow = false;
 	boolean isLoadApi = false;
 
@@ -224,14 +230,15 @@ public class FragmentMarketplace extends FragmentBase implements
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		if (so.getMarketplace().size() == 0)
-			API.MarketLanding(
-					((ActivityMain) getActivity()).getMarketCategory(), 10, 0,
-					"", handler);
-		else {
-			last_i = 0;
-			loadProduct();
-		}
+//		if (so.getMarketplace().size() == 0 && lastrequest == -1) {
+//			lastrequest = so.getMarketplace().size();
+//			API.MarketLanding(
+//					((ActivityMain) getActivity()).getMarketCategory(), 10, 0,
+//					"", handler);
+//		} else {
+//			last_i = 0;
+//			loadProduct();
+//		}
 		((ActivityMain) getActivity()).ShowDemo(2);
 		Pb1.setVisibility(View.GONE);
 	}
@@ -331,7 +338,8 @@ public class FragmentMarketplace extends FragmentBase implements
 					.findViewById(R.id.TvProductTitle);
 			TextView TvProductUser = (TextView) v
 					.findViewById(R.id.TvProductUser);
-			final TextView TvMissing = (TextView) v.findViewById(R.id.TvMissing);
+			final TextView TvMissing = (TextView) v
+					.findViewById(R.id.TvMissing);
 			final ProgressBar PbProduct = (ProgressBar) v
 					.findViewById(R.id.PbProduct);
 			img.setOnClickListener(new OnClickListener() {

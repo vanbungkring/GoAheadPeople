@@ -8,12 +8,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TableRow;
 
-import com.raafstudio.goahead.people.ActivitySettingAccount;
-import com.raafstudio.goahead.people.ActivitySettingBasic;
-import com.raafstudio.goahead.people.ActivitySettingHelp;
-import com.raafstudio.goahead.people.ActivitySettingTerms;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.helper.so;
+import com.raafstudio.goahead.people.setting.ActivitySettingAccount;
+import com.raafstudio.goahead.people.setting.ActivitySettingBasic;
+import com.raafstudio.goahead.people.setting.ActivitySettingHelp;
+import com.raafstudio.goahead.people.setting.ActivitySettingTerms;
 
 public class FragmentSetting extends FragmentBase implements OnClickListener {
 

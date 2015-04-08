@@ -1,7 +1,7 @@
 package com.raafstudio.goahead.people.fragment;
 
 import com.raaf.rDialog;
-import com.raafstudio.goahead.people.ActivityMain;
+import com.raafstudio.goahead.people.activity.ActivityMain;
 import com.raafstudio.goahead.people.helper.API;
 import com.raafstudio.goahead.people.helper.so;
 

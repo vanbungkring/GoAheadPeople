@@ -2,6 +2,7 @@ package com.raafstudio.goahead.people.adapter;
 
 import java.net.URI;
 import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -27,8 +28,8 @@ import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
 import com.raaf.rDialog;
-import com.raafstudio.goahead.people.ActivityMain;
 import com.raafstudio.goahead.people.R;
+import com.raafstudio.goahead.people.activity.ActivityMain;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.component.ImageviewNormal;
 import com.raafstudio.goahead.people.helper.API;
@@ -92,6 +93,7 @@ public class DiscoverAdapter extends ArrayAdapter<Artwork> {
 			holder.ImgArt.setVisibility(View.INVISIBLE);
 			holder.ArtPb.setVisibility(View.INVISIBLE);
 		} else {
+			holder.ImgArt.setVisibility(View.VISIBLE);
 			holder.ImgArt.setOnClickListener(new OnClickListener() {
 
 				@Override

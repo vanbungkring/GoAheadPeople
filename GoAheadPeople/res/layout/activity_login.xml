@@ -42,6 +42,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_red_corner"
-        android:text="Sign In" />
+        android:layout_marginBottom="32dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/TvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Forgot Password ?"
+        android:textColor="@color/transparent_white_percent_50" />
 
 </LinearLayout>

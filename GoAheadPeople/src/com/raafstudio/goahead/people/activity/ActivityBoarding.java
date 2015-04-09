@@ -19,7 +19,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class ActivitySplash extends FragmentActivity {
+public class ActivityBoarding extends FragmentActivity {
 	Button BtRegister, BtLogin;
 	ViewPager mViewPager;
 	SectionsPagerAdapter mSectionsPagerAdapter;
@@ -40,7 +40,7 @@ public class ActivitySplash extends FragmentActivity {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(ActivitySplash.this,
+				startActivity(new Intent(ActivityBoarding.this,
 						ActivityLogin.class));
 			}
 		});
@@ -49,7 +49,8 @@ public class ActivitySplash extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				startActivity(new Intent(ActivityBoarding.this,
+						ActivityRegistration.class));
 			}
 		});
 	}
@@ -59,7 +60,7 @@ public class ActivitySplash extends FragmentActivity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		if (so.getToken().length() > 0) {
-			startActivity(new Intent(ActivitySplash.this, ActivityMain.class));
+			startActivity(new Intent(ActivityBoarding.this, ActivityMain.class));
 			finish();
 		}
 	}

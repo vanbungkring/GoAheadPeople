@@ -4,6 +4,7 @@ import java.io.File;
 
 import com.raaf.rIO;
 import com.raaf.rIntent;
+import com.raafstudio.goahead.people.activity.product.ActivityProductSell;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.so;
 
@@ -33,7 +34,8 @@ public class DialogMarket extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				startActivity(new Intent(DialogMarket.this,
+						ActivityProductSell.class));
 			}
 		});
 		BtBuy.setOnClickListener(new OnClickListener() {

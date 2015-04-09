@@ -264,6 +264,8 @@ public class ActivityProfile extends ActivityBase {
 		inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		Boolean isLeft = true;
 		for (int i = 0; i < so.getUserOther().getProducts().size(); i++) {
+			final String sid = so.getUserOther().getArtworks().get(i)
+					.getString_id();
 			View v = inflater.inflate(R.layout.item_product, null);
 			ImageviewNormal img = (ImageviewNormal) v
 					.findViewById(R.id.ImgProduct);
@@ -299,6 +301,14 @@ public class ActivityProfile extends ActivityBase {
 					.getProduct_title());
 			TvProductUser.setText("By "
 					+ so.getUserOther().getProducts().get(i).getFullname());
+			img.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					ShowProduct(User_id, sid);
+				}
+			});
 			if (isLeft)
 				mListProduct1.addView(v);
 			else

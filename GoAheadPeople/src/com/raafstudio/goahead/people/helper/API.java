@@ -661,6 +661,10 @@ public class API {
 
 	public static void ApiParser(Message msg) {
 		String message = msg.getData().getString("message");
+		if (message.contains("</div>")) {
+			String[] data = message.split("</div>");
+			message = data[data.length - 1];
+		}
 		if (message.contains("\"meta\"")) {
 			API.getMeta(message);
 			int modul = msg.getData().getInt("modul");

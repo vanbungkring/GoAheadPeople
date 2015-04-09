@@ -151,6 +151,15 @@ public class DialogCapture extends Activity {
 				}
 				imageView.setImageBitmap(rImaging
 						.getImageFromFile(getFileName()));
+				if (so.requester == 2) {
+					File f = new File(so.getFileArtSource());
+					if (f.exists())
+						f.delete();
+					rIO.copyFile(getFileName(), so.getFileArtSource());
+				}
+				so.requester = 11;
+				so.apply_image = true;
+				finish();
 				// Glide.with(this).load(so.PicturePath).asBitmap().centerCrop()
 				// .override(220, 220)
 				// .diskCacheStrategy(DiskCacheStrategy.NONE)

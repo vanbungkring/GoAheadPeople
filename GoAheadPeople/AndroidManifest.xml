@@ -34,8 +34,12 @@
             android:theme="@style/MainDemo" >
         </activity>
         <activity
-            android:name="com.raafstudio.goahead.people.activity.ActivitySplash"
+            android:name="com.raafstudio.goahead.people.activity.ActivityBoarding"
             android:label="@string/app_name"
+            android:theme="@style/SplashTheme" >
+        </activity>
+        <activity
+            android:name="com.raafstudio.goahead.people.activity.ActivityRegistration"
             android:theme="@style/SplashTheme" >
         </activity>
         <activity
@@ -59,7 +63,7 @@
             android:label="Change Avatar"
             android:theme="@style/dialog_style" >
         </activity>
-         <activity
+        <activity
             android:name="com.raafstudio.goahead.people.DialogMarket"
             android:theme="@style/dialog_style" >
         </activity>
@@ -86,6 +90,10 @@
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductImage" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductDetail" >
+        </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductSell" >
+        </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductPublished" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.ErrorReporting" >
         </activity>

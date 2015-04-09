@@ -101,7 +101,7 @@ public class ActivityBase extends ActionBarActivity {
 	protected String String_id;
 
 	public void doLogin() {
-		startActivity(new Intent(this, ActivitySplash.class));
+		startActivity(new Intent(this, ActivityBoarding.class));
 		finish();
 	}
 

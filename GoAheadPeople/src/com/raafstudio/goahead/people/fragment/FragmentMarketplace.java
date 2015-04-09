@@ -239,6 +239,12 @@ public class FragmentMarketplace extends FragmentBase implements
 		// last_i = 0;
 		// loadProduct();
 		// }
+		if (so.getMarketplace().size() == 0)
+			Reload();
+		else {
+			last_i = 0;
+			loadProduct();
+		}
 		if (so.getUserOther().getUser_id() == so.getUser().getUser_id()) {
 			if (so.getUserOther().getArtworks().size() == 0)
 				API.getProfileArtwork(so.getUserOther().getUser_id(), 100, 0,
@@ -254,6 +260,7 @@ public class FragmentMarketplace extends FragmentBase implements
 		mListProduct2.removeAllViews();
 		so.getMarketplace().clear();
 		last_i = 0;
+		lastrequest = 0;
 		API.MarketLanding(((ActivityMain) getActivity()).getMarketCategory(),
 				10, 0, "", handler);
 	}

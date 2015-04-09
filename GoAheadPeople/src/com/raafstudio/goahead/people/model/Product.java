@@ -33,7 +33,7 @@ public class Product {
 	int view_stat;
 	String type;
 	int like_stat;
-	String is_want;
+	String is_want = "NO";
 	int like_count;
 
 	int source_top;

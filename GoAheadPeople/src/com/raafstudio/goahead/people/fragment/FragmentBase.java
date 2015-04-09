@@ -22,17 +22,23 @@ public class FragmentBase extends Fragment {
 
 	protected final Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
-			handlerResponse(msg);
+			if (msg != null)
+				handlerResponse(msg);
 		}
 	};
 
 	protected void handlerResponse(Message msg) {
-		API.ApiParser(msg);
-		if (so.meta.getCode() == 401)
-			((ActivityMain) getActivity()).doLogin();
-		else if (so.meta.getCode() != 200)
-			rDialog.SetToast(getActivity(), so.meta.getErrorType() + " - "
-					+ so.meta.getErrorDetail());
+		try {
+			API.ApiParser(msg);
+			if (so.meta.getCode() == 401)
+				((ActivityMain) getActivity()).doLogin();
+			else if (so.meta.getCode() != 200)
+				rDialog.SetToast(getActivity(), so.meta.getErrorType() + " - "
+						+ so.meta.getErrorDetail());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 
 	public int getPos() {

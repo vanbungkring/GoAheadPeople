@@ -436,7 +436,7 @@ public class API {
 			last_uri = uri;
 			rLoader loader = new rLoader(uri, handler, b);
 			loader.start();
-			//rDialog.SetToastLong(so.ctx, uri);
+			// rDialog.SetToastLong(so.ctx, uri);
 		}
 
 	}
@@ -461,6 +461,7 @@ public class API {
 		Bundle b = new Bundle();
 		b.putInt("modul", so.modul_marketplace);
 		b.putInt("mode", 3);
+		b.putString("product_id", product_id);
 		rLoader loader = new rLoader(uri, handler, b, Http_type.post, params,
 				"");
 		loader.start();
@@ -1241,6 +1242,16 @@ public class API {
 						pro.setIs_want(jo.getString("is_want"));
 						pro.setLike_count(jo.getInt("like_count"));
 						so.getUserOther().getProducts().add(pro);
+						break;
+					case 3: // want unwant
+						String product_id = msg.getData().getString(
+								"product_id");
+						for (Product p : so.getUserOther().getProducts()) {
+							if (p.getString_id().equals(product_id)) {
+								p.setIs_want(jo.getString("action").equals(
+										"Want Product") ? "YES" : "NO");
+							}
+						}
 						break;
 					}
 					break;

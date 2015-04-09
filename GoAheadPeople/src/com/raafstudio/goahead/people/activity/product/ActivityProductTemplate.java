@@ -3,6 +3,7 @@ package com.raafstudio.goahead.people.activity.product;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.activity.ActivityBase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -36,30 +37,40 @@ public class ActivityProductTemplate extends ActivityBase implements
 		TvNext.setOnClickListener(this);
 	}
 
+	String template_name = "";
+
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.ImgCanvas:
 			setActive(1);
+			template_name = "Canvas";
 			break;
 		case R.id.ImgSmartphone:
+			template_name = "Smartphone";
 			setActive(2);
 			break;
 		case R.id.ImgIpad:
+			template_name = "iPad";
 			setActive(3);
 			break;
 		case R.id.ImgMac:
+			template_name = "Macbook";
 			setActive(4);
 			break;
 		case R.id.ImgPillow:
+			template_name = "Pillow";
 			setActive(5);
 			break;
 		case R.id.ImgBag:
+			template_name = "Tote Bag";
 			setActive(6);
 			break;
 		default:
-			// next hit
+			Intent it = new Intent(this, ActivityProductImage.class);
+			it.putExtra("template", template_name);
+			startActivity(it);
 			break;
 		}
 	}

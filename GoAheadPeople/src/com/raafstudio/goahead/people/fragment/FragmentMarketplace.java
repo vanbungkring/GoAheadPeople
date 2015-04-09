@@ -230,15 +230,21 @@ public class FragmentMarketplace extends FragmentBase implements
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-//		if (so.getMarketplace().size() == 0 && lastrequest == -1) {
-//			lastrequest = so.getMarketplace().size();
-//			API.MarketLanding(
-//					((ActivityMain) getActivity()).getMarketCategory(), 10, 0,
-//					"", handler);
-//		} else {
-//			last_i = 0;
-//			loadProduct();
-//		}
+		// if (so.getMarketplace().size() == 0 && lastrequest == -1) {
+		// lastrequest = so.getMarketplace().size();
+		// API.MarketLanding(
+		// ((ActivityMain) getActivity()).getMarketCategory(), 10, 0,
+		// "", handler);
+		// } else {
+		// last_i = 0;
+		// loadProduct();
+		// }
+		if (so.getUserOther().getUser_id() == so.getUser().getUser_id()) {
+			if (so.getUserOther().getArtworks().size() == 0)
+				API.getProfileArtwork(so.getUserOther().getUser_id(), 100, 0,
+						handler);
+		} else
+			API.getProfile(so.getUser().getUser_id(), handler);
 		((ActivityMain) getActivity()).ShowDemo(2);
 		Pb1.setVisibility(View.GONE);
 	}
@@ -256,9 +262,15 @@ public class FragmentMarketplace extends FragmentBase implements
 	protected void handlerResponse(Message msg) {
 		// TODO Auto-generated method stub
 		super.handlerResponse(msg);
-		if (so.meta.getCode() == 200)
-			loadProduct();
-
+		if (so.meta.getCode() == 200) {
+			if (so.meta.getModul() == so.modul_marketplace)
+				loadProduct();
+			else if (so.meta.getModul() == so.modul_base) {
+				if (so.getUserOther().getArtworks().size() == 0)
+					API.getProfileArtwork(so.getUserOther().getUser_id(), 100,
+							0, handler);
+			}
+		}
 	}
 
 	@Override

@@ -1,8 +1,8 @@
 package com.raafstudio.goahead.people.model;
 
 public class Meta {
-	String json;
-	int code;
+	String json = "";
+	int code = 0;
 	String errorType = "";
 	String errorDetail = "";
 	int modul = 0;

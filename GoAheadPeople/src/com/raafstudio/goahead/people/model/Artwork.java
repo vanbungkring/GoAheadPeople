@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Artwork {
 	String type;
 	int id;
-	String string_id="";
+	String string_id = "";
 	int like_stat;
 	int comment_stat;
 	int view_stat;
@@ -51,7 +51,7 @@ public class Artwork {
 
 	String is_video;
 	String is_liked = "FALSE";
-	String is_follow;
+	String is_follow = "FALSE";
 	String is_you;
 	String printerous_pass_token;
 	String printerous_token_valid_until;

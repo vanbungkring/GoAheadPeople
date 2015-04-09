@@ -59,6 +59,10 @@
             android:label="Change Avatar"
             android:theme="@style/dialog_style" >
         </activity>
+         <activity
+            android:name="com.raafstudio.goahead.people.DialogMarket"
+            android:theme="@style/dialog_style" >
+        </activity>
         <activity android:name="com.raafstudio.goahead.people.setting.ActivitySettingAccount" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.setting.ActivitySettingBasic" >
@@ -78,6 +82,8 @@
         <activity android:name="com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductTemplate" >
+        </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductImage" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductDetail" >
         </activity>

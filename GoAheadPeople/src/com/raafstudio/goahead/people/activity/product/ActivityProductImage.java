@@ -49,13 +49,26 @@ public class ActivityProductImage extends ActivityBase {
 		});
 	}
 
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if (so.product_published)
+			finish();
+	}
+
 	private void loadArtwork() {
 		LayoutInflater inflater = null;
 		inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mListArtwork.removeAllViews();
 		View v = null;
+		int i = 0;
 		for (Artwork art : so.getUserOther().getArtworks()) {
-
+			if (i == 0)
+				Glide.with(ActivityProductImage.this).load(art.getImage_ori())
+						.asBitmap().diskCacheStrategy(DiskCacheStrategy.SOURCE)
+						.into(ImgProduct);
+			i++;
 			v = inflater.inflate(R.layout.item_artwork, null);
 			ImageviewBox img = (ImageviewBox) v.findViewById(R.id.ImgArtwork);
 			final View vi = (View) v.findViewById(R.id.view1);

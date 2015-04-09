@@ -91,6 +91,8 @@
         </activity>
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductDetail" >
         </activity>
+        <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductBuy" >
+        </activity>
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductSell" >
         </activity>
         <activity android:name="com.raafstudio.goahead.people.activity.product.ActivityProductPublished" >

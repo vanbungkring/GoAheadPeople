@@ -41,6 +41,7 @@ public class so {
 	public static final String GCM_SENDER_ID = "470363429504";
 	public static Boolean apply_image = false;
 	public static Boolean artwork_published = false;
+	public static Boolean product_published = false;
 	public static Boolean load_more = false;
 	public static int requester = 0;
 	public static String PicturePath = "";
@@ -79,7 +80,7 @@ public class so {
 		else
 			return ctx.getString(R.string.api_url) + "mobileapps/";
 	}
-	
+
 	public static String getMarketMediaUrl() {
 		if (ctx == null)
 			return "";

@@ -230,6 +230,8 @@ public class FragmentMarketplace extends FragmentBase implements
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		so.product_published = false;
+
 		// if (so.getMarketplace().size() == 0 && lastrequest == -1) {
 		// lastrequest = so.getMarketplace().size();
 		// API.MarketLanding(

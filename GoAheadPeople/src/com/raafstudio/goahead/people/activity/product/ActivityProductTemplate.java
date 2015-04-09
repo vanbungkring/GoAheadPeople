@@ -1,7 +1,9 @@
 package com.raafstudio.goahead.people.activity.product;
 
+import com.raaf.rDialog;
 import com.raafstudio.goahead.people.R;
 import com.raafstudio.goahead.people.activity.ActivityBase;
+import com.raafstudio.goahead.people.helper.so;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,6 +42,14 @@ public class ActivityProductTemplate extends ActivityBase implements
 	String template_name = "";
 
 	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if (so.product_published)
+			finish();
+	}
+
+	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
@@ -68,6 +78,10 @@ public class ActivityProductTemplate extends ActivityBase implements
 			setActive(6);
 			break;
 		default:
+			if (so.getUserOther().getArtworks().size()==0){
+				rDialog.SetToast(ActivityProductTemplate.this, "Please create Artwork first");
+				return;
+			}
 			Intent it = new Intent(this, ActivityProductImage.class);
 			it.putExtra("template", template_name);
 			startActivity(it);

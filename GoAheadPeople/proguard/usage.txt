@@ -9185,12 +9185,12 @@ com.raafstudio.goahead.people.R$raw
 com.raafstudio.goahead.people.R$string
 com.raafstudio.goahead.people.R$style
 com.raafstudio.goahead.people.R$styleable:
-    3256:3256:public R$styleable()
+    3281:3281:public R$styleable()
+com.raafstudio.goahead.people.activity.ActivityBoarding$SectionsPagerAdapter:
+    89:91:public java.lang.CharSequence getPageTitle(int)
 com.raafstudio.goahead.people.activity.ActivityProfile:
     android.widget.GridView GvArtworks
     com.raafstudio.goahead.people.adapter.ArtworkAdapter ArtAdapter
-com.raafstudio.goahead.people.activity.ActivitySplash$SectionsPagerAdapter:
-    88:90:public java.lang.CharSequence getPageTitle(int)
 com.raafstudio.goahead.people.adapter.ArtworkAdapter
 com.raafstudio.goahead.people.adapter.ArtworkAdapter$ViewHolder
 com.raafstudio.goahead.people.adapter.NotificationAdapter:
@@ -9214,8 +9214,8 @@ com.raafstudio.goahead.people.fragment.FragmentArtworkGraph:
 com.raafstudio.goahead.people.fragment.FragmentBase:
     protected android.widget.ProgressBar pb
     protected android.widget.TextView TvNoNetwork
-    39:41:public int getPos()
-    45:46:public void setPos(int)
+    45:47:public int getPos()
+    51:52:public void setPos(int)
 com.raafstudio.goahead.people.fragment.FragmentProducts
 com.raafstudio.goahead.people.helper.API:
     33:33:public API()
@@ -9229,16 +9229,15 @@ com.raafstudio.goahead.people.helper.API:
     299:306:public static void StoreHome(android.os.Handler)
     309:319:public static void StoreRedem(java.lang.String,android.os.Handler)
     409:421:public static void DiscoverReportArtwork(java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    457:467:public static void MarketLike(java.lang.String,android.os.Handler)
-    471:484:public static void MarketBuy(java.lang.String,int,int,android.os.Handler)
-    487:495:public static void MarketDisclaimer(android.os.Handler)
-    498:507:public static void MarketValidArtwork(int,int,android.os.Handler)
-    511:549:public static void MarketInsertProduct(com.raafstudio.goahead.people.model.Product,com.raaf.io.rFile,android.os.Handler)
-    552:562:public static void MarketKlikRedem(java.lang.String,android.os.Handler)
-    567:583:public static void MarketRedem(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
-    588:603:public static void MarketEdit(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,android.os.Handler)
-    606:612:public static void BrandList(android.os.Handler)
-    652:659:public static void MenuGetEarnings(android.os.Handler)
+    472:485:public static void MarketBuy(java.lang.String,int,int,android.os.Handler)
+    488:496:public static void MarketDisclaimer(android.os.Handler)
+    499:508:public static void MarketValidArtwork(int,int,android.os.Handler)
+    512:550:public static void MarketInsertProduct(com.raafstudio.goahead.people.model.Product,com.raaf.io.rFile,android.os.Handler)
+    553:563:public static void MarketKlikRedem(java.lang.String,android.os.Handler)
+    568:584:public static void MarketRedem(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.os.Handler)
+    589:604:public static void MarketEdit(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,android.os.Handler)
+    607:613:public static void BrandList(android.os.Handler)
+    653:660:public static void MenuGetEarnings(android.os.Handler)
 com.raafstudio.goahead.people.helper.DB
 com.raafstudio.goahead.people.helper.Util:
     12:12:public Util()
@@ -9261,8 +9260,8 @@ com.raafstudio.goahead.people.helper.so:
     public static final java.lang.String GCM_SENDER_ID
     static com.raafstudio.goahead.people.helper.Util util
     21:21:public so()
-    84:87:public static java.lang.String getMarketMediaUrl()
-    120:123:public static void setParam(java.lang.String,java.lang.String)
+    85:88:public static java.lang.String getMarketMediaUrl()
+    121:124:public static void setParam(java.lang.String,java.lang.String)
 com.raafstudio.goahead.people.model.Account:
     29:29:public java.lang.String getGender()
     45:45:public java.lang.String getOtherName()
@@ -9284,7 +9283,6 @@ com.raafstudio.goahead.people.model.Artwork:
     102:102:public int getView_stat()
     110:110:public java.lang.String getCreatedatetime()
     126:126:public java.lang.String getVerifydatetime()
-    150:150:public java.lang.String getImage_ori()
     158:158:public int getImageHeight()
     166:166:public int getImageWidth()
     174:174:public int getPriority()
@@ -9375,7 +9373,6 @@ com.raafstudio.goahead.people.model.Product:
     58:59:public void setPrice_want(java.lang.String)
     62:62:public int getProduct_id()
     66:67:public void setProduct_id(int)
-    70:70:public java.lang.String getEncrypted_id()
     102:102:public java.lang.String getProduct_image()
     126:126:public java.lang.String getPrice()
     134:134:public int getStock()
@@ -9398,7 +9395,6 @@ com.raafstudio.goahead.people.model.Product:
     286:286:public int getView_stat()
     294:294:public java.lang.String getType()
     302:302:public int getLike_stat()
-    310:310:public java.lang.String getIs_want()
     318:318:public int getLike_count()
     326:326:public int getSource_top()
     330:331:public void setSource_top(int)

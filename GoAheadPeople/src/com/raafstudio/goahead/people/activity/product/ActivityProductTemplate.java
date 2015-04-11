@@ -58,15 +58,15 @@ public class ActivityProductTemplate extends ActivityBase implements
 			template_name = "Canvas";
 			break;
 		case R.id.ImgSmartphone:
-			template_name = "Smartphone";
+			template_name = "Smartphone Case";
 			setActive(2);
 			break;
 		case R.id.ImgIpad:
-			template_name = "iPad";
+			template_name = "iPad Case";
 			setActive(3);
 			break;
 		case R.id.ImgMac:
-			template_name = "Macbook";
+			template_name = "Macbook Skin";
 			setActive(4);
 			break;
 		case R.id.ImgPillow:
@@ -78,18 +78,23 @@ public class ActivityProductTemplate extends ActivityBase implements
 			setActive(6);
 			break;
 		default:
-			if (so.getUserOther().getArtworks().size()==0){
-				rDialog.SetToast(ActivityProductTemplate.this, "Please create Artwork first");
+			if (so.getUserOther().getArtworks().size() == 0) {
+				rDialog.SetToast(ActivityProductTemplate.this,
+						"Please create Artwork first");
 				return;
 			}
 			Intent it = new Intent(this, ActivityProductImage.class);
 			it.putExtra("template", template_name);
+			it.putExtra("template_id", template_id);
 			startActivity(it);
 			break;
 		}
 	}
 
+	int template_id = 0;
+
 	private void setActive(int pos) {
+		template_id = pos;
 		ImgCanvas.setImageResource(R.drawable.template_canvas);
 		ImgSmartphone.setImageResource(R.drawable.template_smartphone);
 		ImgIpad.setImageResource(R.drawable.template_ipad);

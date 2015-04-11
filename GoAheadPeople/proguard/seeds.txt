@@ -2427,6 +2427,8 @@ com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type[] values()
 com.raaf.http.rLoader$Http_type: com.raaf.http.rLoader$Http_type valueOf(java.lang.String)
 com.raafstudio.goahead.people.DialogCapture
 com.raafstudio.goahead.people.DialogCapture: DialogCapture()
+com.raafstudio.goahead.people.DialogMarket
+com.raafstudio.goahead.people.DialogMarket: DialogMarket()
 com.raafstudio.goahead.people.ErrorReporting
 com.raafstudio.goahead.people.ErrorReporting: ErrorReporting()
 com.raafstudio.goahead.people.R$anim: int abc_fade_in
@@ -2944,6 +2946,7 @@ com.raafstudio.goahead.people.R$drawable: int boarding_market
 com.raafstudio.goahead.people.R$drawable: int bounding_box
 com.raafstudio.goahead.people.R$drawable: int bounding_box1
 com.raafstudio.goahead.people.R$drawable: int box
+com.raafstudio.goahead.people.R$drawable: int box_number
 com.raafstudio.goahead.people.R$drawable: int btn_art_graph_off
 com.raafstudio.goahead.people.R$drawable: int btn_art_graph_on
 com.raafstudio.goahead.people.R$drawable: int btn_art_layout_off
@@ -2952,6 +2955,7 @@ com.raafstudio.goahead.people.R$drawable: int button_red
 com.raafstudio.goahead.people.R$drawable: int button_red_corner
 com.raafstudio.goahead.people.R$drawable: int button_tab
 com.raafstudio.goahead.people.R$drawable: int button_tab_enable
+com.raafstudio.goahead.people.R$drawable: int button_trans_black
 com.raafstudio.goahead.people.R$drawable: int button_trans_corner
 com.raafstudio.goahead.people.R$drawable: int button_white
 com.raafstudio.goahead.people.R$drawable: int common_full_open_on_phone
@@ -3074,14 +3078,18 @@ com.raafstudio.goahead.people.R$id: int ArtTvMissing
 com.raafstudio.goahead.people.R$id: int ArtTvTime
 com.raafstudio.goahead.people.R$id: int ArtTvTitlle
 com.raafstudio.goahead.people.R$id: int BtApplyImage
+com.raafstudio.goahead.people.R$id: int BtBuy
 com.raafstudio.goahead.people.R$id: int BtCommentSend
 com.raafstudio.goahead.people.R$id: int BtForgot
 com.raafstudio.goahead.people.R$id: int BtLogin
+com.raafstudio.goahead.people.R$id: int BtPublish
+com.raafstudio.goahead.people.R$id: int BtPublished
 com.raafstudio.goahead.people.R$id: int BtRegister
 com.raafstudio.goahead.people.R$id: int BtSave
 com.raafstudio.goahead.people.R$id: int BtSearchArtworks
 com.raafstudio.goahead.people.R$id: int BtSearchProducts
 com.raafstudio.goahead.people.R$id: int BtSearchUser
+com.raafstudio.goahead.people.R$id: int BtSell
 com.raafstudio.goahead.people.R$id: int BtSendError
 com.raafstudio.goahead.people.R$id: int BtSignIn
 com.raafstudio.goahead.people.R$id: int BtText1
@@ -3099,14 +3107,19 @@ com.raafstudio.goahead.people.R$id: int EtArtworkTitle
 com.raafstudio.goahead.people.R$id: int EtComment
 com.raafstudio.goahead.people.R$id: int EtEmail
 com.raafstudio.goahead.people.R$id: int EtPassword
+com.raafstudio.goahead.people.R$id: int EtProfit
 com.raafstudio.goahead.people.R$id: int EtSubBrand
 com.raafstudio.goahead.people.R$id: int EtUserAbout
 com.raafstudio.goahead.people.R$id: int EtUserAddress
 com.raafstudio.goahead.people.R$id: int EtUserCity
+com.raafstudio.goahead.people.R$id: int EtUserEmail
+com.raafstudio.goahead.people.R$id: int EtUserKtp
 com.raafstudio.goahead.people.R$id: int EtUserLocation
 com.raafstudio.goahead.people.R$id: int EtUserMobilePhone
 com.raafstudio.goahead.people.R$id: int EtUserName
 com.raafstudio.goahead.people.R$id: int EtUserOccupation
+com.raafstudio.goahead.people.R$id: int EtUserReffered
+com.raafstudio.goahead.people.R$id: int EtUserTwitter
 com.raafstudio.goahead.people.R$id: int ImgArtFrameBasic
 com.raafstudio.goahead.people.R$id: int ImgArtFrameCrop
 com.raafstudio.goahead.people.R$id: int ImgArtFrameCustom
@@ -3139,6 +3152,8 @@ com.raafstudio.goahead.people.R$id: int ImgMac
 com.raafstudio.goahead.people.R$id: int ImgPillow
 com.raafstudio.goahead.people.R$id: int ImgProduct
 com.raafstudio.goahead.people.R$id: int ImgSmartphone
+com.raafstudio.goahead.people.R$id: int ImgUserBirth
+com.raafstudio.goahead.people.R$id: int ImgUserBrand
 com.raafstudio.goahead.people.R$id: int Launcher
 com.raafstudio.goahead.people.R$id: int LauncherAdd
 com.raafstudio.goahead.people.R$id: int LauncherDiscover
@@ -3160,6 +3175,8 @@ com.raafstudio.goahead.people.R$id: int NotifImgAvatar
 com.raafstudio.goahead.people.R$id: int NotifTvMessage
 com.raafstudio.goahead.people.R$id: int NotifTvTime
 com.raafstudio.goahead.people.R$id: int PbProduct
+com.raafstudio.goahead.people.R$id: int RbUserFemale
+com.raafstudio.goahead.people.R$id: int RbUserMale
 com.raafstudio.goahead.people.R$id: int RelativeLayout1
 com.raafstudio.goahead.people.R$id: int SearchEt
 com.raafstudio.goahead.people.R$id: int SearchToolbar
@@ -3173,6 +3190,7 @@ com.raafstudio.goahead.people.R$id: int ToolbarImg
 com.raafstudio.goahead.people.R$id: int ToolbarLayout
 com.raafstudio.goahead.people.R$id: int ToolbarSpDiscover
 com.raafstudio.goahead.people.R$id: int ToolbarSpMarket
+com.raafstudio.goahead.people.R$id: int TvBasePrice
 com.raafstudio.goahead.people.R$id: int TvChangeAvatar
 com.raafstudio.goahead.people.R$id: int TvCommentContent
 com.raafstudio.goahead.people.R$id: int TvCommentName
@@ -3186,6 +3204,9 @@ com.raafstudio.goahead.people.R$id: int TvProductBy
 com.raafstudio.goahead.people.R$id: int TvProductDesc
 com.raafstudio.goahead.people.R$id: int TvProductTitle
 com.raafstudio.goahead.people.R$id: int TvProductUser
+com.raafstudio.goahead.people.R$id: int TvPublishPrice
+com.raafstudio.goahead.people.R$id: int TvUserBirth
+com.raafstudio.goahead.people.R$id: int TvUserBrand
 com.raafstudio.goahead.people.R$id: int TvUserFollower
 com.raafstudio.goahead.people.R$id: int TvUserFollowing
 com.raafstudio.goahead.people.R$id: int TvUserFullName
@@ -3212,7 +3233,6 @@ com.raafstudio.goahead.people.R$id: int adjust_width
 com.raafstudio.goahead.people.R$id: int always
 com.raafstudio.goahead.people.R$id: int beginning
 com.raafstudio.goahead.people.R$id: int book_now
-com.raafstudio.goahead.people.R$id: int btBuy
 com.raafstudio.goahead.people.R$id: int button1
 com.raafstudio.goahead.people.R$id: int button2
 com.raafstudio.goahead.people.R$id: int buyButton
@@ -3232,6 +3252,7 @@ com.raafstudio.goahead.people.R$id: int donate_with_google
 com.raafstudio.goahead.people.R$id: int drawer
 com.raafstudio.goahead.people.R$id: int drawerList
 com.raafstudio.goahead.people.R$id: int dropdown
+com.raafstudio.goahead.people.R$id: int editText1
 com.raafstudio.goahead.people.R$id: int edit_query
 com.raafstudio.goahead.people.R$id: int email
 com.raafstudio.goahead.people.R$id: int end
@@ -3352,9 +3373,14 @@ com.raafstudio.goahead.people.R$layout: int activity_login_forgot
 com.raafstudio.goahead.people.R$layout: int activity_main
 com.raafstudio.goahead.people.R$layout: int activity_main_demo
 com.raafstudio.goahead.people.R$layout: int activity_product
+com.raafstudio.goahead.people.R$layout: int activity_product_buy
 com.raafstudio.goahead.people.R$layout: int activity_product_detail
+com.raafstudio.goahead.people.R$layout: int activity_product_image
+com.raafstudio.goahead.people.R$layout: int activity_product_published
+com.raafstudio.goahead.people.R$layout: int activity_product_sell
 com.raafstudio.goahead.people.R$layout: int activity_product_template
 com.raafstudio.goahead.people.R$layout: int activity_profile
+com.raafstudio.goahead.people.R$layout: int activity_register
 com.raafstudio.goahead.people.R$layout: int activity_search
 com.raafstudio.goahead.people.R$layout: int activity_setting_account
 com.raafstudio.goahead.people.R$layout: int activity_setting_basic
@@ -3362,6 +3388,7 @@ com.raafstudio.goahead.people.R$layout: int activity_setting_help
 com.raafstudio.goahead.people.R$layout: int activity_setting_terms
 com.raafstudio.goahead.people.R$layout: int demo_login
 com.raafstudio.goahead.people.R$layout: int dialog_image
+com.raafstudio.goahead.people.R$layout: int dialog_market
 com.raafstudio.goahead.people.R$layout: int drawer_row
 com.raafstudio.goahead.people.R$layout: int footer_discover
 com.raafstudio.goahead.people.R$layout: int fragment_artwork_frame
@@ -4038,6 +4065,8 @@ com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletD
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsLogoTextColor
 com.raafstudio.goahead.people.R$styleable: int WalletFragmentStyle_maskedWalletDetailsTextAppearance
 com.raafstudio.goahead.people.activity.ActivityBase: ActivityBase()
+com.raafstudio.goahead.people.activity.ActivityBoarding
+com.raafstudio.goahead.people.activity.ActivityBoarding: ActivityBoarding()
 com.raafstudio.goahead.people.activity.ActivityLogin
 com.raafstudio.goahead.people.activity.ActivityLogin: ActivityLogin()
 com.raafstudio.goahead.people.activity.ActivityLoginForgot
@@ -4048,10 +4077,10 @@ com.raafstudio.goahead.people.activity.ActivityMainDemo
 com.raafstudio.goahead.people.activity.ActivityMainDemo: ActivityMainDemo()
 com.raafstudio.goahead.people.activity.ActivityProfile
 com.raafstudio.goahead.people.activity.ActivityProfile: ActivityProfile()
+com.raafstudio.goahead.people.activity.ActivityRegistration
+com.raafstudio.goahead.people.activity.ActivityRegistration: ActivityRegistration()
 com.raafstudio.goahead.people.activity.ActivitySearch
 com.raafstudio.goahead.people.activity.ActivitySearch: ActivitySearch()
-com.raafstudio.goahead.people.activity.ActivitySplash
-com.raafstudio.goahead.people.activity.ActivitySplash: ActivitySplash()
 com.raafstudio.goahead.people.activity.artwork.ActivityArtwork
 com.raafstudio.goahead.people.activity.artwork.ActivityArtwork: ActivityArtwork()
 com.raafstudio.goahead.people.activity.artwork.ActivityArtworkDetail
@@ -4062,8 +4091,16 @@ com.raafstudio.goahead.people.activity.artwork.ActivityArtworkInfo
 com.raafstudio.goahead.people.activity.artwork.ActivityArtworkInfo: ActivityArtworkInfo()
 com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish
 com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish: ActivityArtworkPublish()
+com.raafstudio.goahead.people.activity.product.ActivityProductBuy
+com.raafstudio.goahead.people.activity.product.ActivityProductBuy: ActivityProductBuy()
 com.raafstudio.goahead.people.activity.product.ActivityProductDetail
 com.raafstudio.goahead.people.activity.product.ActivityProductDetail: ActivityProductDetail()
+com.raafstudio.goahead.people.activity.product.ActivityProductImage
+com.raafstudio.goahead.people.activity.product.ActivityProductImage: ActivityProductImage()
+com.raafstudio.goahead.people.activity.product.ActivityProductPublished
+com.raafstudio.goahead.people.activity.product.ActivityProductPublished: ActivityProductPublished()
+com.raafstudio.goahead.people.activity.product.ActivityProductSell
+com.raafstudio.goahead.people.activity.product.ActivityProductSell: ActivityProductSell()
 com.raafstudio.goahead.people.activity.product.ActivityProductTemplate
 com.raafstudio.goahead.people.activity.product.ActivityProductTemplate: ActivityProductTemplate()
 com.raafstudio.goahead.people.activity.product.ActivityProductTemplate: void onClick(android.view.View)

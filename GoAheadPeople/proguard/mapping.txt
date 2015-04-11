@@ -19536,18 +19536,28 @@ com.raafstudio.goahead.people.DialogCapture$2 -> com.raafstudio.goahead.people.b
 com.raafstudio.goahead.people.DialogCapture$3 -> com.raafstudio.goahead.people.c:
     com.raafstudio.goahead.people.DialogCapture this$0 -> a
     void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.DialogMarket -> com.raafstudio.goahead.people.DialogMarket:
+    android.widget.Button BtSell -> a
+    android.widget.Button BtBuy -> b
+    void onCreate(android.os.Bundle) -> onCreate
+com.raafstudio.goahead.people.DialogMarket$1 -> com.raafstudio.goahead.people.d:
+    com.raafstudio.goahead.people.DialogMarket this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.DialogMarket$2 -> com.raafstudio.goahead.people.e:
+    com.raafstudio.goahead.people.DialogMarket this$0 -> a
+    void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.ErrorReporting -> com.raafstudio.goahead.people.ErrorReporting:
     java.lang.String eror -> a
     void onCreate(android.os.Bundle) -> onCreate
-com.raafstudio.goahead.people.ErrorReporting$1 -> com.raafstudio.goahead.people.d:
+com.raafstudio.goahead.people.ErrorReporting$1 -> com.raafstudio.goahead.people.f:
     com.raafstudio.goahead.people.ErrorReporting this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.ExceptionHandler -> com.raafstudio.goahead.people.e:
+com.raafstudio.goahead.people.ExceptionHandler -> com.raafstudio.goahead.people.g:
     android.app.Activity myContext -> a
     java.lang.String LINE_SEPARATOR -> b
     void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
-com.raafstudio.goahead.people.R -> com.raafstudio.goahead.people.f:
-com.raafstudio.goahead.people.R$styleable -> com.raafstudio.goahead.people.g:
+com.raafstudio.goahead.people.R -> com.raafstudio.goahead.people.h:
+com.raafstudio.goahead.people.R$styleable -> com.raafstudio.goahead.people.i:
     int[] ActionBar -> ActionBar
     int ActionBar_background -> ActionBar_background
     int ActionBar_backgroundSplit -> ActionBar_backgroundSplit
@@ -19890,23 +19900,40 @@ com.raafstudio.goahead.people.activity.ActivityBase -> com.raafstudio.goahead.pe
 com.raafstudio.goahead.people.activity.ActivityBase$1 -> com.raafstudio.goahead.people.activity.b:
     com.raafstudio.goahead.people.activity.ActivityBase this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
+com.raafstudio.goahead.people.activity.ActivityBoarding -> com.raafstudio.goahead.people.activity.ActivityBoarding:
+    android.widget.Button BtRegister -> n
+    android.widget.Button BtLogin -> o
+    android.support.v4.view.ViewPager mViewPager -> p
+    com.raafstudio.goahead.people.activity.ActivityBoarding$SectionsPagerAdapter mSectionsPagerAdapter -> q
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+com.raafstudio.goahead.people.activity.ActivityBoarding$1 -> com.raafstudio.goahead.people.activity.c:
+    com.raafstudio.goahead.people.activity.ActivityBoarding this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.ActivityBoarding$2 -> com.raafstudio.goahead.people.activity.d:
+    com.raafstudio.goahead.people.activity.ActivityBoarding this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.ActivityBoarding$SectionsPagerAdapter -> com.raafstudio.goahead.people.activity.e:
+    com.raafstudio.goahead.people.activity.ActivityBoarding this$0 -> a
+    android.support.v4.app.Fragment getItem(int) -> a
+    int getCount() -> b
 com.raafstudio.goahead.people.activity.ActivityLogin -> com.raafstudio.goahead.people.activity.ActivityLogin:
     android.widget.EditText TvEmail -> v
     android.widget.EditText TvPassword -> w
     android.widget.TextView TvForgot -> x
     void onCreate(android.os.Bundle) -> onCreate
     void handlerResponse(android.os.Message) -> a
-com.raafstudio.goahead.people.activity.ActivityLogin$1 -> com.raafstudio.goahead.people.activity.c:
+com.raafstudio.goahead.people.activity.ActivityLogin$1 -> com.raafstudio.goahead.people.activity.f:
     com.raafstudio.goahead.people.activity.ActivityLogin this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivityLogin$2 -> com.raafstudio.goahead.people.activity.d:
+com.raafstudio.goahead.people.activity.ActivityLogin$2 -> com.raafstudio.goahead.people.activity.g:
     com.raafstudio.goahead.people.activity.ActivityLogin this$0 -> a
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.activity.ActivityLoginForgot -> com.raafstudio.goahead.people.activity.ActivityLoginForgot:
     android.widget.Button BtForgot -> v
     android.widget.EditText EtEmail -> w
     void onCreate(android.os.Bundle) -> onCreate
-com.raafstudio.goahead.people.activity.ActivityLoginForgot$1 -> com.raafstudio.goahead.people.activity.e:
+com.raafstudio.goahead.people.activity.ActivityLoginForgot$1 -> com.raafstudio.goahead.people.activity.h:
     com.raafstudio.goahead.people.activity.ActivityLoginForgot this$0 -> a
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.activity.ActivityMain -> com.raafstudio.goahead.people.activity.ActivityMain:
@@ -19933,21 +19960,21 @@ com.raafstudio.goahead.people.activity.ActivityMain -> com.raafstudio.goahead.pe
     void ChangeModule(int) -> d
     int getMarketCategory() -> m
     com.raafstudio.goahead.people.navdraw.NavigationDrawerFragment access$0(com.raafstudio.goahead.people.activity.ActivityMain) -> a
-com.raafstudio.goahead.people.activity.ActivityMain$1 -> com.raafstudio.goahead.people.activity.f:
+com.raafstudio.goahead.people.activity.ActivityMain$1 -> com.raafstudio.goahead.people.activity.i:
     com.raafstudio.goahead.people.activity.ActivityMain this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.raafstudio.goahead.people.activity.ActivityMain$2 -> com.raafstudio.goahead.people.activity.g:
+com.raafstudio.goahead.people.activity.ActivityMain$2 -> com.raafstudio.goahead.people.activity.j:
     com.raafstudio.goahead.people.activity.ActivityMain this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivityMain$3 -> com.raafstudio.goahead.people.activity.h:
+com.raafstudio.goahead.people.activity.ActivityMain$3 -> com.raafstudio.goahead.people.activity.k:
     com.raafstudio.goahead.people.activity.ActivityMain this$0 -> a
     void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
     void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
-com.raafstudio.goahead.people.activity.ActivityMain$4 -> com.raafstudio.goahead.people.activity.i:
+com.raafstudio.goahead.people.activity.ActivityMain$4 -> com.raafstudio.goahead.people.activity.l:
     com.raafstudio.goahead.people.activity.ActivityMain this$0 -> a
     void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
     void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
-com.raafstudio.goahead.people.activity.ActivityMain$MyAdapter -> com.raafstudio.goahead.people.activity.j:
+com.raafstudio.goahead.people.activity.ActivityMain$MyAdapter -> com.raafstudio.goahead.people.activity.m:
     java.lang.String[] spinnerSubs -> a
     com.raafstudio.goahead.people.activity.ActivityMain this$0 -> b
     android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
@@ -19956,7 +19983,7 @@ com.raafstudio.goahead.people.activity.ActivityMain$MyAdapter -> com.raafstudio.
 com.raafstudio.goahead.people.activity.ActivityMainDemo -> com.raafstudio.goahead.people.activity.ActivityMainDemo:
     int fragment -> a
     void onCreate(android.os.Bundle) -> onCreate
-com.raafstudio.goahead.people.activity.ActivityMainDemo$1 -> com.raafstudio.goahead.people.activity.k:
+com.raafstudio.goahead.people.activity.ActivityMainDemo$1 -> com.raafstudio.goahead.people.activity.n:
     com.raafstudio.goahead.people.activity.ActivityMainDemo this$0 -> a
     void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.activity.ActivityProfile -> com.raafstudio.goahead.people.activity.ActivityProfile:
@@ -19975,57 +20002,64 @@ com.raafstudio.goahead.people.activity.ActivityProfile -> com.raafstudio.goahead
     void onResume() -> onResume
     void loadArtwork() -> m
     void loadProduct() -> n
-com.raafstudio.goahead.people.activity.ActivityProfile$1 -> com.raafstudio.goahead.people.activity.l:
+com.raafstudio.goahead.people.activity.ActivityProfile$1 -> com.raafstudio.goahead.people.activity.o:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-com.raafstudio.goahead.people.activity.ActivityProfile$2 -> com.raafstudio.goahead.people.activity.m:
+com.raafstudio.goahead.people.activity.ActivityProfile$2 -> com.raafstudio.goahead.people.activity.p:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-com.raafstudio.goahead.people.activity.ActivityProfile$3 -> com.raafstudio.goahead.people.activity.n:
+com.raafstudio.goahead.people.activity.ActivityProfile$3 -> com.raafstudio.goahead.people.activity.q:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivityProfile$4 -> com.raafstudio.goahead.people.activity.o:
+com.raafstudio.goahead.people.activity.ActivityProfile$4 -> com.raafstudio.goahead.people.activity.r:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     void onResourceReady(android.graphics.Bitmap,com.bumptech.glide.request.animation.GlideAnimation) -> a
     void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
-com.raafstudio.goahead.people.activity.ActivityProfile$5 -> com.raafstudio.goahead.people.activity.p:
+com.raafstudio.goahead.people.activity.ActivityProfile$5 -> com.raafstudio.goahead.people.activity.s:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     java.lang.String val$sid -> b
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivityProfile$6 -> com.raafstudio.goahead.people.activity.q:
+com.raafstudio.goahead.people.activity.ActivityProfile$6 -> com.raafstudio.goahead.people.activity.t:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     java.lang.String val$sid -> b
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivityProfile$7 -> com.raafstudio.goahead.people.activity.r:
+com.raafstudio.goahead.people.activity.ActivityProfile$7 -> com.raafstudio.goahead.people.activity.u:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     java.lang.String val$sid -> b
     void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivityProfile$8 -> com.raafstudio.goahead.people.activity.s:
+com.raafstudio.goahead.people.activity.ActivityProfile$8 -> com.raafstudio.goahead.people.activity.v:
     com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
     boolean onResourceReady(android.graphics.Bitmap,java.lang.String,com.bumptech.glide.request.target.Target,boolean,boolean) -> a
     boolean onException(java.lang.Exception,java.lang.String,com.bumptech.glide.request.target.Target,boolean) -> a
     boolean onException(java.lang.Exception,java.lang.Object,com.bumptech.glide.request.target.Target,boolean) -> a
     boolean onResourceReady(java.lang.Object,java.lang.Object,com.bumptech.glide.request.target.Target,boolean,boolean) -> a
+com.raafstudio.goahead.people.activity.ActivityProfile$9 -> com.raafstudio.goahead.people.activity.w:
+    com.raafstudio.goahead.people.activity.ActivityProfile this$0 -> a
+    java.lang.String val$sid -> b
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.ActivityRegistration -> com.raafstudio.goahead.people.activity.ActivityRegistration:
+    android.app.DatePickerDialog dpd -> v
+    int year -> w
+    int month -> x
+    int day -> y
+    android.widget.Button BtRegister -> z
+    android.widget.ImageView ImgUserBirth -> A
+    android.widget.ImageView ImgUserBrand -> B
+    android.widget.TextView TvUserBirth -> C
+    android.widget.TextView TvUserBrand -> D
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
+    java.lang.String getMonth(int) -> b
+    android.app.DatePickerDialog access$0(com.raafstudio.goahead.people.activity.ActivityRegistration) -> a
+com.raafstudio.goahead.people.activity.ActivityRegistration$1 -> com.raafstudio.goahead.people.activity.x:
+    com.raafstudio.goahead.people.activity.ActivityRegistration this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.ActivityRegistration$2 -> com.raafstudio.goahead.people.activity.y:
+    com.raafstudio.goahead.people.activity.ActivityRegistration this$0 -> a
+    void onClick(android.view.View) -> onClick
 com.raafstudio.goahead.people.activity.ActivitySearch -> com.raafstudio.goahead.people.activity.ActivitySearch:
     void onCreate(android.os.Bundle) -> onCreate
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-com.raafstudio.goahead.people.activity.ActivitySplash -> com.raafstudio.goahead.people.activity.ActivitySplash:
-    android.widget.Button BtRegister -> n
-    android.widget.Button BtLogin -> o
-    android.support.v4.view.ViewPager mViewPager -> p
-    com.raafstudio.goahead.people.activity.ActivitySplash$SectionsPagerAdapter mSectionsPagerAdapter -> q
-    void onCreate(android.os.Bundle) -> onCreate
-    void onResume() -> onResume
-com.raafstudio.goahead.people.activity.ActivitySplash$1 -> com.raafstudio.goahead.people.activity.t:
-    com.raafstudio.goahead.people.activity.ActivitySplash this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivitySplash$2 -> com.raafstudio.goahead.people.activity.u:
-    com.raafstudio.goahead.people.activity.ActivitySplash this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.raafstudio.goahead.people.activity.ActivitySplash$SectionsPagerAdapter -> com.raafstudio.goahead.people.activity.v:
-    com.raafstudio.goahead.people.activity.ActivitySplash this$0 -> a
-    android.support.v4.app.Fragment getItem(int) -> a
-    int getCount() -> b
 com.raafstudio.goahead.people.activity.artwork.ActivityArtwork -> com.raafstudio.goahead.people.activity.artwork.ActivityArtwork:
     android.support.v4.app.FragmentTabHost myTabHost -> w
     java.lang.Boolean newArt -> v
@@ -20126,15 +20160,60 @@ com.raafstudio.goahead.people.activity.artwork.ActivityArtworkPublish -> com.raa
     android.widget.ImageView ImgBackground -> w
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
+com.raafstudio.goahead.people.activity.product.ActivityProductBuy -> com.raafstudio.goahead.people.activity.product.ActivityProductBuy:
+    void onCreate(android.os.Bundle) -> onCreate
 com.raafstudio.goahead.people.activity.product.ActivityProductDetail -> com.raafstudio.goahead.people.activity.product.ActivityProductDetail:
     com.raafstudio.goahead.people.component.ImageviewNormal ImgProduct -> v
     java.lang.String string_id -> w
     android.widget.TextView TvProductTitle -> x
     android.widget.TextView TvProductBy -> y
     android.widget.TextView TvProductDesc -> z
+    android.widget.Button BtWant -> A
+    android.widget.Button BtBuy -> B
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
     void handlerResponse(android.os.Message) -> a
+    android.os.Handler access$0(com.raafstudio.goahead.people.activity.product.ActivityProductDetail) -> a
+com.raafstudio.goahead.people.activity.product.ActivityProductDetail$1 -> com.raafstudio.goahead.people.activity.product.a:
+    com.raafstudio.goahead.people.activity.product.ActivityProductDetail this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.product.ActivityProductDetail$2 -> com.raafstudio.goahead.people.activity.product.b:
+    com.raafstudio.goahead.people.activity.product.ActivityProductDetail this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.product.ActivityProductImage -> com.raafstudio.goahead.people.activity.product.ActivityProductImage:
+    android.widget.LinearLayout mListArtwork -> v
+    com.raafstudio.goahead.people.component.ImageviewNormal ImgProduct -> w
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void loadArtwork() -> m
+com.raafstudio.goahead.people.activity.product.ActivityProductImage$1 -> com.raafstudio.goahead.people.activity.product.c:
+    com.raafstudio.goahead.people.activity.product.ActivityProductImage this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.product.ActivityProductImage$2 -> com.raafstudio.goahead.people.activity.product.d:
+    com.raafstudio.goahead.people.activity.product.ActivityProductImage this$0 -> a
+    android.view.View val$vi -> b
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.product.ActivityProductPublished -> com.raafstudio.goahead.people.activity.product.ActivityProductPublished:
+    android.widget.Button BtPublished -> v
+    android.widget.ImageView ImgProduct -> w
+    void onCreate(android.os.Bundle) -> onCreate
+com.raafstudio.goahead.people.activity.product.ActivityProductPublished$1 -> com.raafstudio.goahead.people.activity.product.e:
+    com.raafstudio.goahead.people.activity.product.ActivityProductPublished this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.product.ActivityProductSell -> com.raafstudio.goahead.people.activity.product.ActivityProductSell:
+    android.widget.TextView TvBasePrice -> v
+    android.widget.TextView TvPublishPrice -> w
+    android.widget.EditText EtProfit -> x
+    android.widget.Button BtPublish -> y
+    void onCreate(android.os.Bundle) -> onCreate
+com.raafstudio.goahead.people.activity.product.ActivityProductSell$1 -> com.raafstudio.goahead.people.activity.product.f:
+    com.raafstudio.goahead.people.activity.product.ActivityProductSell this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.raafstudio.goahead.people.activity.product.ActivityProductSell$2 -> com.raafstudio.goahead.people.activity.product.g:
+    com.raafstudio.goahead.people.activity.product.ActivityProductSell this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
 com.raafstudio.goahead.people.activity.product.ActivityProductTemplate -> com.raafstudio.goahead.people.activity.product.ActivityProductTemplate:
     android.widget.ImageView ImgCanvas -> v
     android.widget.ImageView ImgSmartphone -> w
@@ -20142,7 +20221,9 @@ com.raafstudio.goahead.people.activity.product.ActivityProductTemplate -> com.ra
     android.widget.ImageView ImgMac -> y
     android.widget.ImageView ImgPillow -> z
     android.widget.ImageView ImgBag -> A
+    java.lang.String template_name -> B
     void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
     void onClick(android.view.View) -> onClick
     void setActive(int) -> b
 com.raafstudio.goahead.people.adapter.DiscoverAdapter -> com.raafstudio.goahead.people.a.a:
@@ -20485,6 +20566,7 @@ com.raafstudio.goahead.people.helper.API -> com.raafstudio.goahead.people.c.a:
     void DiscoverLikeArtwork(java.lang.String,android.os.Handler) -> c
     void MarketLanding(int,int,int,java.lang.String,android.os.Handler) -> a
     void MarketProduct(java.lang.String,android.os.Handler) -> d
+    void MarketLike(java.lang.String,android.os.Handler) -> e
     void BrandListSub(android.os.Handler) -> c
     void BrandProvince(android.os.Handler) -> d
     void BrandCity(android.os.Handler) -> e
@@ -20499,20 +20581,21 @@ com.raafstudio.goahead.people.helper.so -> com.raafstudio.goahead.people.c.c:
     java.lang.String[] styles -> a
     java.lang.Boolean apply_image -> b
     java.lang.Boolean artwork_published -> c
-    java.lang.Boolean load_more -> d
-    int requester -> e
-    java.lang.String PicturePath -> f
-    java.util.ArrayList Marketplace -> g
-    java.util.ArrayList DiscoverArtworks -> h
-    java.util.ArrayList Provinces -> i
-    java.util.ArrayList Brands -> j
-    java.util.ArrayList SubBrands -> k
-    com.raafstudio.goahead.people.model.User user -> l
-    com.raafstudio.goahead.people.model.User user1 -> m
-    java.util.ArrayList notification -> n
-    com.raafstudio.goahead.people.model.Meta meta -> o
-    android.content.Context ctx -> p
-    java.lang.String CurrentFrame -> q
+    java.lang.Boolean product_published -> d
+    java.lang.Boolean load_more -> e
+    int requester -> f
+    java.lang.String PicturePath -> g
+    java.util.ArrayList Marketplace -> h
+    java.util.ArrayList DiscoverArtworks -> i
+    java.util.ArrayList Provinces -> j
+    java.util.ArrayList Brands -> k
+    java.util.ArrayList SubBrands -> l
+    com.raafstudio.goahead.people.model.User user -> m
+    com.raafstudio.goahead.people.model.User user1 -> n
+    java.util.ArrayList notification -> o
+    com.raafstudio.goahead.people.model.Meta meta -> p
+    android.content.Context ctx -> q
+    java.lang.String CurrentFrame -> r
     android.content.SharedPreferences getSp() -> a
     java.lang.String getAppName() -> b
     java.lang.String getAPIUrl() -> c
@@ -20627,6 +20710,7 @@ com.raafstudio.goahead.people.model.Artwork -> com.raafstudio.goahead.people.d.b
     void setTitle(java.lang.String) -> f
     java.lang.String getImage() -> f
     void setImage(java.lang.String) -> g
+    java.lang.String getImage_ori() -> g
     void setImage_ori(java.lang.String) -> h
     void setImageHeight(int) -> e
     void setImageWidth(int) -> f
@@ -20635,31 +20719,31 @@ com.raafstudio.goahead.people.model.Artwork -> com.raafstudio.goahead.people.d.b
     void setSub_type(java.lang.String) -> i
     void setArtwork_class(java.lang.String) -> j
     void setIs_featured(int) -> i
-    java.lang.String getFullname() -> g
+    java.lang.String getFullname() -> h
     void setFullname(java.lang.String) -> k
-    java.lang.String getUser_avatar() -> h
+    java.lang.String getUser_avatar() -> i
     void setUser_avatar(java.lang.String) -> l
     void setIs_you(java.lang.String) -> m
     void setJob_profile(java.lang.String) -> n
     void setJob_location(java.lang.String) -> o
     void setBio(java.lang.String) -> p
-    int getUser_id() -> i
+    int getUser_id() -> j
     void setUser_id(int) -> j
     void setLink(java.lang.String) -> q
     void setEncrypted_id(java.lang.String) -> r
-    java.lang.String getArtwork_id() -> j
+    java.lang.String getArtwork_id() -> k
     void setArtwork_id(java.lang.String) -> s
     void setIs_video(java.lang.String) -> t
     void setArtwork_content(java.lang.String) -> u
     void setKind(java.lang.String) -> v
     void setStatus(java.lang.String) -> w
     void setArtwork_thumb(java.lang.String) -> x
-    java.lang.String getDescription() -> k
+    java.lang.String getDescription() -> l
     void setDescription(java.lang.String) -> y
-    java.util.ArrayList getComments() -> l
-    java.lang.String getIs_liked() -> m
+    java.util.ArrayList getComments() -> m
+    java.lang.String getIs_liked() -> n
     void setIs_liked(java.lang.String) -> z
-    java.lang.String getIs_follow() -> n
+    java.lang.String getIs_follow() -> o
     void setIs_follow(java.lang.String) -> A
     void setPrinterous_pass_token(java.lang.String) -> B
     void setPrinterous_token_valid_until(java.lang.String) -> C
@@ -20795,17 +20879,18 @@ com.raafstudio.goahead.people.model.Product -> com.raafstudio.goahead.people.d.i
     int like_stat -> D
     java.lang.String is_want -> E
     int like_count -> F
+    java.lang.String getEncrypted_id() -> a
     void setEncrypted_id(java.lang.String) -> a
-    java.lang.String getString_id() -> a
+    java.lang.String getString_id() -> b
     void setString_id(java.lang.String) -> b
-    java.lang.String getProduct_title() -> b
+    java.lang.String getProduct_title() -> c
     void setProduct_title(java.lang.String) -> c
-    java.lang.String getProduct_description() -> c
+    java.lang.String getProduct_description() -> d
     void setProduct_description(java.lang.String) -> d
     void setProduct_image(java.lang.String) -> e
-    java.lang.String getProduct_thumbnail() -> d
+    java.lang.String getProduct_thumbnail() -> e
     void setProduct_thumbnail(java.lang.String) -> f
-    int getUser_id() -> e
+    int getUser_id() -> f
     void setUser_id(int) -> a
     void setPrice(java.lang.String) -> g
     void setStock(int) -> b
@@ -20824,14 +20909,15 @@ com.raafstudio.goahead.people.model.Product -> com.raafstudio.goahead.people.d.i
     void setBrand(java.lang.String) -> r
     void setBrand_url(java.lang.String) -> s
     void setPrinterous_product_id(java.lang.String) -> t
-    java.lang.String getImage() -> f
+    java.lang.String getImage() -> g
     void setImage(java.lang.String) -> u
-    java.lang.String getFullname() -> g
+    java.lang.String getFullname() -> h
     void setFullname(java.lang.String) -> v
     void setCount(int) -> e
     void setView_stat(int) -> f
     void setType(java.lang.String) -> w
     void setLike_stat(int) -> g
+    java.lang.String getIs_want() -> i
     void setIs_want(java.lang.String) -> x
     void setLike_count(int) -> h
 com.raafstudio.goahead.people.model.Province -> com.raafstudio.goahead.people.d.j:

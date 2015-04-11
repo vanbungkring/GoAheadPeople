@@ -5,6 +5,7 @@ import java.io.File;
 import com.raaf.rIO;
 import com.raaf.rIntent;
 import com.raafstudio.goahead.people.activity.product.ActivityProductBuy;
+import com.raafstudio.goahead.people.activity.product.ActivityProductImage;
 import com.raafstudio.goahead.people.activity.product.ActivityProductSell;
 import com.raafstudio.goahead.people.component.CircleImageView;
 import com.raafstudio.goahead.people.helper.so;
@@ -21,6 +22,8 @@ import android.widget.TextView;
 public class DialogMarket extends Activity {
 
 	Button BtSell, BtBuy;
+	int template_id, template_type;
+	String template, template_type_name;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +37,14 @@ public class DialogMarket extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(DialogMarket.this,
-						ActivityProductSell.class));
+				Intent it = new Intent(DialogMarket.this,
+						ActivityProductSell.class);
+				it.putExtra("template", template);
+				it.putExtra("template_type_name", template_type_name);
+				it.putExtra("template_type", template_type);
+				it.putExtra("template_id", template_id);
+				startActivity(it);
+
 				finish();
 			}
 		});
@@ -44,11 +52,19 @@ public class DialogMarket extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(DialogMarket.this,
-						ActivityProductBuy.class));
+				Intent it = new Intent(DialogMarket.this,
+						ActivityProductBuy.class);
+				it.putExtra("template", template);
+				it.putExtra("template_type_name", template_type_name);
+				it.putExtra("template_type", template_type);
+				it.putExtra("template_id", template_id);
+				startActivity(it);
 				finish();
 			}
 		});
+		template = getIntent().getStringExtra("template");
+		template_type_name = getIntent().getStringExtra("template_type_name");
+		template_type = getIntent().getIntExtra("template_type", 0);
+		template_id = getIntent().getIntExtra("template_id", 0);
 	}
 }

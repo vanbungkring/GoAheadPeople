@@ -15,9 +15,11 @@ import com.raafstudio.goahead.people.activity.ActivityBase;
 
 public class ActivityProductSell extends ActivityBase {
 
-	TextView TvBasePrice, TvPublishPrice;
+	TextView TvBasePrice, TvPublishPrice, TvTemplateName;
 	EditText EtProfit;
 	Button BtPublish;
+	int template_id, template_type;
+	String template, template_type_name;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class ActivityProductSell extends ActivityBase {
 		getSupportActionBar().setTitle("Sell on Marketplace");
 		TvBasePrice = (TextView) findViewById(R.id.TvBasePrice);
 		TvPublishPrice = (TextView) findViewById(R.id.TvPublishPrice);
+		TvTemplateName = (TextView) findViewById(R.id.TvTemplateName);
 		EtProfit = (EditText) findViewById(R.id.EtProfit);
 		BtPublish = (Button) findViewById(R.id.BtPublish);
 		BtPublish.setOnClickListener(new OnClickListener() {
@@ -63,18 +66,79 @@ public class ActivityProductSell extends ActivityBase {
 					profit = Integer.parseInt(s.toString());
 				else
 					EtProfit.setText("0");
-				String sPrice = TvBasePrice.getText().toString();
-				sPrice = sPrice.replace("Rp", "");
-				sPrice = sPrice.replace(",", "");
-				sPrice = sPrice.replace(".", "");
-				sPrice = sPrice.replace(" ", "");
-				int basePrice = Integer.parseInt(sPrice);
 
 				TvPublishPrice.setText("Rp. "
 						+ String.format("%,d", (basePrice + profit)));
 			}
 		});
-		TvBasePrice.setText("Rp. " + String.format("%,d", 100000));
-		TvPublishPrice.setText("Rp. " + String.format("%,d", 100000));
+
+	}
+
+	int basePrice = 0;
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		template = getIntent().getStringExtra("template");
+		template_type_name = getIntent().getStringExtra("template_type_name");
+		template_type = getIntent().getIntExtra("template_type", 0);
+		template_id = getIntent().getIntExtra("template_id", 0);
+		TvTemplateName.setText(template_type_name);
+		switch (template_id) {
+		case 1:
+			basePrice = 100000;
+			
+			break;
+
+		case 2:
+			switch (template_type) {
+			case 0:
+			case 1:
+			case 3:
+				basePrice = 200000;
+				break;
+			case 2:
+			case 4:
+			case 5:
+			case 6:
+				basePrice = 150000;
+				break;
+			case 7:
+				basePrice = 1750000;
+				break;
+			}
+			break;
+		case 3:
+			switch (template_type) {
+			case 0:
+			case 1:
+				basePrice = 250000;
+				break;
+			case 2:
+			case 3:
+				basePrice = 150000;
+				break;
+			}
+			break;
+		case 4:
+			switch (template_type) {
+			case 0:
+				basePrice = 250000;
+				break;
+			case 1:
+				basePrice = 200000;
+				break;
+			}
+			break;
+		case 5:
+			basePrice = 130000;
+			break;
+		case 6:
+			basePrice = 125000;
+			break;
+		}
+		TvBasePrice.setText("Rp. " + String.format("%,d", basePrice));
+		TvPublishPrice.setText("Rp. " + String.format("%,d", basePrice));
 	}
 }

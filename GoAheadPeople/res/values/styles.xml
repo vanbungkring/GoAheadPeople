@@ -18,7 +18,7 @@
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="MainDemo" parent="android:Theme">
@@ -31,6 +31,11 @@
     </style>
 
     <style name="mySpinnerItemStyle" parent="Theme.AppCompat.NoActionBar"></style>
+
+    <style name="mySpinnerLight" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="dialog_style" parent="Theme.AppCompat.Dialog"></style>
 
